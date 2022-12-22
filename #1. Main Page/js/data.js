@@ -39,7 +39,6 @@ const qnaList = [
       { answer: 'c. 어차피 내 연인인데 왜?? 모든 스킨십 다 돼!', type: ['tiger', 'snake', 'monkey'] },
     ]
   },
-
   {
     q: '6. 기념일이 다가온다. 당신은 어떻게 할 것인가? (ex - 100, 200일)',
     a: [
