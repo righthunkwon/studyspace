@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>목록태그(ol, ul, li, dl, dt, dd)</title>
+</head>
+<body>
+    <!-- pre 태그 -->
+    <pre>
+        pre태그는 <b>줄바꿈과 공백</b>이 적용된다.
+        태그도 적용이 된다.
+        글자크기는 기본 글자 크기보다 작다.
+    </pre>
+    ol, ul 태그는 목록 태그로 사용한다. 메뉴, 게시판 리스트, 상품 리스트, 물품 리스트 등에 많이 사용된다.
+    
+    <!-- ol, ul, li -->
+    <pre>
+        ol태그 : 순서가 있는 목록 태그
+        ul태그 : 순서가 없는 목록 태그
+        li태그 : 목록 수 만큼 만든다.
+        ol태그의 type속성 : 1(기본값), a, A, i, I / 숫자, 소문자, 대문자, 로마소문자, 로마대문자
+        ul태그의 type속성 : disc(기본값), circle, square / 채워진 원, 비워진 원, 채워진 사각형
+    </pre>
+    <ol type="a" style="background-color: green;">
+        <li>해바라기</li>
+        <li style="background-color: greenyellow">장미
+            <ol>
+                <li>빨강</li>
+                <li>노랑</li>
+                <li>분홍</li>
+            </ol>
+        </li>
+        <li>무궁화</li>
+    </ol>
+    <ul type="square">
+        <li>html</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    
+    <!-- dl, dt, dd-->
+    <pre>
+        설명목록 태그 : dl, dt, dd
+        dl : 시작
+        dt : 제목(이름)
+        dd : 값(설명)
+    </pre>
+    <dl>
+        <dt>html</dt>
+        <dd>Hyper Text Markup Language</dd>
+        <dd>html은 마크업 언어로 프로그래밍 언어가 아니다.</dd>
+    </dl>
+</body>
+</html>

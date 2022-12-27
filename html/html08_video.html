@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비디오 재생</title>
+</head>
+<body>
+    <h1>비디오 재생</h1>
+    <pre>
+        src : 재생할 영상 파일 명
+        controls : 재생 컨트롤러 표시
+        width, height : 폭과 높이 지정(px, %)
+        loop : 반복횟수
+        muted : 음소거
+        autoplay : 자동재생 (muted 시 자동재생 가능)
+        preload : 파일 전송 완료 후 재생
+        poster : 재생 전에 표시할 이미지(썸네일) - autoplay를 설정할 경우 영상이 바로 재생되므로 poster가 잘 구현되지 않음
+    </pre>
+    <video controls width="500" loop="2" poster="./img/05.jpg">
+        <source src="./audio_movie/Wildlife.mp4" type="video/mp4"/>
+    </video>
+</body>
+</html>
