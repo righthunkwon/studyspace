@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상태 선택자</title>
+    <style>
+        /*
+            상태 선택자
+                :focus -> (커서가) 컴퍼넌트에 들어가면 (가상 클래스와 연관)
+                :checked -> 컴퍼넌트를 체크하면
+                :disabled -> 비활성화된 컴퍼넌트에 적용
+                :enabled -> 활성화된 컴퍼넌트에 적용
+        */
+        input:focus {
+            background-color: #07CF5C;
+            font-size: 1.1em;
+            color: #282A2D;
+        }
+        input:checked {
+            width: 50px;
+            height: 50px;
+        }
+        input:disabled {
+            background-color: tomato;
+        }
+        input:enabled {
+            background-color: slateblue;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="test.jsp">
+        아이디 : <input type="text" name="userId" maxlength="10" value="네이버 취업" placeholder="아이디입력"/> <br/>
+        비밀번호 : <input type="password" name="userPwd" placeholder="비밀번호입력"/> <br/>
+        이메일 : <input type="email" name="email" value="" disabled/>
+        성별 : 
+        <input type="radio" name="gender" value="M"/> 남 
+        <input type="radio" name="gender" value="F"/> 여 
+        <!--name을 다르게 할 경우 두 개가 다른 범주화가 되어서 중복해서 선택가능하다는 문제가 발생하므로 value로 요소를 구분. 이 경우 M이나 F가 서버로 넘어간다.--> <br/>
+        취미 : 
+        <input type="checkbox" name="hobby" value="게임"/> 게임 
+        <input type="checkbox" name="hobby" value="운동"/> 운동 
+        <input type="checkbox" name="hobby" value="여행"/> 여행 
+        <input type="checkbox" name="hobby" value="그림"/> 그림 
+        <input type="checkbox" name="hobby" value="유튜브 시청" checked/> 유튜브 시청 <br/>
+    </form>
+</body>
+</html>

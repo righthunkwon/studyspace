@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조 선택자</title>
+    <style>
+        ul, li {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-align: center;
+        }
+        #menu li{
+            float: left;
+            height: 50px;
+            line-height: 50px;
+            width: 150px;
+        }
+        /*
+            구조 선택자
+                :nth-child(2n) -> 2의 배수(짝수)
+                :nth-child(3n) -> 3의 배수
+                :nth-child(2n+1) -> 홀수번째
+                :first-child -> 처음 객체
+                :last-child -> 마지막 객체
+        */
+        #menu li:nth-child(2n) {
+            background-color: deepskyblue;  
+        }
+        #menu li:nth-child(2n+1) {
+            background-color: darksalmon;
+        }
+        #menu li:first-child {
+            border-radius: 20px 0px 0px 20px; /*왼쪽상단 - 오른쪽상단 - 오른쪽하단 - 왼쪽하단 순*/
+        }
+        #menu li:last-child {
+            border-radius: 0px 20px 20px 0px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="menu">
+        <li>AAAAAA</li>
+        <li>BBBBBB</li>
+        <li>CCCCCC</li>
+        <li>DDDDDD</li>
+        <li>EEEEEE</li>
+        <li>FFFFFF</li>
+    </ul>
+</body>
+</html>

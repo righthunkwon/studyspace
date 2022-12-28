@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shadow</title>
+    <style>
+        div {
+            width: 800px;
+            height: 150px;
+            line-height: 150px;
+            font-size: 5em;
+            border: 1px solid #888;
+            margin: 100px;
+            text-align: center;
+        }
+
+        /*
+            문자에 그림자 설정하기 = text-shadow: 가로 세로 번짐정도 색상;
+        */
+        .txt {
+            text-shadow: 10px -10px 10px teal;
+        }
+
+        /*
+            박스에 그림자 설정하기 = box-shadow: 가로 세로 번짐정도 색상;
+        */
+        .box {
+            box-shadow: -10px 10px 10px tomato;
+        }
+
+        /*
+            그라데이션
+            http://colorzilla.com/gradient-editor
+        */
+        .gradient {
+            height: 800px;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7abcff+0,60abf8+44,4096ee+100;Blue+3D+%2314 */
+            background: rgb(122,188,255); /* Old browsers */
+            background: -moz-linear-gradient(top,  rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+        }
+    </style>
+</head>
+<body>
+    <div class="txt">문자에 그림자 설정</div>
+    <div class="box">박스에 그림자 설정</div>
+    <div class="gradient"></div>
+</body>
+</html>
