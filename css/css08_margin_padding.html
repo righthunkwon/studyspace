@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin, padding</title>
+    <style>
+        div {
+            border: 3px solid grey;
+            width: 200px;
+            height: 200px;
+            /*float 상하정렬을 좌우정렬로(left, right) / left를 일반적으로 사용, 글자를 왼쪽에서 오른쪽으로 읽기 때문, right는 역방향*/
+            float: left;
+
+            /* 테두리 바깥쪽 여백 설정 : margin / 바깥쪽 여백인 margin 태그는 margin-top, margin-right, margin-bottom, margin-left가 합쳐진 그룹화된 태그이다. */
+            margin-left: 100px;
+            margin-right: 100px;
+
+            /*margin 중첩 현상 발생 (요소를 세로로 배치할 때는 50+50=100으로 margin이 적용되지 않는다. 세로 방향의 경우 중첩되어 margin이 적용된다. 가로는 정상 적용)*/
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+            /*margin은 top, right, bottom, left 순으로 구성된다. 12시부터 시계방향 순. 두 요소만 쓸 경우 상하(top,bottom) 좌우(left,right) 순으로 구성된다.*/
+            /*margin: 50px 100px 50px 100px; or margin: 50px 100px;*/
+
+            /*테두리 안쪽 여백 설정 : padding / 안쪽 여백인 padding은 margin과 마찬가지로 그룹화 되어있고, 추가적인 공간을 부여한다. 즉 기존 박스 공간인 200x200보다 늘어난 220x230이 된다.*/
+            padding: 15px 10px 15px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: aquamarine;">Margin Margin Margin Margin Margin </div>
+    <div>Padding Padding Padding Padding Padding Padding </div>
+    <div style="background-color: pink;">Test Test Test Test Test </div>
+</body>
+</html>

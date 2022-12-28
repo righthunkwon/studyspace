@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position, display, visibility</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            border: 1px solid grey;
+        }
+        /*웹 요소의 위치를 지정하는 요소들 : left, top, right, bottom*/
+        /*단 position 속성의 변동이 필요함(position은 static이 기본값으로 문서의 흐름에 맞추어 배치하는 게 기본 설정)*/
+        
+        /*
+            position의 속성값 (좌표 지정을 위해서는 absolute, relative, fixed 속성이 설정되어야 한다.)
+
+                static : 요소를 문서의 흐름에 맞추어 배치(기본값, 좌표가 설정되지 않음)
+                relative : 이전 요소에 자연스럽게 연결해 배치하되 위치 지정 가능(공간을 유지한다, 좌표의 기준 : 원래 위치)
+                absolute : 원하는 위치를 지정해 배치(공간을 반납한다, 좌표의 기준 : 맨위 맨왼쪽)
+                fixed : 지정한 위치에 고정(요소 잘릴 수 있음)
+            
+            z-index : 위치 지정 요소의 우선순위를 결정(단, position 속성이 static이외의 것이어야 한다.)
+        */
+
+        /*각 position를 주석처리한 뒤 하나씩 살펴보자!*/
+        .div1 {
+            background-color:deepskyblue;
+            position: fixed;
+            right: 100px;
+            bottom: 10px;
+        }
+        .div2 {
+            background-color: teal;
+            position: absolute;
+            left: 100px; /*left, top, right, bottom은 position 설정 없이는 적용되지 않는다.*/
+            top: 100px;
+            z-index: 100; /*객체가 겹칠 때 순서정하기 값이 높은 순서대로 배치된다.*/
+        }
+        .div3 {
+            background-color: tomato;
+            position: relative;
+            left: 200px;
+            top: -100px;
+        }
+        .div4 {
+            background-color: sandybrown;
+            position: relative;
+            z-index: 101;
+        }
+        img {
+            width: 110px;
+            height: 200px;
+        }
+        /*하위객체의 좌표설정은 상위객체의 position에 영향을 받는다. absolute, relative, fixed인 경우 해당객체가 기준점, static인 경우 body가 기준점.*/
+        #i1 {
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+        #i2 {
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+    <div class="div2">
+        <img src="../img/04.jpg" id="i1" alt="">
+    </div>
+    <div class="div3">
+        <img src="../img/05.jpg" id="i2" alt="">
+    </div>
+    <div class="div4"></div>
+</body>
+</html>

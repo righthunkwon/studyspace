@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout margin</title>
+    <style>
+        body {
+            margin: 0px;
+            background-color: #1E1F21;
+        }
+        .header {
+            margin-top: 0px;
+            background-color: RGB(40, 42, 45);
+            height: 200px;
+        }
+        /*자식 선택자 : >로 지정*/
+        .header>div {
+            width: 1200px;
+            height: 150px;
+            margin: 0 auto; /*auto를 통해 좌우의 여백을 자동으로 부여함으로써 div를 가운데로 배치한다.*/
+            font-size: 4em; /*px, pt, cm, mm, em(1em 기본크기)*/
+            font-weight: 600;
+            text-align: center;
+            color: #04CE5C;
+            line-height: 150px;
+        }
+        .container {
+            background-color: grey;
+            width: 1200px; /*header의 div와 동일하게 하여 통일감 부여*/
+            margin: 0 auto; /*auto를 통해 좌우의 여백을 자동으로 부여함으로써 div를 가운데로 배치한다.*/
+        }
+        .container>h1 {
+            margin-top: 0;
+        }
+        .footer {
+            height: 100px;
+            background-color: whitesmoke;
+        }
+        
+        /*메뉴 만들기(ul태그의 표시 없애기, 가로로 구현하기, 여백 초기화하기)*/
+        .topMenu {
+            margin: 0;
+            padding: 0;
+            list-style-type: none; /*ul 태그의 마커 제거*/
+            height: 50px;
+            width: 1200px;
+            margin: 0 auto;
+            ;
+        }
+        .topMenu>li {
+            float: left; /*세로로된 메뉴를 가로로 정렬, 정렬할 경우 높이가 0이 된다. 따라서 header 총 200px중 header의 div에서 사용한 120px을 제외한 80px을 topMenu에 별도로 명시해야 한다. */
+            color: #04CE5C;
+            width: 25%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+        /*
+        a태그 링크 시 스타일 속성 작성법(가상 클래스)
+        
+        a:link { } / 링크
+        a:visited { } / 방문 페이지
+        a:hover { } / 마우스 오버
+        a:active { } / 누른 상태
+        */
+
+        /*선택자를 통합하여 작성할 수 있다.*/
+        a:link, a:visited {
+            color: wheat;
+            text-decoration: none;
+        }
+        a:hover {
+            color: salmon;
+            text-decoration: underline;
+        }
+        a:active {
+            color: red;
+        }
+        /*hover 밑에 active를 두어야 정상 작동한다.*/
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            고양이
+        </div>
+        <ul class="topMenu">
+            <li><a href="./css01_start.html">홈 페이지</a></li>
+            <li><a href="https://www.naver.com/" target="_blank">네이버</a></li>
+            <li><a href="https://codingfromtoday.tistory.com/" target="_blank">티스토리</a></li>
+            <li><a href="https://github.com/righthunkwon" target="_blank">GitHub</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>내용 영역</h1>
+        <div style="text-align: center;">
+        <img src="../img/01.jpg" width="80%" alt="고양이">
+        </div>
+    </div>
+    <div class="footer">
+        하단 작성 연습해보기! header 참고!!!
+    </div>
+</body>
+</html>
