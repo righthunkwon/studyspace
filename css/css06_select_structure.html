@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조 선택자</title>
+    <style>
+        ul, li {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        #menu, #boardDiv {
+            /*height: 50px; 메뉴 탭과 콘텐츠 탭이 겹칠 때 해결방법 (1)*/
+            overflow: auto; /*메뉴 탭과 콘텐츠 탭이 겹칠 때 해결방법 (2) - 더 나은 해결책, 높이를 고정하는 것보다 내용의 길이에 따라 자연스럽게 설정 가능*/
+        }
+        #menu li{
+            float: left;
+            height: 50px;
+            line-height: 50px;
+            width: 150px;
+            text-align: center;
+        }
+        /*
+            구조 선택자
+                :nth-child(2n) -> 2의 배수(짝수)
+                :nth-child(3n) -> 3의 배수
+                :nth-child(2n+1) -> 홀수번째
+                :first-child -> 처음 객체
+                :last-child -> 마지막 객체
+        */
+        #menu li:nth-child(2n) {
+            background-color: deepskyblue;  
+        }
+        #menu li:nth-child(2n+1) {
+            background-color: darksalmon;
+        }
+        #menu li:first-child {
+            border-radius: 20px 0px 0px 20px; /*왼쪽상단 - 오른쪽상단 - 오른쪽하단 - 왼쪽하단 순*/
+        }
+        #menu li:last-child {
+            border-radius: 0px 20px 20px 0px;
+        }
+
+        /*게시판 목록 만들기*/
+        #boardDiv {
+            width: 1000px;
+            margin: 50px auto;
+        }
+        #boardDiv li {
+            float: left;
+            width: 10%; /*한 칸을 10%로 한다.*/
+            height: 40px;
+            line-height: 40px;
+            border-bottom:1px solid grey;
+            text-align: center;
+        }
+        #boardDiv li:nth-child(5n+2) {
+            width: 60%;
+            text-align: left;
+        }
+    </style>
+</head>
+<!-- 
+    본문 복사 막는 방법
+
+    html속성(두 가지를 동시에 활용)
+    oncontextmenu : 마우스 오른쪽 버튼 메뉴 제어(키보드 ctrl c v 는 가능 -> 드래그도 막아야 한다)
+    onselectstart : 드래그 제어
+ -->
+<body oncontextmenu="return false" onselectstart="return false">
+        <ul id="menu">
+            <li>AAAAAA</li>
+            <li>BBBBBB</li>
+            <li>CCCCCC</li>
+            <li>DDDDDD</li>
+            <li>EEEEEE</li>
+            <li>FFFFFF</li>
+        </ul>
+    <div id="boardDiv">
+        <ul>
+            <li>번호</li>
+            <li>제목</li>
+            <li>작성자</li>
+            <li>작성일</li>
+            <li>조회수</li>
+
+            <!--가상의 데이터, 실제로는 DB에서 반복문을 통해 데이터를 구현한다. 실습을 위해 데이터는 하나만 남기고 삭제-->
+            <li>1</li>
+            <li>고양이</li>
+            <li>권정훈</li>
+            <li>12-29 09:38</li>
+            <li>78</li>
+        </ul>
+    </div>
+
+    <style>
+        /*
+            구조 선택자
+                :nth-of-type -> 홀수번째, 짝수번째, n의 배수 등 가능
+                :first-of-type -> 처음 객체 선택 
+                :last-of-type -> 마지막 객체 선택 
+        */
+        #d1 > h1:nth-of-type(2n) {
+            background-color: olive;
+        }
+        #d1 > h2:nth-of-type(2n+1) {
+            background-color: brown;
+        }
+        #d1 > h1:first-of-type {
+            color: salmon;
+        }
+        #d1 > h2:last-of-type {
+            color: royalblue;
+        }
+    </style>
+    <div id="d1">
+        <h1>구조 선택자 11111</h1>
+        <h2>구조 선택자 AAAAA</h2>
+        <h1>구조 선택자 22222</h1>
+        <h2>구조 선택자 BBBBB</h2>
+        <h1>구조 선택자 33333</h1>
+        <h2>구조 선택자 CCCCC</h2>
+        <h1>구조 선택자 44444</h1>
+        <h2>구조 선택자 DDDDD</h2>
+    </div>
+    <style>
+        /*
+            텍스트 스타일
+            ::first-letter -> 첫 번째 문자에 대한 스타일 적용
+            ::first-line -> 첫 번째 줄에 대한 스타일 적용
+            ::selection -> 선택(드래그) 영역의 스타일 적용
+        */
+        #txt::first-letter {
+            font-size: 2.5em;
+            font-weight: 800;
+            color: darkred;
+        }
+        #txt::first-line {
+            background-color: bisque;
+            text-decoration: underline;
+        }
+        #txt::selection {
+            background-color: bisque;
+            color: darkred;
+        }
+    </style>
+    <div id="txt">
+        포르쉐가 50주년? 아니다. ‘포르쉐 디자인’은 포르쉐 자동차와 긴밀한 관계를 맺고 있지만 엄연히 다른 기업이다. <br/>1931년 공학박사 ‘페르디난트 포르쉐’가 포르쉐를 창립, 이후 아들 ‘페리 포르쉐’가 회사의 규모를 성장시켰고, 1963년에는 손자인 ‘페르디난트 알렉산더 포르쉐’가 브랜드의 간판 모델인 911을 디자인한다. 그리고 1972년 그가 분가해 설립한 프리미엄 라이프스타일 브랜드가 바로 ‘포르쉐 디자인’이다. 포르쉐 디자인은 창업 연도(1972년)에 브랜드의 첫 모델 ‘크로노그래프 1’을 출시한다. 911의 크롬 장식이 무광 블랙으로 마감된 시점이 1973년부터였으니, 이번 50주년 에디션 의색상이 오로지 블랙 테마로 제작된 것도 여기에서 기인했다고 볼 수 있다. <s>이 스페셜 모델은 지금의 992세대, ‘911타르가 4 GTS’를 기반으로 단 7백50대만 제작한 한정 모델이다.</s> 가장 인상적인 건 자체를 새틴 플래티넘 컬러로 마감하면서도 타르가의 상징적인 실버 톤 롤 바는 그대로 살려둔 부분. 포르쉐 디자인이 생각하는 타르가의 본질적 디자인은 무엇인지 엿볼 수 있는 지점이다. 이런 균형은 다른 곳에서도 찾아볼 수 있다. 휠의 림은 롤 바와 동일한 소재와 컬러로, 안쪽 브레이크 캘리퍼는 블랙 컬러로 마감해 차제와의 조화를 연결한다. 리어 리드 그릴 슬랫에는 50주년 에디션을 뜻하는 원형 배지가 부착되어 있다. 재미있는 건 그 위치를 고민한 흔적이 역력해 보이는데, 리어 그릴 하단으로 이어지는 에이프런 위쪽에는 포르쉐 로고가, 밑으로는 911 블랙 로고가 있으니 배치의 위치는 달리 도리가 없어 보인다. <strike>혹자는 911타르가 4 GTS 기반인데 새로울 것이 뭐가 있겠냐며 오해한다.</strike> 하지만 타르가 특유의 롤 오버 바와 우아한 루프 라인은 그대로 둔 채 ‘크로노그래프 1’을 연상시키는 매혹적인 요소들을 안팎으로 배치했으니, 이건 뻔한 리메이크가 아니라 오히려 이야깃거리를 더한 집약체인 셈이다. 과거의 것을 데려와 새로 다듬었을 때 좋은 평가의 기준은 대체로 조화와 균형으로 귀결된다. 그런 부분에서 이번 에디션 모델은 좋은 스토 리텔러이자 복각된 클래식 카의 범례 중 으뜸일 수밖에 없다. 이우헌(포토그래퍼)
+    </div>
+</body>
+</html>

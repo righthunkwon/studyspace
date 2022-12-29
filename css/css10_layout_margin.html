@@ -82,8 +82,9 @@
         }
         /*hover 밑에 active를 두어야 정상 작동한다.*/
 
-        
-
+        .테스트>li {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -103,9 +104,27 @@
         <div style="text-align: center;">
         <img src="../img/01.jpg" width="80%" alt="고양이">
         </div>
+        <div>
+            <ul class="테스트">
+                <li>ul의 자식 li 1</li>     
+                <li>ul의 자식 li 2</li>
+                <ol>
+                    <li>ul안 ol리스트</li>
+                </ol>
+            </ul>
+        </div>
+        <!--
+            자식 선택자 vs 하위(후손)선택자
+            css는 ul 태그의 클래스인 테스트의 자식 요소중 li의 태그의 color를 red로 설정한다. 
+            html을 보게되면 ul 태그 아래 li 태그와 ol 태그가 있다. ol 태그는 li 태그를 포함한다.
+            <li>ul안 ol리스트</li> html의 해당 요소 또한 큰 범위로 보면 ul에 포함되어 있지만, 해당 요소의 직접적인 부모는 ol이므로 해당 요소의 color는 변경되지 않는다.
+            즉, ol 내부의 li은 ul의 자식 선택자가 아니라 하위(후손) 선택자이므로, css가 적용되지 않는다.
+        -->
     </div>
+
     <div class="footer">
         하단 작성 연습해보기! header 참고!!!
     </div>
+
 </body>
 </html>
