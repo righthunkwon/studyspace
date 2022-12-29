@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>변수</title>
+</head>
+<body id="main">
+    <h1>자바스크립트에서의 변수와 상수</h1>
+    <script>
+        // 변수 정의 방법 : 생략, var, let, const
+
+        // 문자형 변수(변수: username, 상수: 홍길동)
+        var username = "홍길동";
+
+        // 변수의 재정의 (변수가 재정의, 즉 덮어쓰기 되었기 때문에 기존에 정의한 홍길동은 사라지고 username 변수에는 권정훈이라는 값만 저장되어 있다.)
+        var username = "권정훈";
+        document.write("username = ", username);
+
+        // 숫자형 변수
+        var age = 27;
+
+        // 변수에 true나 false를 넣는 경우 -> 단순한 불린값이 출력되는 게 아니라 추가로 조건을 부여하는 방법? 조건문!
+        var bg = confirm("배경에 이미지를 설정할까요?"); // true : 배경이미지 설정, false : 배경이미지 미설정
+
+        // 조건에 들어갈 조건식은 참거짓을 판별해야 하므로 기본적으로 논리형(boolean : true, false)이어야 한다.
+        if(bg) {
+            // document.getElementById("main").style.color = "darkgreen" // style: 예약어, backgroundColor: 속성, darkgreen: 속성값
+            // document.getElementById("main").style.backgroundImage = "url(../img/01.jpg)" // CSS에서는 background-image라 표기하지만, JavaScript에서는 backgroundImage라 표기한다.
+
+            var bodyTag = document.getElementById("main"); // 코드의 단축 : 변수 코드를 담고 이후 변수로 선언
+            bodyTag.style.color = "darkgreen";
+            bodyTag.style.backgroundImage = "url(../img/02.jpg)";
+        }
+        document.write(userId); // userId 라는 변수를 선언하지 않았기에 이는 undefined의 자료형이다. (단, 출력은 되지 않는다. 하지만 var userId;로 변수를 선언하면 undefined라 출력된다)
+    </script>
+</body>
+</html>

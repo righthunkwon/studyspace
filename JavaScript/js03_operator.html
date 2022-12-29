@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operator 연산자</title>
+</head>
+<body>
+    <script>
+        // 산술연산자 : +, -, *, /, %(나머지), ++(1씩 증가), --(1씩 감소)
+        var n1 = 10;
+        var n2 = 4;
+
+        var result_1 = n1 * n2 + n2;
+        document.write("result_1 : "+ result_1);
+        
+        document.write("<br/>result_3 : "+ n1 + n2); // 104, 문자 + 숫자 + 숫자의 계산이므로 모두 문자 취급하여 104가 출력
+        document.write("<br/>result_3 : "+ (n1 + n2)); // 해결책 : 괄호
+        document.write("<br/>result_2 : "+ n1/n2); // 2.5, 연산자 우선순위에 따라 나눗셈 계산 이후에 더해서 결과값이 정상 출력 (java에서는 결과값이 2가 나온다.)
+        
+        var mod = n1 % n2;
+        document.write("<br/>mod : "+ mod); // 2, %: 나머지를 구한다.
+
+        // n2의 값을 1 증가시키기
+        // 방법 (1) n2 = n2 + 1;
+        // 방법 (2) n2 += 1;
+        // 방법 (3) n2++;
+        document.write("<br/>n2 : "+ n2);
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대화상자(alert, confirm, prompt), document.write(), console.log</title>
+    <script>
+        // 한 줄의 주석
+        /* 여러 줄의 주석 */
+
+        // 변수 선언, 수식, 명령어
+        // 내장객체.메소드() js의 document는 html의 body에 대응한다.
+
+        document.write("JavaScript에서 표시<br/>"); // 자바스크립트 내에서 html 태그를 사용할 수 있다. 단, 반드시 문자열로 표기하여야 한다.
+        document.write('document 내장객체<br/>');
+        document.write("<img src='../img/naver_logo.png'>"); // 따옴표를 " ' ' " 로 쓰든 ' " " ' 로 쓰든 동일하다.
+        
+        // 대화상자-알림 창
+        // alert("환영합니다.");
+
+        // 대화상자-확인 창 : 확인/취소 (클릭하는 버튼에 따라 프로그램 동작) (예:true / 아니오:false)
+        // document.write(confirm("정말 탈퇴하시겠습니까?")); 
+
+        // 대화상자-프롬프트 창 : 값 입력을 받을 수 있는 대화상자, 확인/취소 (예:입력한 값 / 아니오:null)
+        // document.write("입력 받은 값 : "+ prompt("이름을 입력하세요."));
+
+        // 두 가지의 매개변수(입력값, 기본값)(입력값 + 기본값)
+        // document.write("나이 -> ", prompt("나이를 입력하세요", 20));
+
+        // 개발자도구(f12) : console탭에 정보를 출력할 수 있다. (웹 페이지에 출력은 되지 않지만 개발자도구-콘솔창에서는 출력된다.)
+        console.log(12345);
+        console.log("강남구");
+        console.log(12345, "홍길동", true);
+    </script>
+</head>
+<body>
+    <h1>자바스크립트 시작하기</h1>
+    HTML에서 표시
+    <script>
+        document.write("JavaScript에서 표시");
+    </script>
+</body>
+</html>
