@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval, setTimeout</title>
+    <style>
+        #clock {
+            width: 300px;
+            height: 70px;
+            line-height: 70px;
+            font-size: 3em;
+            text-align: center;
+            border: 2px solid darkcyan;
+        }
+        #num {
+            width: 300px;
+            height: 300px;
+            line-height: 300px;
+            font-size: 5em;
+            text-align: center;
+            border: 2px solid darkorange;
+            border-radius: 150px;
+        }
+    </style>
+    <script>
+        // 현재 시분초를 구하는 함수를 1초에 한 번씩 호출되게 만들기
+        // 함수 생성
+        function clockView() {
+            var now = new Date(); // 날짜, 시간
+            var hour = now.getHours();
+            var minute = now.getMinutes();
+            var second = now.getSeconds();
+
+            document.getElementById("clock").innerText = hour+":"+minute+":"+second; // 12:15:21(시,분,초)
+        }
+
+    </script>
+</head>
+<body>
+    <h1>setInterval</h1>
+    <div id="clock"></div>
+    <script>
+        // 일정한 시간 간격으로 반복하여 호출하는 메서드(함수) : setInterval(호출할 함수, 시간간격(밀리초, 1000=1s))
+        setInterval("clockView()", 1000);
+    </script>
+
+    <h1>setTimeout</h1>
+    <div id="num"></div>
+    <script>
+        // setTimeout을 이용한 함수 재호출
+        var n = 1;
+
+        // 함수 생성 : setTimeout(호출할 함수, 시간간격)
+        function setNum() {
+            document.querySelector("#num").innerText = n;
+            var timer = setTimeout("setNum()", 500);
+            n++;
+            if(n>99) {
+                clearTimeout(timer); // 반복 중단
+            }
+        }
+        setNum(); // 생성 이후 최초 한 번의 실행이 필요하다.
+    </script>
+</body>
+</html>

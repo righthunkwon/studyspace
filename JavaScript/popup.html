@@ -5,8 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>popup</title>
+    <script>
+        document.title = "자바스크립트"; // title을 수정
+        
+        function chkState() {
+            // checkbox의 체크 유무를 확인하여 체크 상태일 때(true일 때) 쿠키를 저장한다.
+            var boo = document.getElementById("chk").checked;
+            
+            if(boo) {
+                // checked가 true일 때 실행된다.
+
+
+                // Date 객체의 메서드 (get: 값을 가져온다 / set: 값을 설정한다)
+                // 현재 날짜(체크박스에 체크가 된 상태에서 버튼을 누르면 현재 시간이 기록)
+                var now = new Date();
+                console.log(now);
+                // 오늘 날짜
+                var date = now.getDate();
+
+                // 일 변경하기(오늘 날짜 + 1, 오늘은 그만 보기 기능을 구현하기 위함)
+                now.setDate(date+1);
+
+                // 쿠키 기록 (변수=상수; 저장위치; 소멸날짜(현재 시스템의 날짜를 기준으로 파악))
+                document.cookie = "popup=yes;path=/;expires="+now;
+            }
+            window.close(); // self.close(); 와 동일하게 기능
+        }
+    </script>
 </head>
 <body>
     <img src="../img/shiba_dog.webp" alt="dog meme" width="100%"/>
+    <div>
+        <input type="checkbox" name="chk" id="chk"/>오늘은 그만 보기
+        <input type="button" value="Close" id="closeOk" onclick="chkState()"/>
+    </div>
 </body>
 </html>
