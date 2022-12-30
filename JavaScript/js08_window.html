@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window 내장객체</title>
+    <script>
+        // 알림창 함수 생성하기 (함수는 document.write(); 처럼 바로 실행되지는 않는다. 함수를 호출함으로써 비로소 실행이 된다.)
+        function windowOpen() {
+            alert('클릭하였습니다.');
+        }
+
+        // 팝업창 열기 객체를 저장할 변수 (팝업창을 관리하기 위해 팝업창의 정보를 저장할 저장소)
+        var popup;
+
+        // 팝업창 열기(함수 생성)
+        function popupOpen() {
+            // window 내장객체의 open() 메서드를 이용하여 새창을 띄울 수 있다.
+            // 1. 팝업창에 표시할 컨텐츠가 있는 파일명
+            // 2. 창이름 (창 이름을 지정하면 동일한 창을 1개만 열리도록 설정하여 여러 개의 팝업창이 뜨는 것을 막을 수 있다.)
+            // 3. 옵션(width, height, left, top)
+            popup = window.open("popup.html","pop","width=300px, height=400px, left=300px, top=200px");
+        }
+
+        // 팝업창 닫기(함수 생성), 현재창 닫기
+        function popupClose() {
+            popup.close(); // popup 변수에 있는 window가 닫힌다.
+            window.close(); // 현재창을 닫는다.
+            self.close(); // 현재창을 닫는다.
+        }
+
+        // 창 이동하기(함수 생성) - 서버에서 작동 필요(매번 Go Live 누르기)
+        function windowMove() {
+            // 1. moveTo(x, y); : 현재 위치와 상관없이 절대좌표로 이동한다.
+            // 2. moveBy(x, y); : 현재 위치에 따른 상대좌표로 이동한다.
+            // popup.moveTo(500, 400);
+            popup.moveBy(10,10);
+        }
+
+        // 창 크기 조정 하기(함수 생성) - 서버에서 작동 필요(매번 Go Live 누르기)
+        function windowSize() {
+            // 1. resizeTo(w, h); : 현재 크기와 상관 없이 절대크기로 설정한다.
+            // 2. resizeBy(w, h); : 현재 크기에 따라 상대크기로 설정한다.
+            // popup.resizeTo(600, 500);
+            popup.resizeBy(10, 10);
+        }
+
+        // 현재 윈도우의 정보 구하기(함수 생성)
+        function winInfo() {
+            var infoTxt = "";
+            // 좌표 구하기
+            infoTxt += "<li>x좌표=" + window.screenX + "</li>";
+            infoTxt += "<li>y좌표=" + window.screenY + "</li>";
+
+            // 윈도우의 폭과 높이
+            // 창전체의 폭과 높이(경계선+메뉴+툴바)
+            infoTxt += "<li>창 폭=" + window.outerWidth + "</li>";
+            infoTxt += "<li>창 높이=" + window.outerHeight + "</li>";
+            
+            // 컨텐츠의 폭과 높이(경계선, 메뉴, 툴바 등을 제외)
+            infoTxt += "<li>컨텐츠 폭=" + window.innerWidth + "</li>";
+            infoTxt += "<li>컨텐츠 높이=" + window.innerHeight + "</li>";
+
+            // screen의 해상도 구하기
+            // 작업표시줄을 포함한 폭과 높이
+            infoTxt += "<li>screen 폭=" + screen.width + "</li>";
+            infoTxt += "<li>screen 높이=" + screen.height + "</li>";
+
+            // 작업표시줄을 제외한 폭과 높이 -> 사용자의 화면에 맞는 서비스 제공 가능
+            infoTxt += "<li>screenAvail 폭=" + screen.availWidth + "</li>";
+            infoTxt += "<li>screenAvail 높이=" + screen.availHeight + "</li>";
+
+            document.querySelector("#winInfo").innerHTML = infoTxt; // document.getElementById("winInfo")와 동일하다 (getElementById는 id값만 가져올 수 있다는 차이가 있다.)
+        }
+    </script>
+</head>
+<!--body태그 내부 onload : 현재 페이지가 실행이 완료되면 onload이벤트가 발생한다.-->
+<!--body태그 내부 popupOpen :현재 페이지가 실행이 완료되면 popupOpen이벤트가 발생한다.-->
+<body onload="winInfo(); popupOpen();">
+    <!--알림창 열기 / 버튼은 click이라는 이벤트가 발생한다. 두 번 실행도 가능하다..-->
+    <input type="button" value="알림창 열기" onclick="alert('클릭하였습니다.'); alert('click')"/> 
+
+    <!--알림창 열기(함수호출) / script 태그 내부에 있는 함수()를 호출하여서도 이벤트를 발생시킬 수 있다.-->
+    <input type="button" value="알림창 열기" onclick="windowOpen()"/>
+
+    <!--팝업창 열기/닫기(함수호출)-->
+    <input type="button" value="팝업창 열기" onclick="popupOpen()"/>
+    <input type="button" value="팝업창 닫기" onclick="popupClose()"/>
+
+    <!--창 이동(함수호출)-->
+    <input type="button" value="윈도우 이동하기" onclick="windowMove()"/>
+
+    <!--크기 조정(함수호출)-->
+    <input type="button" value="윈도우 크기 조정하기" onclick="windowSize()"/>
+
+    <!--윈도우 정보 구하기(함수호출)-->
+    <ol id="winInfo"></ol>
+
+    <!--
+        팝업창 오늘 그만보기, 일주일 그만보기, 이제 그만보기 기능 저장 방법
+        1. DB서버 : session 
+        2. 클라이언트 cookie : document를 이용하여 클라이언트 컴퓨터에 기록 
+    -->
+</body>
+</html>

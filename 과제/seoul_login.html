@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울시 통합회원 로그인</title>
+</head>
+<style>
+    input::placeholder {
+        color: black;
+        font-weight: 600;
+    }
+    .제목 {
+        text-align: center;
+        margin: 35px;
+    }
+    .본문 {
+        text-align: center;
+        color: grey;
+        margin: 30px;
+    }
+    .아이디, .비밀번호, .로그인 {
+        text-align: center;
+    }
+    .아이디 input, .비밀번호 input {
+        border: 2px solid;
+        width: 500px;
+        height: 35px;
+        margin: 5px;
+        padding: 10px;
+        padding-left: 15px;
+        font-size: 13px;
+    }
+    .로그인 input {
+        width: 530px;
+        height: 55px;
+        margin: 15px;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        background-color: #0C82E9;
+        border: 0cm;
+    }
+    span {
+        margin: 40px;
+    }
+    .아이디찾기 a {
+        margin-left: 370px;
+    }
+    a {
+        text-decoration: none;
+    }
+</style>
+<body>
+    <form method="post" action="test.jsp">
+        <div class="제목">
+            <div style="font-size: 35px" style="font-weight: 700;">서울시 통합회원 로그인</div>
+        </div>
+        
+        <div class="본문">
+            서울특별시 누리집을 방문해주셔서 감사합니다.<br/>
+            로그인하시면 보다 편리하게 서비스 이용이 가능합니다.
+        </div>
+        
+        <div class="아이디">
+        <input type="text" name="userId" size="80px" placeholder="아이디(5~15자의 영문, 숫자만 가능)"/>
+        </div>
+        
+        <div class="비밀번호">
+            <input type="password" name="userPwd" size="80px" placeholder="비밀번호">
+        </div>
+
+        <div class="로그인">
+            <input type="submit" value="로그인"/>
+        </div>
+
+        <span class="아이디찾기">
+            <a href="">아이디 찾기</a>
+        </span>
+
+        <span class="비밀번호찾기">
+            <a href="">비밀번호 찾기</a>
+
+        </span>
+
+        <span class="회원가입">
+            <a href="">회원가입</a>
+        </span>
+    </form>
+</body>
+</html>
