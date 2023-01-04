@@ -63,6 +63,9 @@ public class Operator {
 		System.out.println("~a=" + ~a);
 		System.out.println("~b=" + ~b);
 		
+		// ~a = -11
+		// ~b = -4
+		
 		// shift 연산자 : 비트를 왼쪽 또는 오른쪽으로 이동하며 연산하기(<<, >>, >>>)
 		// << : 왼쪽으로 이동
 		// >> : 오른쪽으로 이동, 빈 칸은 원래 부호로 채워짐
@@ -71,14 +74,14 @@ public class Operator {
 		// int a = 10; , int b = 3;
 		
 		int r4 = a << 3;
-		System.out.println("r5=" + r4); // 10 * 2^3
+		System.out.println("r4=" + r4); // 10 * 2^3
 		/*
 			a 	   : 0 0 0 0 1 0 1 0
 			a << 3 : 0 1 0 1 0 0 0 0 
 		*/
 		
 		int r5 = a >> 3;
-		System.out.println("r6=" + r5);
+		System.out.println("r5=" + r5);
 		/*
 			a 	   : 0 0 0 0 1 0 1 0
 			a >> 3 : 0 0 0 0 0 0 0 1 / 넘어가버린 0 1 0 은 절삭
@@ -91,9 +94,10 @@ public class Operator {
 		System.out.println("r7=" + r7);
 		
 		/*
-			~b       : 
-			~b >> 3  :
-			~b >>> 3 :
+		 	b        : 0 0 0 0 0 0 1 1
+			~b       : 1 1 1 1 1 1 0 0 : -4
+			~b >> 3  : 1 1 1 1 1 1 1 1 : -1
+			~b >>> 3 : 536870911 (8비트 초과)
 		*/
 	}
 
