@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
-public class MoneyCount2 {
+public class Ex09MoneyCount2 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-
+		// 배열 이용 X 방법
 		System.out.print("금액을 입력하세요 : ");
 		int price = scan.nextInt();
 		int m1 = (price / 50000);
