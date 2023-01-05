@@ -49,7 +49,7 @@ public class Variable {
 		
 		// 1. char + int = int
 		// c1은 char타입이고 1은 int타입인데, char과 int 중에서는 int 더 크므로 이를 계산하면 int 타입인데, 이를 c1이라는 char에 넣으려고 하여 오류가 발생하였다.
-		c1 = (char)(c1 + 1); 
+		c1 = (char)(c1 + 1); // 따라서 강제로 형변환을 해주었다.
 		
 		// 2. int + double = double
 		// int result = data3 + n1; -> 오류 발생

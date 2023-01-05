@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex08Array {
+public class Ex07Array {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
@@ -18,8 +18,12 @@ public class Ex08Array {
 		}
 		
 		// 총점
+		for (int i=0; i<score.length-2; i++) {
+			score[score.length-2] += score[i];
+		}
 		
 		// 평균
+		score[score.length-1] = score[score.length-2] / msg.length;
 		
 		for(int d : score) {
 			System.out.println(d);
