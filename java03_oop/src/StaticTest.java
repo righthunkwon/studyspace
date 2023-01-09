@@ -9,6 +9,7 @@ public class StaticTest {
 	// 객체를 여러 개 만들더라도 static 변수는 한 개만 존재한다. (싱글톤)
 	// static에서는 static 변수만 사용 가능하다. 
 	
+	// 멤버변수들은 접근 제한자가 생략되었는데, 이 때는 default가 생략된 것이다.
 	int num = 10;
 	String name = "권정훈";
 	static String Local = "강남구";

@@ -20,7 +20,13 @@ public class ClassTest01Main {
 	// 		: 반환형이 없다.
 	//		: 생성자 메소드는 여러 개 만들 수 있다. 단, 매개변수의 갯수나 데이터형이 달라야 한다.
 	//		: 생성자 메소드를 만들지 않을 경우 컴퍼일러가 매개변수 없는 생성자를 자동으로 클래스에 넣어준다.
-	// 		: 객체 생성시 한 번 실행됨. new 생성자(). 객체의 초기값을 설정할 때 사용한다.
+	// 		: 객체 생성시(new) 한 번 실행됨. new 생성자(). 주로, 객체의 초기값을 설정할 때 사용한다.
+	
+	static {
+		// 멤버영역에서 실행문을 구현할 때 static {} 을 이용하여 기술할 수 있다.
+		// 클래스 내에서 가장 먼저 실행된다(당연히 생성자 메서드보다 먼저 실행된다.)
+		System.out.println("멤버 영역에서 실행");
+	}
 	
 	public ClassTest01Main() {
 		System.out.println("ClassTest01() 생성자 메소드 실행");
@@ -57,9 +63,10 @@ public class ClassTest01Main {
 	public String method2(int a, int b) {
 		int c = a + b;
 		return "c="+c;
-		// 위 method1의 a,b,c는 void이므로 메소드 실행 이후에는 사라지기에 3333이 게산된다.
+		// 위 method1의 a,b,c는 void이므로 메소드 실행 이후에는 사라지기에 3333이 계산된다.
 	}
 	public String getMyName() {
+		method2(11, 25);
 		return myName;
 		}
 	
