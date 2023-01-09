@@ -84,6 +84,7 @@ public class TvTest {
 	public void setOnOff() {
 		power = !power;
 		if(!power) {
+			System.out.println("TV를 끕니다.");
 			System.exit(0); // 프로그램을 종료시키는 API, 0: 정상종료
 		}
 	}

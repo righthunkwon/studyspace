@@ -6,9 +6,10 @@ public class TvProgram {
 	// 메뉴
 	public void startMenu() {
 		TvTest tv = TvTest.getInstance();
+		System.out.println("TV를 켭니다.");
 		do {
 			tv.tvInfor();
-			System.out.println("메뉴 선택(1:볼륨업, 2:볼륨다운, 3:채널업, 4:채널다운, 5:전원)");
+			System.out.print("메뉴 선택(1:볼륨업, 2:볼륨다운, 3:채널업, 4:채널다운, 5:전원) = ");
 			int menu = scan.nextInt();
 			switch(menu) {
 			case 1: tv.volumeUp(); break; // 볼륨업
@@ -23,7 +24,8 @@ public class TvProgram {
 	
 // -------------------- 다른 클래스라 생각하고 작업-------------------- 
 	public static void main(String[] args) {
-		
+		TvProgram main = new TvProgram();
+		main.startMenu();
 	}
 
 }
