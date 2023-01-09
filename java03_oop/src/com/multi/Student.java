@@ -11,6 +11,8 @@ import java.lang.System;;
 			protected 	: 자식 클래스가 아닌 다른 패키지에 소속된 클래스에 접근 불가 (필드, 생성자, 메소드에 사용)
 			default 	: 같은 패키지 내애서만 허용 (클래스, 필드, 생성자, 메소드에 사용)
 			private 	: 모든 외부 클래스에서 접근 불가 (필드, 생성자, 메소드에 사용)
+			
+			접근제한자가 무엇이든 같은 클래스 내부에 있다면 모두 사용할 수 있다.
 	*/
 
 public class Student { // 클래스, 만약에 접근제한자 public을 생략할 경우 기본값인 default로 설정되어 다른 패키지에 소속된 클래스인 ModifierTest01은 Student 클래스를 사용할 수 없다.
