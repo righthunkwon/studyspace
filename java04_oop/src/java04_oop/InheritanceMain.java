@@ -3,7 +3,7 @@ package java04_oop;
 public class InheritanceMain {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		CCC c = new CCC();
 		System.out.println(c.getData());
 		

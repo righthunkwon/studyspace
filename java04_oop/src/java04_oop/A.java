@@ -13,7 +13,6 @@ public class A {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		A t = new A();
 		System.out.println(t.test(25));
 
