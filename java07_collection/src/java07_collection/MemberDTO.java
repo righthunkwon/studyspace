@@ -14,7 +14,6 @@ public class MemberDTO {
 		
 			DTO 클래스(Data Transfer Object)	: setter 이용하여 데이터 변경 가능 
 			VO 클래스(Value Object)			: readonly 전용
-용
 	*/
 	
 	// 캡슐화 변수
