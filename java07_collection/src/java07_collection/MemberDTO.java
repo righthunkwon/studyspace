@@ -24,15 +24,23 @@ public class MemberDTO {
 	private String tel; // 번호는 문자열로 저장한다.
 	private String email;
 	
-	
+	// 생성자 메서드(매개변수 X)
 	public MemberDTO() {
 	}
-	
+	// 일반 메서드 1(임의로 생성한 메서드, 매개변수 O)
 	public MemberDTO(String userId, String userName, String tel) {
 		this.userId = userId;
 		this.userName = userName;
 		this.tel = tel;
 	}
+	// 일반 메서드 2(임의로 생성한 메서드, 매개변수 O)
+	public MemberDTO(String userId, String userName, String tel, String email) {
+		this.userId = userId;
+		this.userName = userName;
+		this.tel = tel;
+		this.email = email;
+	}
+	
 	
 	// getter와 setter는 마우스 우클릭 - source - Generate Getter and Setter를 이용하면 한 번에 만들 수 있다.
 	// 추가적으로 Generate toString 등 다양한 기능을 활용할 수 있다.
