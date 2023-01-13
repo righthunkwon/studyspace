@@ -147,6 +147,13 @@ public class StringTest {
 		String r14 = String.valueOf(c);
 		System.out.println("r14="+r14);
 	
+		
+		// 문자열의 크기비교 : StringA.compareTo(StringB) -> StringB - StringA -> 결과가 양수면 왼쪽(A)가 크고, 결과가 음수면 오른쪽(B)가 크다.
+		String str4 = "Oracle"; // O : 79(아스키코드)
+		String str5 = "oracle"; // o : 111
+		
+		int result = str4.compareTo(str5); // 순서는 왼쪽 - 오른쪽 (str5 - str4)
+		System.out.println("str4와 str5의 비교 : "+result); // -32
 	}	
 
 }
