@@ -24,11 +24,3 @@ public class InputStreamReaderTest2 {
 	}
 
 }
-	
-	/*
-			InputStream()		  : 1byte
-			InputStreamReader()	  : 1문자(유니코드)
-			BufferedReader()	  : Reader(한 줄 단위, enter 기준, readLine() : 한 줄을 문자열로 받아서 리턴)
-			
-			BufferedReader를 만들기 위해서는 InputStreamReader가 필요하고, InputStreamReader를 만들기 위해서는 InputStream가 필요하다.
-	*/

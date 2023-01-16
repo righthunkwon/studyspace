@@ -13,7 +13,15 @@ public class InputStreamTest {
 				  자바에는 이러한 기능을 수행하기 위해 InputStream와 OutputStream이 존재하며 단일 방향으로 연속적으로 흘러갑니다.
   				  InputStream과 OutputStream은 추상 클래스이며 추상 메소드를 오버라이딩해서 다양한 역할을 수행할 수 있습니다. (예 : 파일, 네트워크, 메모리 입출력)
   				  자바에서 기본적으로 제공하는 I/O 기능은 java.io 패키지에서 제공됩니다. 
-				  InputStream은 외부에서 데이터를 읽는 역할을 수행하고, OutputStream은 외부로 데이터를 출력하는 역할을 수행합니다.       
+				  InputStream은 외부에서 데이터를 읽는 역할을 수행하고, OutputStream은 외부로 데이터를 출력하는 역할을 수행합니다.
+			
+				입출력 기준 분류
+					(1) 입력 스트림
+					(2) 출력 스트림
+					
+				데이터 기준 분류
+					(1) 바이트 기반 스트림	: 최상위 클래스 -> InputStream, OutputStream
+					(2) 문자 기반 스트림		: 최상위 클래스 -> Reader(입력), Writer(출력)
   				  
 
 			InputStream
