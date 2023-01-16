@@ -61,8 +61,6 @@ public class TreeMapTest {
 				 : HasSet, LinkedHashSet, TreeSet
 							
 			Map	 : 순서 유지 X, 키 중복 허용 X, 값 중복 허용 O, key와 value의 쌍으로 이루어진 데이터 집합, key와 value는 모두 객체
-				 :
-			
-			Que	 :
-			deque:
+				 : HashMap, HashTable, LinkedHashMap, Properties, TreeMap
+
 	*/
