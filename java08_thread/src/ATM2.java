@@ -69,7 +69,7 @@ public class ATM2 implements Runnable {
 		Thread mother = new Thread(atm, "mother");
 		Thread son = new Thread(atm, "son");
 		
-		son.setPriority(Thread.MAX_PRIORITY); // 우선순위 부여
+		son.setPriority(Thread.MAX_PRIORITY); // 우선순위 부여, 단 이는 먼저 실행된다는 게 아니라, 시스템이 busy할 때 우선순위가 높은 쓰레드에게 먼저 CPU를 할당해준다는 의미
 		mother.start();
 		son.start();
 	}
