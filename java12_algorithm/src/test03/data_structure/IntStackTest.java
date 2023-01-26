@@ -1,7 +1,6 @@
 package test03.data_structure;
 
 import java.util.Scanner;
-
 import test03.data_structure.IntStack.EmptyIntStackException;
 import test03.data_structure.IntStack.OverflowIntStackException;
 
@@ -15,7 +14,7 @@ public class IntStackTest {
 		
 		while(true) {
 			System.out.println("현재 데이터수: "+ stack.size() +  ", 스택의 크기: "+stack.capacity());
-			System.out.print("(1)PUSH (2)POP (3)PEEK (4)DUMP (5)SEARCH (6)EMPTY (7)스택정보표시 (0)종료 -->");
+			System.out.print("(1)PUSH (2)POP (3)PEEK (4)DUMP (5)SEARCH (6)EMPTY (7)REMOVE (8)스택정보표시 (0)종료 -->");
 			int menu = scan.nextInt();
 			
 			// 종료(0)
@@ -67,7 +66,17 @@ public class IntStackTest {
 			case 6: // EMPTY(6): 스택 비움
 				stack.empty();
 				break;
-			case 7: // 스택정보표시(7) : 용량, 데이터수, 스택의 상태
+			case 7: // REMOVE(7): 원하는 데이터 삭제
+				System.out.print("삭제할 값: ");
+				int delData = scan.nextInt();
+				boolean delResult = stack.remove(delData);
+				if(delResult) {
+					System.out.println(delData+"가 스택에서 삭제되었습니다.");
+				} else {
+					System.out.println(delData+"가 존재하지 않습니다.");
+				}
+				break;
+			case 8: // 스택정보표시(8) : 용량, 데이터수, 스택의 상태
 				System.out.println("용량: "+ stack.capacity());
 				System.out.println("현재 데이터 수: "+stack.size());
 				System.out.println("스택이 비어"+ (stack.isEmpty() ? "있습니다." : "있지 않습니다."));

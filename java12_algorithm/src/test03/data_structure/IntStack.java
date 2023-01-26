@@ -5,11 +5,14 @@ import java.lang.RuntimeException;
 	/*
 		스택(Stack)
 			: 데이터를 일시적으로 저장하기 위해 사용하는 자료구조
-			: "쌓다"라는 의미로, 데이터를 아래에서부터 순서대로 쌓음
-			: 가장 마지막에 삽입된 자료가 가장 먼저 삭제되는 구조(일회용 종이컵을 하나씩 꺼내서 사용하는 것)
+			: "쌓다"라는 의미로, 데이터를 아래에서부터 순서대로 쌓음(중복 가능)
+			: 가장 마지막에 삽입된 자료가 가장 먼저 삭제되는 구조
+			: 일회용 종이컵을 하나씩 꺼내서 사용하는 것
+			  (웹 브라우저 방문기록, 뒤로가기, 실행취소, 역순 문자열 만들기, 후위 표기법 계산)
 			: 즉, 데이터의 입력과 출력 순서는 후입선출(LIFO, Last in, First out)
 			: push(삽입), pop(삭제), peek(최상단의 값 확인), dump(스택 전체 데이터 출력),
-			  search(찾는 데이터의 위치 반환), 
+			  search(찾는 데이터의 위치 반환)
+			
 			
 	*/
 
@@ -66,6 +69,7 @@ public class IntStack {
 		return pointer<=0;
 	}
 	
+	// 스택의 상태(스택이 가득 차있는지 아닌지)
 	public boolean isFull() {
 		return pointer == max;
 	}
@@ -133,4 +137,27 @@ public class IntStack {
 	public void empty() {
 		pointer = 0;
 	}
+	
+	// REMOVE(원하는 데이터 삭제)
+	public boolean remove(int data) {
+		// 스택이 비어있을 때
+		if(isEmpty()) {
+			return false;
+		}
+		
+		// 스택은 비어있지 않지만 값이 스택에 없을 때
+		int idx;
+		if((idx = indexOf(data)) == -1) {
+			return false;
+		}
+		
+		// 값이 스택에 있을 때
+		pointer--;
+		for(int i=idx; i<pointer; i++) {
+			stack[i] = stack[i+1];
+		}
+		return true;
+	}
 }
+
+
