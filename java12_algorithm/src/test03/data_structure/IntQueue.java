@@ -8,8 +8,6 @@ package test03.data_structure;
 				: 카페에서 먼저 와서 주문한 손님이 음료를 먼저 받고 나가는 것
 				  (은행 업무, 대기열 순서와 같은 우선순위의 작업 예약, 서비스센터의 대기, 프로세스 관리 등)
 			
-				
-			
 	*/
 
 public class IntQueue {
