@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class DBConnection {
-	// DB 연결과 관련된 파일들은 해당 파일에 상속받아 사용했다.
+	// DB 연결과 관련된 파일들은 해당 파일에 상속받아 사용했다. 
 	
 	// 멤버변수
 	// protected로 선언하여 다른 패키지에서 접근할 때 상속하여서만 사용할 수 있게 만들었다.

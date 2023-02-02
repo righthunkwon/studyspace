@@ -26,7 +26,7 @@ public class SelectSearchTest {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 		} catch(Exception e) {
 			System.out.println("드라이버 로딩 예외...");
-		}
+		} 
 	}
 	
 	// 세 번째로 실행

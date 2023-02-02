@@ -17,7 +17,7 @@ public class UpdateTest extends DBConnection {
 			System.out.print("수정할 사원번호: ");
 			int empno = Integer.parseInt(scan.nextLine());
 			
-			System.out.print("담당업무: ");
+			System.out.print("담당업무: "); 
 			String job = scan.nextLine();
 			
 			System.out.print("급여: ");

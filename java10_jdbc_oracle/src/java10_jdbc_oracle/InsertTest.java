@@ -33,7 +33,7 @@ public class InsertTest extends DBConnection {
 		
 		System.out.print("보너스: ");
 		double comm = Double.parseDouble(scan.nextLine());
-		
+		 
 		System.out.print("부서코드: ");
 		int deptno = Integer.parseInt(scan.nextLine());
 		

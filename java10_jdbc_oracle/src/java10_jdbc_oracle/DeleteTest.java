@@ -5,7 +5,7 @@ public class DeleteTest extends DBConnection{
 	Scanner scan = new Scanner(System.in);
 
 	public DeleteTest() {
-		
+		 
 	}
 	
 	public void start() {

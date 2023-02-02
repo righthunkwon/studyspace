@@ -25,7 +25,7 @@ public class SelectTest {
 			conn = DriverManager.getConnection(url, "scott", "tiger"); // (DB주소, 아이디, 비밀번호)
 			// 3. SQL문 작성 후 Statement 생성
 			String sql = "select empno, ename, job, mgr, hiredate, sal, comm, deptno from emp "
-					+ "order by ename asc";
+					+ "order by ename asc"; 
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			// executeUpdate()	: insert, uptate, delete문 실행
