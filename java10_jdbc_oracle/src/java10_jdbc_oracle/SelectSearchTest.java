@@ -72,7 +72,7 @@ public class SelectSearchTest {
 	}
 	
 	public static void main(String[] args) {
-		SelectSearchTest sst = new SelectSearchTest();
+		new SelectSearchTest();
 	}
 
 }
