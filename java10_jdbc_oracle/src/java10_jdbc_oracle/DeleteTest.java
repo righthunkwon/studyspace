@@ -26,7 +26,7 @@ public class DeleteTest extends DBConnection{
 			}
 			// 삭제할 때는 필드명을 별도로 기술할 필요가 없다.
 		} catch (Exception e) {
-			e.printStackTrace();
+			e.printStackTrace(); 
 		} finally {
 			dbClose();
 		}
