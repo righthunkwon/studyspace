@@ -1,5 +1,6 @@
 package java10_jdbc_oracle;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -12,6 +13,7 @@ public class DBConnection {
 	// protected로 선언하여 다른 패키지에서 접근할 때 상속하여서만 사용할 수 있게 만들었다.
 	protected Connection conn = null;
 	protected PreparedStatement pstmt = null;
+	protected CallableStatement cstmt = null;
 	protected ResultSet rs = null;
 
 	String url = "jdbc:oracle:thin:@localhost:1521:xe";
@@ -51,6 +53,9 @@ public class DBConnection {
 			}
 			if(conn != null) {
 				conn.close();
+			}
+			if(cstmt != null) {
+				cstmt.close();
 			}
 		} catch (Exception e) {
 			System.out.println("DB 닫기 예외 발생...");
