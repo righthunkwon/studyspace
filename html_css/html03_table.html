@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>표 만들기</title>
+</head>
+<body>
+    <h1>표 만들기</h1>
+    <pre>
+        table태그 : 표의 시작
+        tr태그 : 줄 생성
+        td태그 : 칸 생성(내용)
+        th태그 : 요소 이름(보통 첫번째 줄, head로 강조, 가운데 정렬)
+    </pre>
+    <table border="1">
+        <caption><b>탕수육의 근본</b></caption>
+        <thead>
+            <tr>
+                <th>열 번호</th>
+                <th>제목</th>
+                <th>내용</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>첫 번째 줄</td>
+                <td>
+                    <ul>
+                        <li>부먹</li>
+                        <li>찍먹</li>
+                    </ul>
+                </td>
+                <td>
+                    어떤 방법이 정답일까요?
+                </td>
+            </tr>
+            <tr>
+                <td>두 번째 줄</td>
+                <td>탕수육의 요소</td>
+                <td>
+                    <ol>
+                        <li>고기</li>
+                        <li>튀김옷</li>
+                        <li>소스의 맛</li>
+                        <li>소스의 농도</li>
+                    </ol>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr/>
+    <pre>
+        표에서 행 수와 칸 수가 다를 때
+        colspan속성 : 행을 병합
+        rowspan속성 : 열을 병합
+    </pre>
+    <table border="1">
+        <caption><b>구역 병합하기</b></caption>
+        <tr>
+            <td>1111111111</td>
+            <td colspan="2">2222222222</td>
+        </tr>
+        <tr>
+            <td colspan="2">3333333333</td>
+            <td>4444444444</td>
+        </tr>
+        <tr>
+            <td>5555555555</td>
+            <td rowspan="2">6666666666</td>
+            <td>7777777777</td>
+        </tr>
+        <tr>
+            <td>8888888888</td>
+            <td>9999999999</td>
+        </tr>
+    </table>
+</body>
+</html>

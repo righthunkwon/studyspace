@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array sort (배열 정렬)</title>
+    <style>
+        div {
+            background-color: gray;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="arrayData1"></div>
+    <div id="arrayData2"></div>
+    <div id="asc1"></div>
+    <div id="asc2"></div>
+    <div id="desc1"></div>
+    <div id="desc2"></div>
+
+    <script>
+        var num = [25, 2, 79, 95, 41, 35, 29]
+        var str = ['orange','banana','tomato','apple','melon','peach','mango','watermelon']
+
+        // DOM(Document Object Model) 방식
+        document.getElementById("arrayData1").innerHTML = "<b>num : "+num+"</b>";
+        document.getElementById("arrayData2").innerHTML = "<i>str : "+str+"</i>";
+
+        // Ascending
+        // 숫자 데이터의 오름차순 정렬
+        num.sort(function(x,y){return x-y});
+        document.getElementById("asc1").innerHTML = "number ascending : "+num;
+
+        // 문자 데이터의 오름차순 정렬
+        str.sort();
+        document.getElementById("asc2").innerHTML = "string ascending : "+str;
+
+        // Descending 
+        // 숫자 데이터의 내림차순 정렬 : 연산순서를 바꿔준다.
+        num.sort(function(x,y){return y-x});
+        document.getElementById("desc1").innerHTML = "number descending : "+num;
+
+        // 문자 데이터의 내림차순 정렬 : 오름차순으로 정렬 후 뒤집기
+        // str.sort(); (이미 상단에 처리되어 있음)
+        str.reverse();
+        document.getElementById("desc2").innerHTML = "string descending : "+str;
+
+        // 지금까지 한 배열은 1차원 배열로, 2차원 배열은 행렬 형식이다.
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+	$(function() {
+		// $('div:first')
+		// eq(n) : n번째
+		// gt(n) : n번째 초과
+		$('div:eq(0)').css('border', '2px solid gray');
+		$('div:gt(0)').css('width', '300px').css('height', '300px')
+			.css('background-color', 'khaki');
+		$('div:eq(2)').css('position', 'absolute').css('left', '400px')
+			.css('top', '150px').css('margin', '50px').css('padding', '20px')
+			.css('right', '100px').css('background-color', 'lightblue');
+		
+		// 세 번째 div의 폭과 높이 구하기(단, 이때의 값은 border와 margin은 제외된 값이다)
+		var width = $("div:eq(2)").width();
+		var height = $("div:eq(2)").height();
+		
+		$("div:eq(2)").append("<br>width = "+ width + ", height = " + height);
+		
+		// 세 번째 div의 크기 변경
+		// innerWidth(), innerHeight() : padding을 포함한 폭과 높이를 구한다.
+		var innerWidth = $("div:eq(2)").innerWidth();
+		var innerHeight = $("div:eq(2)").innerHeight();
+		
+		$("div:eq(2)").append("<br>innerWidth = "+ innerWidth + ", innerHeight = " + innerHeight);
+	});
+	
+</script>
+
+</head>
+<body>
+	<div>수치 조작 메소드</div>
+	<div>12345</div>
+	<div>ABCDE</div>
+</body>
+</html>

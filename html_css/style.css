@@ -1,0 +1,8 @@
+p{
+    color: grey;
+    background-color: yellowgreen;
+}
+
+/*
+수업은 인라인 스타일, 내부 스타일 시트, 외부 스타일 시트(해당 파일) 중에서 주로 내부 스타일 시트로 진행될 것이다.
+*/

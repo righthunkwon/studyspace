@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background</title>
+    <style>
+        /*배경 스타일
+            background-color : 단색 배경 (컬러명, rgb코드(0~225 or 16진수 #00~#ff)) / #ffffff = 흰색, #000000 = 검은색
+            background-image : 그림 배경(컬러보다 우선)
+            background-repeat : 배경 이미지의 반복을 수평, 수직으로 하게 하거나 반복하지 않도록 설정할 수 있다.
+            background-position : (반복되지 않는) 배경 이미지의 위치 지정
+            background-attachment : 배경고정(fixed 고정, scroll 움직임)
+            background-size : 배경이미지의 폭과 높이 설정(px, %)
+                contain : 배경을 사용하는 요소를 벗어나지 않는 최대 크기로 이미지를 확대 또는 축소, 가로세로 비율 유지
+                cover : 배경을 사용하는 요소를 다 채울 수 있게 이미지를 확대 또는 축소, 가로세로 비율 유지
+        */
+        body {
+            /*
+            background-image: url(./img/01.jpg);
+            background-color: rgb(200, 600, 150);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-attachment: fixed;
+            */
+
+            /* 그룹화를 통해 코드를 단순화 할 수 있음(중복제거)*/
+            background: sandybrown url(../img/01.jpg) no-repeat fixed center;
+            background-size: 50%;
+        }
+        div {
+            width: 400px;
+            height: 300px;
+            border: 2px solid red;
+            background-image: url(../img/03.jpg);
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <h1>background 속성</h1>
+    <div>
+
+    </div>
+    <ul>
+        <li>치즈냥이</li>
+        <li>고등어냥이</li>
+        <li>깜냥이</li>
+        <li>흰냥이</li>
+        <li>냥선생님</li>
+        <li>개발자고양이</li>
+        <li>안경고양이</li>
+        <li>고오야앙이</li>
+        <li>치즈냥이</li>
+        <li>고등어냥이</li>
+        <li>깜냥이</li>
+        <li>흰냥이</li>
+        <li>냥선생님</li>
+        <li>개발자고양이</li>
+        <li>안경고양이</li>
+        <li>고오야앙이</li>
+        <li>치즈냥이</li>
+        <li>고등어냥이</li>
+        <li>깜냥이</li>
+        <li>흰냥이</li>
+        <li>냥선생님</li>
+        <li>개발자고양이</li>
+        <li>안경고양이</li>
+        <li>고오야앙이</li>
+        <li>치즈냥이</li>
+        <li>고등어냥이</li>
+        <li>깜냥이</li>
+        <li>흰냥이</li>
+        <li>냥선생님</li>
+        <li>개발자고양이</li>
+        <li>안경고양이</li>
+        <li>고오야앙이</li>
+        <li>치즈냥이</li>
+        <li>고등어냥이</li>
+        <li>깜냥이</li>
+        <li>흰냥이</li>
+        <li>냥선생님</li>
+        <li>개발자고양이</li>
+        <li>안경고양이</li>
+        <li>고오야앙이</li>
+        <li>치즈냥이</li>
+        <li>고등어냥이</li>
+        <li>깜냥이</li>
+        <li>흰냥이</li>
+        <li>냥선생님</li>
+        <li>개발자고양이</li>
+        <li>안경고양이</li>
+        <li>고오야앙이</li>
+    </ul>
+</body>
+</html>

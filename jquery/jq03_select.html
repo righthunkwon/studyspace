@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+	$(function() {
+		// (1) 전체선택자(*) (모든 태그 선택)
+		$('*').css('color', 'navy')
+		
+		// (2) 태그 선택자('태그명')(해당 태그 선택)
+		$('h1').css('font-size', '1.3em').append(' 선택자')
+		
+		// (3) 아이디 선택자(#)
+		$('#site>li.addr').css('background-color', 'yellow')
+
+		// (4) 클래스 선택자(.)
+		$('li.addr').css('text-decoration', 'underline')
+		
+		// (5) 자식 클래스 선택자(.)
+		$('li.sub').css('background-color', 'orange')
+		
+		// (6) 속성 선택자([속성=값])
+		// val() : 컴퍼넌트의 값을 처리(기존 값을 가져와 확인할 수도, 새로운 값을 넣어 세팅할 수도 있다.)
+		console.log($('input[type=text]').val()); // 기존 문자 확인
+		$('input[type=text]').val("바뀐 문자"); // 바뀐 문자로 변경
+		
+		// (7) 필터 선택자
+		// selected를 지정하지 않을 경우 가장 위의 값으로 설정(성별과 같은 요소에 활용)
+		var txt = $('#sex>option:selected').val(); 
+		console.log('txt =', txt);
+		
+		
+	});
+</script>
+</head>
+<body>
+<h1>Selector</h1>
+<ul id="site">
+	<li>Naver</li>
+	<li class="addr">Daum</li>
+	<li class="addr sub">Google</li>
+	<li>Nate</li>
+</ul>
+
+<div id="types">
+	<input type="text" value="기존 문자"/><br/>
+	<input type="password"/><br/>
+	<input type="radio"/><br/>
+	<input type="checkbox"/>
+	
+	<select id="sex">
+		<option>남</option>
+		<option>여</option>
+		<option selected>비공개</option>
+	</select>
+</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+	$(function() {
+		// (8) 위치선택자(:odd, :even, :first, :last)
+		$('.company>li:odd').css('background-color', 'yellow');
+		$('.company>li:even').css('background-color', 'orange');
+		$('.company>li:first').css('background-color', '#00CE5C');
+		$('.company>li:last').css('background-color', '#C00C3F');
+	});
+	
+	$(function() {
+		
+		// (9) 함수 형태의 필터선택자
+		// index는 0부터 시작한다.
+		
+		// eq(n) : n번째에 위치하는 문서 객체 선택
+		// lt(n) : n번째 미만에 위치하는 문서 객체 선택
+		// gt(n) : n번째 초과에 위치하는 문서 객체 선택
+		// slice(n) : n번째 이상에 위치하는 문서 객체 선택
+		// contains("문자열") : 특정 문자열을 포함하는 문서 객체를 선택
+		// has("태그명") : 해당 태그를 가지고 있는 문서 객체 선택
+		// not("선택자") : 선택자와 일치하지 않는 문서 객체 선택
+		$('.langs>li:eq(2)').css('color','red');
+		$('.langs>li:lt(2)').css('color','green');
+		$('.langs>li:gt(3)').css('color','blue');
+		$('.langs>li').slice(5).css('color', 'yellow');
+		$('.langs>li:contains("Script")').css('color', 'purple')
+		$('.langs>li:has("b")').css('text-decoration', 'underline')
+		$('.langs>li:not(:last)').css('background-color', 'lightgray')
+	});
+	
+	$(function() {
+		// nth-child(n) : n번째에 위치하는 문서 객체 선택
+		$("#test>li:nth-child(3n)").css('background-color', 'lightgray');
+		$("#test>li:nth-child(3n+1)").css('background-color', 'khaki');
+	});
+</script>
+
+</head>
+<body>
+	<ul class='company'>
+		<li>네이버</li>
+		<li>카카오</li>
+		<li>라인</li>
+		<li>쿠팡</li>
+		<li>배달의 민족</li>
+		<li>당근마켓</li>
+		<li>토스</li>
+		<li>다우기술</li>
+		<li>현대 IT&E</li>
+		<li>삼성 SDS</li>
+		<li>LG CNS</li>
+	</ul>
+	
+	<ul class='langs'>
+		<li><b>Java</b></li>
+		<li>html</li>
+		<li>CSS</li>
+		<li>JavaScript</li>
+		<li>JQuery</li>
+		<li><b>SQL</b></li>
+	</ul>
+	
+	<ul id="test">
+		<li>필터 선택자 :nth-child()</li>
+		<li>필터 선택자 :nth-child()</li>
+		<li>필터 선택자 :nth-child()</li>
+		<li>필터 선택자 :nth-child()</li>
+		<li>필터 선택자 :nth-child()</li>
+		<li>필터 선택자 :nth-child()</li>
+		<li>필터 선택자 :nth-child()</li>
+		<li>필터 선택자 :nth-child()</li>
+	</ul>
+</body>
+</html>

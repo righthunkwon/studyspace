@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookie를 이용한 팝업창 띄우기</title>
+    <script>
+        function popupOpen() {
+            // 쿠키 값 가져오기
+            var cookie = document.cookie;
+            console.log(cookie); // "popup=yes"
+
+            // 문자열 처리 메서드
+            console.log(cookie.length); // 9, cookie 안에 들어있는 글자 수
+            console.log(cookie.substring(2)); // pup=yes, 2번째 글자부터 잘라냄
+            console.log(cookie.indexOf("yes")); // 6, 해당 글자의 위치 index를 구해줌
+            console.log(cookie.indexOf("test")); // -1, 해당 글자가 없다면 -1을 출력
+
+            // 쿠키 정보를 확인하고 쿠키가 없으면 팝업창을 띄우기
+            if(cookie.indexOf("popup=yes") == -1) {
+                window.open("popup.html","p", "width=350px, height=400");
+            }
+        }
+    </script>
+</head>
+<body onload="popupOpen()">
+    <h1>cookie를 이용한 팝업창 띄우기</h1>
+</body>
+</html>
