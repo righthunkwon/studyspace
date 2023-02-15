@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<style>
+	.bgColor1{background-color:orange}
+	.bgColor2{background-color:lightblue}
+	.bgColor3{background-color:khaki}
+</style>
+<script>
+	$(function() {
+		// jQuery의 이벤트 처리방법 1
+		$('.test1').click(function() {
+			// 실행문
+			$('div').append("<br/>h1 태그가 클릭됨");
+			// this : 이벤트가 발생한 test1 클래스
+			$(this).toggleClass('bgColor1')
+		});
+		
+		// jQuery의 이벤트 처리방법 2
+		$('.test2').on('click', function() {
+			// 실행문
+			$('div').append("<br/>h1 태그가 클릭됨");
+			// this : 이벤트가 발생한 test2 클래스
+			$(this).toggleClass('bgColor2')
+		});
+		
+		// jQuery의 이벤트 처리방법 3
+		$('.test3').on({
+			mouseover:function(){$(this).css('background-color', 'pink')},
+			mouseout:function(){$(this).css('background-color', 'gray')}
+		});
+		
+		// jQuery의 이벤트 처리방법 4
+		// button 태그는 html()로, input 태그는 val()로 값을 변경할 수 있다.
+		$('button').click(function() {
+			$(this).html('click 이벤트 발생');
+		});
+		
+		$('button').focus(function() {
+			$(this).html('focus 이벤트 발생');
+		});
+	});
+</script>
+</head>
+<body>
+	<h1 class="test1">click 이벤트 처리 1</h1>
+	<h1 class="test2">click 이벤트 처리 2</h1>
+	<div>click 이벤트 처리 공간</div>
+	
+	<!-- mouseover, mouseout -->
+	<!-- mouseenter, mouseleave-->
+	<h1 class="test3">mouseover, mouseout 이벤트 처리</h1>
+	
+	<button>11111111</button>
+	<button>22222222</button>
+	<button>33333333</button>
+
+</body>
+</html>
