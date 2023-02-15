@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<!-- 
+	https://jqueryui.com/download/all/ 에서 jQuery UI JS and CSS files 다운로드
+	
+	jQuery 작업 시 필요한 파일
+	1. jquery 
+	2. jquery-ui.min.css
+	3. jquery-iu.min.js
+	
+ -->
+<link rel="stylesheet" href="jquery-ui.min.css" type="text/css"/>
+<script src="jquery-ui.min.js"></script>
+
+<style>
+	div{width:100px; height:100px; position:relative; border:2px solid gray;}
+	#d1{background-color:red;}
+	#d2{background-color:orange;}
+	#d3{background-color:yellow;}
+	#d4{background-color:green;}
+	#d5{background-color:blue;}
+</style>
+
+<script>
+	$(function() {
+		// animate
+		$("#d1").animate({left:800}, 2000);
+		$("#d2").animate({left:800, top:105}, 10000, 'easeOutExpo');
+		$("#d3").animate({left:800}, 10000, 'easeOutElastic');
+		$("#d4").delay(1000).animate({left:800}, 3500);
+		$("#d5").animate({left:800, opacity:0.7}, 2000);
+		$("#d1, #d2, #d3, #d4, #d5, #d6").mouseover(function() {
+			$(this).stop();
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="d1"></div>
+	<div id="d2"></div>
+	<div id="d3"></div>
+	<div id="d4"></div>
+	<div id="d5"></div>
+</body>
+</html>
+

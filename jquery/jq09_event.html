@@ -7,7 +7,6 @@
 <style>
 	.bgColor1{background-color:orange}
 	.bgColor2{background-color:lightblue}
-	.bgColor3{background-color:khaki}
 </style>
 <script>
 	$(function() {
@@ -42,7 +41,24 @@
 		$('button').focus(function() {
 			$(this).html('focus 이벤트 발생');
 		});
+		
+		// jQuery의 이벤트 처리방법 5 (이벤트 종류, 선택자, 이벤트 발생 시 실행할 함수() {})
+		$(document).on('click', 'h1.test4', function() {
+			$(this).css('color', 'red');
+		});
+		
+		// jQuery의 이벤트 처리방법 6
+		document.getElementById('test5').addEventListener('click', function() {
+			$(this).css('color', 'blue');
+		});
+		
+		// jQuery의 이벤트 처리방법 7 & 기본 이벤트 해제
+		$("a[href $='naver.com'").on('click', function() {
+			event.preventDefault(); // 기본 이벤트 해제(a태그의 기능 해제)
+			$(this).css('background-color', '#04CE5C')
+		})
 	});
+	
 </script>
 </head>
 <body>
@@ -52,11 +68,15 @@
 	
 	<!-- mouseover, mouseout -->
 	<!-- mouseenter, mouseleave-->
-	<h1 class="test3">mouseover, mouseout 이벤트 처리</h1>
+	<h1 class="test3">mouseover, mouseout 이벤트 처리 3</h1>
 	
 	<button>11111111</button>
 	<button>22222222</button>
 	<button>33333333</button>
-
+	
+	<h1 class="test4">click 이벤트 처리 4</h1>
+	<h1 id="test5">click 이벤트 처리 5</h1>
+	
+	<a href="https://www.naver.com">네이버 실행</a>
 </body>
 </html>
