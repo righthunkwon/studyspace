@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 
+	https://cloud.google.com/maps-platform/ 
+ -->
+<!--
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=구글API키&callback=initMap"></script> -->
+<style>
+	#gMap{height:600px; border:2px solid gray;}
+</style>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=키 입력&callback=initMap"></script>
+</head>
+<body>
+	<div id="gMap"></div>
+	<script>
+		// 상단에 key를 별도로 기술하지 않으면 작동하지 않음! (혹시 모를 보안 때문에 제거)
+		// 지도에 표시할 위도와 경도
+		var latitude = 37.5716300;
+		var longitude = 126.9767577;
+	
+		function initMap() {
+			// 지도의 가운데를 지정(LatLng)
+			var myCenter = new google.maps.LatLng(latitude, longitude);
+			
+			// 지도에 사용한 옵션
+			var mapProperty = {
+				center : myCenter,
+				zoom : 14, // 확대 정도(0~21, 클수록 확대)
+				mapTypeId : google.maps.MapTypeId.ROADMAP // 지도의 종류(ROADMAP, HYBRID, SATELLITE, TERRAIN)	
+			}
+			
+			// 맵 생성(지도 객체)
+			var map = new google.maps.Map(document.getElementById('gMap'), mapProperty);
+			
+			// 마커 표시
+			var marker = new google.maps.Marker({
+				position: myCenter, // position: 마커를 표시할 위치
+				map:map, // map: 사용할 지도
+				icon:'gmap_pin.png', // icon: 마커로 사용할 이미지
+				title:'기준 위치'// title: 마커에 표시되는 풍선 도움말
+			});
+			marker.setMap(map);
+			
+			// 마커 클릭 시 대화상자 표시(이벤트 처리)
+			var information = "위도 : " + latitude
+				information += "<br/>경도 : " + longitude
+				information += "<br/><a href='https://gwanghwamun.seoul.go.kr/main.do' target='_blank'><img src='../img/02.jpg' width='80' height='50'/></a>";
+			var infor = new google.maps.InfoWindow({content: information});
+			
+			// 마커 클릭 시 대화상자 팝업(이벤트 처리)
+			google.maps.event.addListener(marker, 'click', function(){infor.open(map, marker)});
+			
+			// 마커를 기준으로 반경 표시
+			var myCity = new google.maps.Circle({
+				center: myCenter, // center: 원의 중심 위치
+				radius: 500, // radius: n (m가 기준)
+				strokeColor: '#282A2D', // strokeColor : 선의 색상
+				strokeOpacity: 0.4, // strokeOpacity: 투명도
+				strokeWidth: 2, // strokeWidth: 선의 두께(px)
+				fillColor : '#06CE5C', // fillColor: 배경색
+				fillOpacity: 0.2 // 배경의 투명도
+			});
+			myCity.setMap(map);
+		}
+	</script>
+</body>
+</html>

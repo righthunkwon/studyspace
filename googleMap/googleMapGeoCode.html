@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#roadView{width:100%; height:800px; border:2px soid gray;}
+	#search{position:absolute; top:50px; left:45%;}
+	#searchList{position:absolute; width:250px; height:600px; top:120px; left:30px; 
+				background:gray; opacity:0.6; border:2px soid gray; overflow:scroll;}
+	.c{background:white; margin:5px; font-size:0.8em; font-weight:bold; color:black;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=구글 키&callback=initMap"></script>
+</head>
+<body>
+	<div id="gMap">
+	
+		<div id="roadView">
+			
+		</div>
+	
+		<div id="search">
+			<input type="text" id="address" value="광화문 광장"/>
+			<input type="button" id="geoSubmit" value='geoCode' onclick="geocodeAddress()"/>
+		</div>
+	
+		<div id="searchList">
+		
+		</div>
+	</div>
+	
+	<script>
+	// 상단에 key를 별도로 기술하지 않으면 작동하지 않음! (혹시 모를 보안 때문에 제거)
+	
+	// (1) 기본 map 세팅
+	var latitude = 37.5716300;
+	var longitude = 126.9767577;
+	var map;
+	var geoCoder;
+	
+	function initMap() {
+		var myCenter = new google.maps.LatLng(latitude, longitude);
+		var option = {
+				center: myCenter,
+				zoom: 14,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+		}
+		map = new google.maps.Map(document.getElementById('roadView'), option);
+		
+		// geoCoder 객체
+		geoCoder = new google.maps.Geocoder();
+	}
+	
+	// (2) geoCode 클릭 시	
+	function geocodeAddress() {
+		var addr = document.getElementById("address").value;
+		if(addr=='') {
+			alert('지역명 또는 건물명을 입력하세요.');
+		} else {
+			searchAddress(addr);	
+		}
+	}
+	
+	// (3) geoCode로 입력받은 검색어로 지도 정보 표시하기
+	function searchAddress(addr) {
+		// 전달받은 검색어를 이용하여 주소 정보 찾기
+		geoCoder.geocode({'address':addr}, // 검색어 
+			function(results, status) { // results: 지도를 찾은 정보, status: 성공(OK) 여부
+				// 결과를 콘솔창에서 확인
+				console.log(status, results);
+				if(status == 'OK') { // 주소 검색 성공
+					// 검색한 주소로 이동할 지도의 좌표
+					var la = results[0]['geometry']['location']['lat'](); // 위도
+					var lng = results[0]['geometry']['location']['lng'](); // 경도
+					var searchAddr = results[0]['formatted_address']; // 주소 구하기
+/* 					var searchAddr = results[0].address_components[3].long_name; // 주소 구하기
+						searchAddr += " " + results[0].address_components[2].long_name;
+						searchAddr += " " + results[0].address_components[1].long_name;
+						searchAddr += " " + results[0].address_components[0].long_name; */
+					
+					// 지도의 중심 위치 변경(이동)
+					map.setCenter(results[0].geometry.location);
+					
+					// 마커 만들기
+					var marker = new google.maps.Marker({
+						map:map,
+						icon:'gmap_pin.png',
+						title: searchAddr,
+						position: results[0]['geometry']['location']
+					});
+					
+					// 지도 정보
+					var mapInfo = "<div class='c'>위도 : " + la;
+					mapInfo += "<br/>경도 : " + lng;
+					mapInfo += "<br/>주소 : " + searchAddr + "</div>";
+					
+					document.getElementById('searchList').innerHTML = document.getElementById('searchList').innerHTML + mapInfo;
+					
+					// 마커 클릭 시 대화상자 출력
+					var popWin = new google.maps.InfoWindow({content:mapInfo});
+					
+					// 마우스 오버와 아웃 이벤트 처리
+					google.maps.event.addListener(marker, 'mouseover', function(){popWin.open(map, marker)});
+					google.maps.event.addListener(marker, 'mouseout', function(){popWin.close(map, popWin)});
+					
+					
+				} else { // 주소 검색 실패
+					alert("존재하지 않는 주소입니다.")
+				}		
+			}
+		);
+	}
+	
+	</script>
+</body>
+</html>

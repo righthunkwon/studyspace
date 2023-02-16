@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	img{width:30%;}
+	ul, li{margin:0; padding:0; list-style-type:none;}
+</style>
+<!-- 
+	https://gist.github.com/coolniikou/665255
+	
+	1. jquery.js
+	2. innerfade.js
+ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="jquery.innerfade.js"></script>
+<script>
+	$(function() {
+		$("#innerImg").innerfade({
+			// animationtype: fade(기본값), slide
+			animationtype:'fade',
+			
+			// speed(내용물의 변경 속도): slow, fast, normal, ms(밀리초)
+			speed:2000,
+			
+			// timeout(변경 효과가 적용되는 속도): slow, fast, normal, ms(밀리초)
+			timeout:5000,
+			
+			// type(내용물의 변경 방식): sequence(기본값), random, random_start
+			type:'random'
+		});
+	});
+</script>
+</head>
+<body>
+	<ul id="innerImg">
+		<li><a href="https://www.naver.com"><img src="/webApp/img/01.jpg"/></a></li>
+		<li><a href="https://www.naver.com"><img src="/webApp/img/02.jpg"/></a></li>
+		<li><a href="https://www.naver.com"><img src="/webApp/img/03.jpg"/></a></li>
+		<li><a href="https://www.naver.com"><img src="/webApp/img/04.jpg"/></a></li>
+		<li><a href="https://www.naver.com"><img src="/webApp/img/05.jpg"/></a></li>
+		<li><a href="https://www.naver.com"><img src="/webApp/img/06.jpg"/></a></li>
+	</ul>
+</body>
+</html>
