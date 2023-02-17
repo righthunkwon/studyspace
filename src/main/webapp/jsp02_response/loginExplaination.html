@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 태그</title>
+</head>
+<body>
+    <h1>폼 양식 만들기</h1>
+    <pre>
+        <!--
+        	form에서 사용하는 여러 속성
+        		method : 
+        			- get(기본값, 내용 길이 제한 O, 주소표시줄에 입력 내용 드러남)
+        			- post(내용 길이 제한 X, 입력 내용 안 드러남)
+		-->
+        <!--
+	        input 태그의 type 속성값
+		        text : 한 줄짜리 텍스트(로그인 id 입력, 글 제목 입력 등)
+		        password : 비밀번호 입력 필드
+		        email : 이메일 입력 필드
+		        radio : 주어진 여러 요소 중 하나 선택하는 버튼(태그 밖에 라벨 표시)
+		        checkbox : 주어진 여러 요소 중 두 개 이상 선택할 수 있는 버튼(태그 밖에 라벨 표시)
+		        checked : checkbox, radio에서 기본 선택 상태를 설정한다.
+		        button : 일반 버튼
+		        submit : 전송 버튼(폼 -> 서버)
+		        image : submit 버튼 대신에 이미지 삽입 가능
+        -->
+        <!--
+        	input 태그의 기타 속성
+		        name : form 컨트롤 요소의 값을 서버로 전송하기 위해 필요한 속성
+		        value : 기본 입력값 설정(아이디 저장)
+		        size : 입력 상자 크기(문자 수)
+		        maxlength : 최대 문자 수
+		        readonly : 읽기전용, 값이 들어가지 않음
+		        disabled : 비활성화
+        -->
+    </pre>
+    
+    <form method="post" action="test.jsp">
+        아이디 : <input type="text" name="userId" maxlength="10" value="네이버 취업" placeholder="아이디입력"/> <br/>
+        비밀번호 : <input type="password" name="userPwd" placeholder="비밀번호입력"/> <br/>
+        이메일 : <input type="email" name="email" value=""/>
+        성별 : 
+        <input type="radio" name="gender" value="M"/> 남 
+        <input type="radio" name="gender" value="F"/> 여 
+        <!--name을 다르게 할 경우 두 개가 다른 범주화가 되어서 중복해서 선택가능하다는 문제가 발생하므로 value로 요소를 구분. 이 경우 M이나 F가 서버로 넘어간다.--> <br/>
+        취미 : 
+        <input type="checkbox" name="hobby" value="게임"/> 게임 
+        <input type="checkbox" name="hobby" value="운동"/> 운동 
+        <input type="checkbox" name="hobby" value="여행"/> 여행 
+        <input type="checkbox" name="hobby" value="그림"/> 그림 
+        <input type="checkbox" name="hobby" value="유튜브 시청" checked/> 유튜브 시청 <br/>
+        여러 줄의 문자열을 입력 수 있는 태그 : <textarea name="memo" id="" cols="30" rows="10">값이 입력되는 곳</textarea> <br/>
+        관심분야 : 
+        <select name="interest" size="4" multiple>
+            <option value="">==분야를 선택하세요==</option> <!--value는 생략 가능, 생략 시 option 사이의 텍스트가 서버로 전송된다-->
+            <option value="" selected>IT</option>
+            <option value="">여행</option>
+            <option value="">음식</option>
+            <option value="">운동</option>
+            <option value="">문학</option>
+            <option value="">영화</option>
+        </select> <br/>
+        파일첨부 : <input type="file" name="filename"/> <br/>
+        숨김데이터 : <input type="hidden" name="nickname" value="ggm"/> <br/>
+
+        <!--서버로 정보가 전송되도록 설정-->
+        <input type="submit" value="전송하기"/> <!--submit은 form 태그 내에 위치-->
+        <input type="button" value="전송하기"/> <!--submit의 기능을 수행하지 않는다-->
+        <button>전송하기</button> <!--submit의 기능-->
+        <input type="reset" value="다시쓰기"/>
+        <input type="image" src="../img/naver_logo.png"> <!--submit의 기능--> <br/>
+
+        <!--
+        <button></button> === <button type="submit"></button>
+        Q. button에 type="button" 을 지정해주는 이유?
+        A. 그게 디폴트가 아니니까요!
+
+        button의 type에는 3가지 값을 지정해 줄 수 있는데 각각 submit, reset, button입니다.
+        만약 아무런 값도 지정하지 않았다면 기본값은 submit이 됩니다.
+        그러니까 <button></button> === <button type="submit"></button>인 셈이죠.
+        즉, form 태그 내에서 button을 사용할 때 타입 명시가 없다면 기본적으로 'submit' 처리가 일어나게 됩니다.
+
+
+        ▪︎  button의 기본 type은 submit이다
+        ▪︎  button에 타입을 명시하지 않아도 큰 문제는 없다..... form 내부에서 쓰이지 않으며, 하위 IE가 아니라면!
+        ▪︎  form 태그 내에 타입 명시 없는 버튼은 submit으로 동작하므로 클릭 시 새로고침된다.
+        ▪︎  IE10 이하에서 form 밖의 input에서 엔터 입력은 submit 버튼과 연결된다.
+        ▪︎  명확한 구분을 위해 submit이 아닌 버튼에는 type="button"을 지정해주는 것이 좋다.
+
+        ▪︎  <input/>의 한계를 넘기 위해 나온 것이 <button> 태그이다
+        ▪︎  <input type="button">을 써도 되지만, <button>을 쓰는 것이 권장된다
+        ▪︎  <button>은 자식 요소를 가질 수 있기 때문에, 이미지/텍스트/가상 요소 등 다양한 활용이 가능하다
+        -->
+
+        <hr/>
+        date : <input type="date" name="date1"/> <br/>
+        datetime-local : <input type="datetime-local" name="date2"/> <br/>
+        month : <input type="month" name="date3"/> <br/>
+        week : <input type="week" name="date4"/> <br/>
+        color : <input type="color" name="clr"/> <br/>
+        number : <input type="number" name="n" min="11" max="20" step="2"/> <br/>
+        range : <input type="range" name="r" min="1" max="100" value="10"/> <br/>
+    </form>
+</body>
+</html>
