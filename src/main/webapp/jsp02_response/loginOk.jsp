@@ -33,7 +33,7 @@
 	Connection conn = getConn();
 	
 	// 3. sql -> statement 생성
-	String sql = "select count(userid) from register where userid=? and userpwd=?";
+	String sql = "select username, userid from register where userid=? and userpwd=?";
 	PreparedStatement pstmt = conn.prepareStatement(sql);
 	pstmt.setString(1, userid);
 	pstmt.setString(2, userpwd);
@@ -42,13 +42,7 @@
 	ResultSet rs = pstmt.executeQuery();
 
 	// 5. 조회결과에 따른 처리
-	rs.next();
-	int result = rs.getInt(1);
-	
-	// 6. 종료
-	rs.close();
-	pstmt.close();
-	conn.close();
+	// int result = rs.getInt(1);
 	
 	/*
 	// JSP로 구현
@@ -61,8 +55,18 @@
 	*/
 	
 	// javascript 로 구현
-	if(result>0) {
+	if(rs.next()) {
 		// 로그인 성공
+		// 세션에 로그인 정보 기록
+		// 등록한 계정 : hippoDev/1234 
+		session.setAttribute("logId", rs.getString(2));
+		session.setAttribute("logName", rs.getString(1));
+		session.setAttribute("logStatus", "Y");
+		
+		// 6. 종료
+		rs.close();
+		pstmt.close();
+		conn.close();
 		%>
 		<script>
 			alert("로그인에 성공하셨습니다. 홈페이지로 이동합니다.");
