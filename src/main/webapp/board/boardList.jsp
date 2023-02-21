@@ -1,3 +1,6 @@
+<%@ page import="java.util.List"%>
+<%@ page import="com.multicampus.home.board.BoardDAO"%>
+<%@ page import="com.multicampus.home.board.BoardDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,6 +19,12 @@
 	}
 	#boardList>li:nth-child(5n+2) {
 		width:40%;
+		white-space:nowrap; /* 줄바꿈 방지 */
+		overflow:hidden; /* 넘치는 것 방지*/
+		text-overflow:ellipsis; /* 말 줄임표 표시 */
+	}
+	#boardList>li:nth-child(5n) {
+		text-align:center
 	}
 </style>
 </head>
@@ -29,18 +38,19 @@
 			<li>작성자</li>
 			<li>등록일</li>
 			<li>조회수</li>
-			
-			<li>100</li>	
-			<li>첫번째 글</li>
-			<li>권정훈</li>
-			<li>02-20 16:20</li>
-			<li>92</li>
-			
-			<li>99</li>	
-			<li>두 번째 글</li>
-			<li>프릳츠</li>
-			<li>02-20 16:29</li>
-			<li>55</li>
+			<!-- Board DAO를 객체로 만들어 사용  -->
+			<%
+				BoardDAO dao = new BoardDAO();
+				List<BoardDTO> list = dao.boardAllRecord();
+				for(int i=0; i<list.size(); i++) {
+					BoardDTO dto = list.get(i);
+			%>
+					<li><%=dto.getNo() %></li>
+					<li><a href="<%=request.getContextPath()%>/board/boardView.jsp?no=<%=dto.getNo()%>"><%=dto.getSubject() %></a></li>
+					<li><%=dto.getUserid() %></li>
+					<li><%=dto.getWritedate() %></li>
+					<li><%=dto.getHit() %></li>	
+			<%}%>
 		</ul>
 	</div>
 </body>
