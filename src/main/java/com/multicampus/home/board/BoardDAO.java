@@ -141,6 +141,21 @@ public class BoardDAO extends DBConnection{
 			return result;
 		}
 		// 글 삭제
+		public int boardDelete(int no) {
+			int result = 0;
+			try {
+				getConnection();
+				sql = "delete from board where no=?";
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setInt(1, no);
+				result = pstmt.executeUpdate();
+			} catch(Exception e) {
+				e.printStackTrace();
+			} finally {
+				dbClose();
+			}
+			return result;
+		}
 		
 		// 하단은 오류 방지용으로 그냥 채워둔 것 -> 수정 필요
 		public int boardDelete(BoardDTO dto) {
