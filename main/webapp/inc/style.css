@@ -1,0 +1,36 @@
+@charset "UTF-8";
+body, ul, li {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+.container {
+	width:900px;
+	margin:0 auto;
+	overflow:auto;
+}
+
+/*메뉴스타일*/
+.mainMenu {
+	background-color:#282A2D;
+	overflow:auto;
+}
+
+.mainMenu li{
+	float:left;
+	width:200px;
+	height:80px;
+	line-height:80px;
+	color:#00CE5C;
+	font-size:1.3em;
+	text-align:center;
+}
+
+.bottom {
+	text-align:center;
+	height:50px;
+	line-height:50px;
+	background-color:#282A2D;
+	color:#00CE5C;
+}
