@@ -34,3 +34,19 @@ body, ul, li {
 	background-color:#282A2D;
 	color:#00CE5C;
 }
+
+/*게시판 스타일*/
+.boardList>li {
+	float:left;
+	width:10%;
+	height:40px;
+	line-height:40px;
+	border-bottom:2px solid gray;
+}
+.boardList>li:nth-child(5n+2) {
+	width:60%;
+	white-space:nowrap;
+	overflow:hodden;
+	text-overflow:ellipsis;
+	
+}

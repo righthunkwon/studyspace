@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>top</title>
 <link rel="stylesheet" href="/webMVC/inc/style.css" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -18,6 +19,6 @@
 					<li><a href="<%=request.getContextPath() %>/logout.do">로그아웃</a></li>
 				</c:when>
 			</c:choose>
-			<li>게시판</li>
+			<li><a href="<%=request.getContextPath() %>/board/boardList.do">게시판</a></li>
 		</ul>
 	</div>

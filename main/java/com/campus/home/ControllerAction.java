@@ -67,8 +67,8 @@ public class ControllerAction extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// uri 구하기 
-		String uri = request.getRequestURI(); // /webMVC/index.do
-		String ctx = request.getContextPath(); // /weMVC
+		String uri = request.getRequestURI(); // /webMVC/index.do   ,   /webMVC/board/boardList.do
+		String ctx = request.getContextPath(); // /weMVC            ,   /board/boardList.do
 		
 		// 접속한 주소 알아보기
 		String commandKey = uri.substring(ctx.length()); // /index.do
