@@ -14,4 +14,16 @@
 		select zipcode, sido, doroname, build_num1, build_num2, buildname, dong, bungi1, bungi2 from zipcode
 		where doroname like '%${param1}%' order by doroname asc
 	</select>
+	<insert id="registerInsert">
+		insert into register(userid, userpwd, username, tel, email, zipcode, addr, addrdetail, hobby)
+		values(#{userid}, #{userpwd}, #{username}, #{tel}, #{email}, #{zipcode}, #{addr}, #{addrdetail}, #{hobby})
+	</insert>
+	<select id="registerEdit" resultType="com.multi.campus.dto.RegisterDTO">
+		select userid, username, tel, email, zipcode, addr, addrdetail, hobby from register
+		where userid=#{param1}
+	</select>
+	<update id="registerEditOk">
+		update register set tel=#{tel}, email=#{email}, zipcode=#{zipcode}, addr=#{addr}, addrdetail=#{addrdetail}, hobby=#{hobby}
+		where userid=#{userid} and userpwd=#{userpwd}
+	</update>
 </mapper>

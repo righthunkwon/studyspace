@@ -90,4 +90,45 @@ public class RegisterController {
 		mav.setViewName("register/zipcodeSearch");
 		return mav;
 	}
+
+	@RequestMapping(value="/joinOk", method=RequestMethod.POST)
+	public ModelAndView joinOk(RegisterDTO dto) {
+		System.out.println(dto.toString());
+		ModelAndView mav = new ModelAndView();
+		// 회원가입
+		int result = service.registerInsert(dto);
+		
+		if(result>0) { // 회원가입 성공 시 : 로그인 폼으로
+			mav.setViewName("redirect:loginForm");
+		} else { // 회원가입 실패 시 : history.back()(적었던 정보 저장), 회원가입 폼으로(정보 초기화)
+			mav.addObject("msg", "회원 가입에 실패하였습니다.");
+			mav.setViewName("register/joinOkResult");
+		}
+		return mav;
+	}
+	
+	// 회원정보수정 폼 - session 로그인 아이디에 해당하는 회원정보를 select하여 뷰페이지로 이동
+	@GetMapping("/joinEdit")
+	public ModelAndView joinEdit(HttpSession session) {
+		RegisterDTO dto = service.registerEdit((String)session.getAttribute("logId"));
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("dto", dto);
+		mav.setViewName("register/joinEdit");
+		return mav;
+	}
+	
+	// 회원정보수정(DB작업) - form의 내용과 session의 로그인 아이디를 구해 회원정보를 수정
+	@PostMapping("/joinEditOk")
+	public ModelAndView joinEditOk(RegisterDTO dto, HttpSession session) {
+		dto.setUserid((String)session.getAttribute("logId"));
+		int cnt = service.registerEditOk(dto);
+		ModelAndView mav = new ModelAndView();
+		if(cnt>0) { // 수정성공시 : DB에서 수정된 내용 보여주기
+			mav.setViewName("redirect:joinEdit");
+		} else { // 수정실패시 : 이전 페이지 출력
+			mav.addObject("msg", "회원 정보 수정에 실패하였습니다.");
+			mav.setViewName("register/joinOkResult");
+		}
+		return mav;
+	}
 }

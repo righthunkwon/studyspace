@@ -13,4 +13,10 @@ public interface RegisterService {
 	public int idCheckCount(String userid);
 	// 우편번호검색
 	public List<ZipcodeDTO> zipSearch(String doroname);
+	// 회원가입
+	public int registerInsert(RegisterDTO dto);
+	// 회원정보수정
+	public RegisterDTO registerEdit(String userid);
+	// 회원정보수정 DB반영
+	public int registerEditOk(RegisterDTO dto);
 }

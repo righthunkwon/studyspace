@@ -32,4 +32,19 @@ public class RegisterServiceImpl implements RegisterService {
 		return dao.zipSearch(doroname);
 	}
 
+	@Override
+	public int registerInsert(RegisterDTO dto) {
+		return dao.registerInsert(dto);
+	}
+
+	@Override
+	public RegisterDTO registerEdit(String userid) {
+		return dao.registerEdit(userid);
+	}
+
+	@Override
+	public int registerEditOk(RegisterDTO dto) {
+		return dao.registerEditOk(dto);
+	}
+
 }
