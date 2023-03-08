@@ -5,9 +5,16 @@ public class BoardDTO {
 	private String subject;
 	private String content;
 	private String userid;
+	private String username;
 	private int hit;
 	private String writedate;
 	private String ip;
+
+	@Override
+	public String toString() {
+		return "BoardDTO [no=" + no + ", subject=" + subject + ", content=" + content + ", userid=" + userid
+				+ ", username=" + username + ", hit=" + hit + ", writedate=" + writedate + ", ip=" + ip + "]";
+	}
 	public int getNo() {
 		return no;
 	}
@@ -31,6 +38,12 @@ public class BoardDTO {
 	}
 	public void setUserid(String userid) {
 		this.userid = userid;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	public int getHit() {
 		return hit;
