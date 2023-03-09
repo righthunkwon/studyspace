@@ -8,13 +8,22 @@
 		values(board_sq.nextval, #{subject}, #{content}, #{userid}, #{ip})
 	</insert>
 	<select id="totalRecord" resultType="int">
-		select count(no) totalRecord from board
+		select count(b.no) totalRecord from board b join register r on b.userid=r.userid 
+		<if test="searchWord!=null">
+			where ${searchKey} like '%${searchWord}%'
+		</if>
 	</select>
 	<select id="pageSelect" resultType="com.multi.campus.dto.BoardDTO">
 		select * from	
 			(select * from
-				(select b.no, b.subject, r.username, b.hit, to_char(b.writedate,'MM-DD HH:MI') writedate 
-					from board b join register r on b.userid = r.userid order by b.no desc)
+				(
+					select b.no, b.subject, r.username, b.hit, to_char(b.writedate,'MM-DD HH:MI') writedate 
+					from board b join register r on b.userid = r.userid 
+					<if test="searchWord!=null"> <!-- 검색어가 있을 때 -->
+						and ${searchKey} like '%${searchWord}%'
+					</if>
+					order by b.no desc
+				)
 			<![CDATA[
 			where rownum <= ${onePageRecord*nowPage} order by no asc
 			]]>
@@ -32,4 +41,21 @@
 				</when>
 			</choose>
 	</select>
+	<select id="boardSelect" resultType="com.multi.campus.dto.BoardDTO">
+		select b.no, b.userid, b.subject, b.content, r.username, b.hit, b.writedate
+		from board b join register r on b.userid=r.userid
+		and b.no=${param1}
+	</select>
+	<select id="boardEditSelect" resultType="com.multi.campus.dto.BoardDTO">
+		select no, subject, content from board where no = ${param1}
+	</select>
+	<update id="boardUpdate" parameterType="com.multi.campus.dto.BoardDTO">
+		update board set subject=#{subject}, content=#{content} where no=${no} and userid=#{userid}
+	</update>
+	<update id="boardHitCount">
+		update board set hit=hit+1 where no=${param1}
+	</update>
+	<delete id="boardDelete">
+		delete from board where no=${no} and userid=#{userid}
+	</delete>
 </mapper>

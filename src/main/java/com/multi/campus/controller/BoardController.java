@@ -4,6 +4,7 @@ import java.nio.charset.Charset;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -33,7 +34,7 @@ public class BoardController {
 		ModelAndView mav = new ModelAndView();
 		
 		// 총 레코드 수
-		vo.setTotalRecord(service.totalRecord());
+		vo.setTotalRecord(service.totalRecord(vo));
 		System.out.println(vo.toString());
 		// DB 조회
 		// 해당 페이지 레코드 선택
@@ -77,9 +78,82 @@ public class BoardController {
 		
 		return new ResponseEntity<String>(htmlTag, headers, HttpStatus.OK);
 	}
+	// 글내용보기
+	@GetMapping("/boardView")
+	public ModelAndView boardView(int no, PagingVO vo) {
+		
+		// 조회수 증가
+		service.boardHitCount(no);
+		
+		
+		BoardDTO dto = service.boardSelect(no);
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("dto", dto); // 선택한 레코드
+		mav.addObject("vo", vo); // 페이지번호, 검색어, 검색키
+		mav.setViewName("board/boardView");
+		return mav;
+	}
 	// 수정폼
+	@GetMapping("/boardEdit")
+	public ModelAndView boardEdit(int no, PagingVO vo) {
+		BoardDTO dto = service.boardEditSelect(no);
+		
+		String subject = dto.getSubject().replaceAll("\"","&quot;");
+		subject.replaceAll("'","&#39;");
+		dto.setSubject(subject);
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("dto", dto);
+		mav.addObject("vo", vo);
+		mav.setViewName("board/boardEdit");
+		return mav;
+	}
+	// 수정(DB update)
+	@PostMapping("/boardEditOk")
+	public ResponseEntity<String> boardEditOk(BoardDTO dto, PagingVO vo, HttpSession session) { 
+		// 수정하기 위해서는 레코드 번호와 로그인 아이디 모두 같아야 한다
+		dto.setUserid((String)session.getAttribute("logId"));
+		String bodyTag = "<script>";
+		try {
+			service.boardUpdate(dto);
+			bodyTag += "location.href='boardView?no="+dto.getNo()+"&nowPage="+vo.getNowPage();
+			if(vo.getSearchWord()!=null) { // 검색어가 있을 때
+				bodyTag += "&searchKey="+vo.getSearchKey()+"&searchWord="+vo.getSearchWord();
+			}
+			bodyTag += "';";
+		} catch (Exception e) {
+			e.printStackTrace();
+			bodyTag += "alert('글 수정에 실패하였습니다.')";
+			bodyTag += "history.back()";
+		}
+		bodyTag += "</script>";
+		
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(new MediaType("text", "html", Charset.forName("UTF-8")));
+		headers.add("Content-Type", "text/html; charset=UTF-8");
+		
+		ResponseEntity<String> entity = new ResponseEntity<String>(bodyTag, headers, HttpStatus.OK);
+		return entity;
+	}
 	
-	// 수정등록
 	
 	// 삭제
+	@GetMapping("/boardDel")
+	public ModelAndView boardDel(BoardDTO dto, PagingVO vo, HttpSession session) {
+		dto.setUserid((String)session.getAttribute("logId"));
+		int result = service.boardDelete(dto);
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("nowPage", vo.getNowPage());
+		if(vo.getSearchWord()!=null) {
+			mav.addObject("searchKey", vo.getSearchKey());
+			mav.addObject("searchWord", vo.getSearchWord());
+		}
+		if(result > 0) { // 삭제 성공 : 리스트로 이동
+			mav.setViewName("redirect:boardList");
+		} else { // 삭제 실패 : 글 내용보기로 이동
+			mav.addObject("no", dto.getNo());
+			mav.setViewName("redirect:boardView");
+		}
+		return mav;
+	}
 }
