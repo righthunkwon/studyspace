@@ -19,5 +19,20 @@
 		번호 : ${num }<br/>
 		이름 : ${name }<br/>
 	</div>
+	<div>
+		<h2>파일 업로드 구현</h2>
+		<pre>
+			1. pom.xml에 프레임워크 추가
+				(메이븐 저장소 : https://mvnrepository.com/ 활용)
+				(1) commons-fileupload
+				(2) commons-io
+			
+			2. 환경설정파일(mvc-context.xml)에 MultipartResolver 객체 추가
+			3. 파일 업로드 위치를 생성
+				(1) webapp 하위에 upload파일 폴더 생성
+				(2) servlet-context.xml에 폴더 등록
+			
+		</pre>
+	</div>
 	<img src="img/shiba_dog.jpg" onclick="test()"/>
 </div>
