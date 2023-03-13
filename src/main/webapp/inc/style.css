@@ -16,6 +16,16 @@ body, ul, li {
 
 a:link, a:visited, a:hover {
 	text-decoration: none;
+	color: #000;
+}
+
+.menu a:link, .menu a:visited, .menu a:hover {
+	text-decoration: none;
+	color: #16B33F;
+}
+
+.logo a:link, .logo a:visited, .logo a:hover {
+	text-decoration: none;
 	color: #16B33F;
 }
 

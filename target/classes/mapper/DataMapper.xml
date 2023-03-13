@@ -7,4 +7,30 @@
 		select d.no, d.subject, r.username, d.hit, to_char(d.writedate, 'MM-DD HH:MI') writedate 
 		from data d join register r on d.userid = r.userid order by no desc
 	</select>
+	<insert id="dataInsert" parameterType="com.multi.campus.dto.DataDTO">
+		insert into data(no, userid, subject, content, ip)
+		values(board_sq.nextval, #{userid}, #{subject}, #{content}, #{ip})
+		<selectKey resultType="int" keyProperty="no" order="AFTER">
+			select board_sq.currval from dual
+		</selectKey>
+	</insert>
+	<insert id="dataFileInsert" parameterType="java.util.List">
+		<foreach item="item" collection="list" open="insert all" separator=" " close="select * from dual">
+			into dataFile(no, filename) values(#{item.no}, #{item.filename})
+		</foreach>
+	</insert>
+	<delete id="dataDelete">
+		delete from data where no=${param1}
+	</delete>
+	<delete id="dataFileDelete">
+		delete from datafile where no=${param1}
+	</delete>
+	<select id="dataSelect" resultType="com.multi.campus.dto.DataDTO">
+		select no, userid, subject, content, hit, writedate
+		from data where no=${param1}
+	</select>
+	<select id="dataFileSelect" resultType="com.multi.campus.dto.DataFileDTO">
+		select no, filename from datafile
+		where no=${param1}
+	</select>
 </mapper>

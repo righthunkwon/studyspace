@@ -24,6 +24,7 @@
 			<mvc:mapping path="/board/boardEdit"/>
 			<mvc:mapping path="/board/boardEditOk"/>
 			<mvc:mapping path="/board/boardDel"/>
+			<mvc:mapping path="/data/dataWrite"/>
 			<bean class="com.multi.campus.LoginInterceptor"></bean>
 		</mvc:interceptor>
 	</mvc:interceptors>
