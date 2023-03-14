@@ -13,4 +13,8 @@ public interface DataService {
 	public int dataFileDelete(int no);
 	public DataDTO dataSelect(int no);
 	public List<DataFileDTO> dataFileSelect(int no);
+	public DataDTO dataEditSelect(int no, String userid);
+	public List<String> dataFilenameList(int no);
+	public int dataEditUpdate(DataDTO dto);
+	public int dataEditDelete(int no, String userid);
 }

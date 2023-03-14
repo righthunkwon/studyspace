@@ -33,4 +33,18 @@
 		select no, filename from datafile
 		where no=${param1}
 	</select>
+	<select id="dataEditSelect" resultType="com.multi.campus.dto.DataDTO">
+		select no, subject, content from data
+		where no=${param1} and userid=#{param2}
+	</select>
+	<select id="dataFilenameList" resultType="string">
+		select filename from datafile where no=${param1}
+	</select>
+	<update id="dataEditUpdate">
+		update data set subject=#{subject}, content=#{content}
+		where no=${no} and userid=#{userid}
+	</update>
+	<delete id="dataEditDelete">
+		delete from data where no=${param1} and userid=#{param2}
+	</delete>
 </mapper>

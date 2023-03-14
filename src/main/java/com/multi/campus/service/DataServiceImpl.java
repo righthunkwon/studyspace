@@ -48,4 +48,24 @@ public class DataServiceImpl implements DataService {
 	public List<DataFileDTO> dataFileSelect(int no) {
 		return dao.dataFileSelect(no);
 	}
+
+	@Override
+	public DataDTO dataEditSelect(int no, String userid) {
+		return dao.dataEditSelect(no, userid);
+	}
+
+	@Override
+	public List<String> dataFilenameList(int no) {
+		return dao.dataFilenameList(no);
+	}
+
+	@Override
+	public int dataEditUpdate(DataDTO dto) {
+		return dao.dataEditUpdate(dto);
+	}
+
+	@Override
+	public int dataEditDelete(int no, String userid) {
+		return dao.dataEditDelete(no, userid);
+	}
 }

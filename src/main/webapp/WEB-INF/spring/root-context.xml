@@ -24,5 +24,4 @@
 	<!-- dao의 위치를 알려주기 -->
 	<!-- source에서 mybatis 체크 필요 -->
 	<mybatis-spring:scan base-package="com.multi.campus.dao"/>
-		
 </beans>

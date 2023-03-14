@@ -6,6 +6,13 @@
 		border-bottom:1px solid gray;
 	}
 </style>
+<script>
+	function dataDelCheck(){
+		if(confirm("자료실 글을 삭제하시겠습니까?")) {
+			location.href="/campus/data/dataDelete?no=${dto.no}";
+		}
+	}
+</script>
 <div class="container">
 	<h1>자료실 글 내용보기</h1>
 	<ul class="dataView">
@@ -25,7 +32,10 @@
 		<li>${dto.content}</li>
 	</ul>
 	<div>
-		수정
-		삭제
+		<!-- 로그인 여부 & 자신이 작성한 여부 -->
+		<c:if test="${logId==dto.userid }">
+			<a href="/campus/data/dataEdit/${dto.no }">수정</a>
+			<a href="javascript:dataDelCheck()">삭제</a>
+		</c:if>
 	</div>
 </div>

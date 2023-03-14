@@ -1,5 +1,7 @@
 package com.multi.campus.dto;
 
+import java.util.List;
+
 public class DataDTO {
 	private int no;
 	private String subject;
@@ -9,6 +11,9 @@ public class DataDTO {
 	private int hit;
 	private String writedate;
 	private String ip;
+	
+	// 삭제한 파일명들
+	private List<String> delfile;
 	
 	@Override
 	public String toString() {
@@ -63,4 +68,11 @@ public class DataDTO {
 	public void setIp(String ip) {
 		this.ip = ip;
 	}
+	public List<String> getDelfile() {
+		return delfile;
+	}
+	public void setDelfile(List<String> delfile) {
+		this.delfile = delfile;
+	}
+	
 }
