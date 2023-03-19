@@ -185,3 +185,24 @@ function calculateKrAge(ageOfForeigner) {
 
 const krAge = calculateKrAge(age);
 console.log(krAge);
+console.log("============================================================");
+
+
+// conditionals ///////////////////////////////////////////////////////////////////////
+const askAge = parseInt(prompt("How old are you?")); // prompt 현재는 사용하지 않는 방법, 웹페이지 일시정지, 디자인 문제 등
+console.log(askAge); // 질문에 대한 입력값 콘솔에 출력
+
+// typeof : 타입 확인
+// 원래 prompt는 입력값을 string으로 내놓기에 숫자를 입력해도 string이라고 입력되지만,
+// 앞서 parseInt로 string을 int로 바꿔줬으므로 type은 int로 출력된다.
+console.log(typeof askAge);
+if(isNaN(askAge) || age < 0) { // NaN : not a number
+    console.log("Please write a real positive number.");
+} else if (askAge < 20) {
+    console.log("You are too young to drink.");
+} else if (askAge >= 20 && askAge <= 50) {
+    console.log("You can drink.");
+} else {
+    console.log("You'd better not drink.");
+}
+
