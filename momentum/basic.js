@@ -49,7 +49,7 @@ console.log("============================================================");
 
 
 // Types ///////////////////////////////////////////////////////////////////////
-// boolean
+// boolean : true, false
 const amIFat1 = true;
 const amIFat2 = false;
 const amIFat3 = "true"; // String
@@ -60,7 +60,7 @@ const amIFat3 = "true"; // String
 // null은 variable 안에 어떤 것이 없다는 것을 확실히 하기 위해 사용한다.
 const amIFat4 = null; 
 
-// undefined
+// undefined : no value
 let something; 
 console.log(something) ; // undefined
 console.log("============================================================");
@@ -88,7 +88,7 @@ const nonsense = [1, 2, 3, "hello", true, false, undefined, null];
 console.log(nonsense);
 
 const daysOfWeekArray = [mon , tue , wen , thu , fri , sat , sun];
-console.log(daysOfWeekArray); // ['mon', 'tue', 'wen', 'thu', 'fri', 'sat', 'sun']
+console.log(daysOfWeekArray); // (7) ['mon', 'tue', 'wen', 'thu', 'fri', 'sat', 'sun']
 console.log(daysOfWeekArray[0]); // mon
 console.log(daysOfWeekArray[1]); // tue
 console.log(daysOfWeekArray[2]); // wen
@@ -138,11 +138,50 @@ plus(8, 60); // 68
 console.log("============================================================");
 
 // 객체 내부의 함수
-const studyMemeber = {
+const studyMember = {
     name: "Kwon",
     sayHelloToMember: function(otherPersonName) {
         console.log("Hello" + otherPersonName + ". nice to meet you!");
     }
-}
-studyMemeber.sayHelloToMember("Kim");
-studyMemeber.sayHelloToMember("Lee");
+};
+studyMember.sayHelloToMember("Kim");
+studyMember.sayHelloToMember("Lee");
+console.log("============================================================");
+
+
+// assignment ///////////////////////////////////////////////////////////////////////
+const calculator = {
+    add: function (a, b) {
+        return a + b; // return 이 실행되는 시점에서 함수는 종료된다.
+        console.log("hi!"); // 해당 코드는 출력되지 않는다.
+    },
+    minus: function (a, b) {
+        return a - b;
+    },
+    div: function (a, b) {
+        return a / b;
+    },
+    multi: function (a, b) {
+        return a * b;
+    },
+    power: function (a, b) {
+        return a ** b;
+    },
+};
+    
+const plusResult = calculator.add(4, 2);
+const minusResult = calculator.minus(4, 2);
+const timesResult = calculator.div(4, 2);
+const divideResult = calculator.multi(4, 2);
+const powerResult = calculator.power(4, 2);
+console.log("============================================================");
+
+
+// return ///////////////////////////////////////////////////////////////////////
+const age = 26;
+function calculateKrAge(ageOfForeigner) {
+    return ageOfForeigner + 2;
+};
+
+const krAge = calculateKrAge(age);
+console.log(krAge);
