@@ -119,4 +119,30 @@ player.lastName = "kwon"; // 속성 추가
 console.log(player);
 player.fat = false; // 속성 변경
 console.log(player);
+console.log("============================================================");
 
+// Function ///////////////////////////////////////////////////////////////////////
+function sayHello(nameOfPerson, age){
+    console.log("Hello " + nameOfPerson + "(" +age +")!")
+}
+sayHello("Kwon", 28);
+sayHello("Kim", 23);
+sayHello("Lee", 25);
+console.log("============================================================");
+
+function plus(firstNumber, secondNumber) {
+    console.log(firstNumber + secondNumber); // firstNumber, secondNumber는 function plus 내부에서만 존재한다.
+}
+plus(); // NaN : not a number
+plus(8, 60); // 68
+console.log("============================================================");
+
+// 객체 내부의 함수
+const studyMemeber = {
+    name: "Kwon",
+    sayHelloToMember: function(otherPersonName) {
+        console.log("Hello" + otherPersonName + ". nice to meet you!");
+    }
+}
+studyMemeber.sayHelloToMember("Kim");
+studyMemeber.sayHelloToMember("Lee");
