@@ -22,4 +22,6 @@ public interface BoardService {
 	public void boardHitCount(int no);
 	// 글삭제
 	public int boardDelete(BoardDTO dto);
+	// 여러 글 한 번에 삭제
+	public int boardMultiLineDelete(List<Integer> noList);
 }

@@ -17,7 +17,7 @@
 		select * from	
 			(select * from
 				(
-					select b.no, b.subject, r.username, b.hit, to_char(b.writedate,'MM-DD HH:MI') writedate 
+					select b.no, b.subject, b.userid, r.username, b.hit, to_char(b.writedate,'MM-DD HH:MI') writedate 
 					from board b join register r on b.userid = r.userid 
 					<if test="searchWord!=null"> <!-- 검색어가 있을 때 -->
 						and ${searchKey} like '%${searchWord}%'
@@ -57,5 +57,12 @@
 	</update>
 	<delete id="boardDelete">
 		delete from board where no=${no} and userid=#{userid}
+	</delete>
+	<delete id="boardMultiLineDelete">
+		<!-- delete from board where no in (num1, num2, num3, ...) 문을 만드는 쿼리문 (반복문 활용) -->
+		delete from board where
+		<foreach item="item" collection="list" open="no in (" separator=", " close=")">
+			#{item}
+		</foreach>
 	</delete>
 </mapper>

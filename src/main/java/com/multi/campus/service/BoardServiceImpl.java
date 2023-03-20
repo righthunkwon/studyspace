@@ -54,4 +54,11 @@ public class BoardServiceImpl implements BoardService {
 	public int boardDelete(BoardDTO dto) {
 		return dao.boardDelete(dto);
 	}
+
+	@Override
+	public int boardMultiLineDelete(List<Integer> noList) {
+		return dao.boardMultiLineDelete(noList);
+	}
+	
+	
 }

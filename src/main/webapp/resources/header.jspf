@@ -29,6 +29,7 @@
 				<li><a href="/campus/board/boardList">게시판</a></li>
 				<li><a href="<%=request.getContextPath() %>/data/dataList">자료실</a></li>
 				<li>계층형게시판</li>
+				<li><a href="/campus/transaction">트랜잭션</a></li>
 			</ul>
 		</div>
 	</header>
