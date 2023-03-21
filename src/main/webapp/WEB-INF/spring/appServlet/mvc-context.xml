@@ -28,6 +28,7 @@
 			<mvc:mapping path="/data/dataWriteOk"/>
 			<mvc:mapping path="/data/dataEdit"/>
 			<mvc:mapping path="/commentSend"/>
+			<mvc:mapping path="/answer/answerWrite"/>
 			<bean class="com.multi.campus.LoginInterceptor"></bean>
 		</mvc:interceptor>
 	</mvc:interceptors>

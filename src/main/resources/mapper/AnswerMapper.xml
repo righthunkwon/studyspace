@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace는 mapper 인터페이스와 연결된 DAO 인터페이스의 패키지와 이름을 정의 -->
+<mapper namespace="com.multi.campus.dao.AnswerDAO">
+	<select id="answerTotalRecord" resultType="int">
+		select count(no) from answerboard
+	</select>
+	<select id="answerAllSelect" resultType="com.multi.campus.dto.AnswerDTO">
+		select no, title, userid, hit, writedate
+		from answerboard order by no desc
+	</select>
+	<insert id="answerInsert">
+		insert into answerboard(no, title, content, userid, ip, ref)
+		values(answer_sq.nextval, #{title}, #{content}, #{userid}, #{ip}, answer_sq.currval)
+	</insert>
+</mapper>
