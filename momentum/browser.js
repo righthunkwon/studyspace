@@ -8,9 +8,9 @@
 // document.getElementById("title")
 
 // getElementById
-const title = document.getElementById("title");
-console.log(title);
-console.dir(title);
+const got = document.getElementById("title");
+console.log(got);
+console.dir(got);
 title.innerText = "Got you!"; // HTML의 Grab me!를 JavaScript에 의해 변경
 
 // getElementsByClassName
@@ -24,3 +24,44 @@ console.log(content); // 값 하나만 출력
 // querySelectorAll
 const contents = document.querySelectorAll(".content h1");
 console.log(contents); // 배열로 출력
+
+// Event
+function handleTitleClick() {
+    got.style.color = "blue";
+    console.log("title was clicked!");
+}
+function handleMouseEnter() {
+    got.innerText = "Mouse is here!";
+    console.log("mouse is here!");
+}
+function handleMouseLeave() {
+    got.innerText = "Mouse is gone!";
+}
+// HTML Element (ex. title)
+got.addEventListener("click", handleTitleClick);
+got.addEventListener("mouseenter", handleMouseEnter);
+got.addEventListener("mouseleave", handleMouseLeave);
+
+// title.onclick = handleTitleClick;
+// title.onmouseenter = handleMouseEnter
+// title.onmouseleave = handleMouseLeave
+// 단, .addEventListener를 사용할 경우 이후
+// .removeEventListener로 데이터를 지울 수 있으므로 더 편리하다.
+
+// Window (기본 제공)
+function handleWindowResize() {
+    document.body.style.backgroundColor = "tomato";
+}
+function handleWindowCopy() {
+    alert("copier!");
+}
+function handleWindowOffline() {
+    alert("SOS no WIFI!");
+}
+function handleWindowOnline() {
+    alert("ALL GOOD!");
+}
+window.addEventListener("resize", handleWindowResize);
+window.addEventListener("copy", handleWindowCopy);
+window.addEventListener("offline", handleWindowOffline);
+window.addEventListener("online", handleWindowOnline);
