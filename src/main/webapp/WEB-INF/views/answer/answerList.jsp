@@ -72,7 +72,18 @@
 			<li>등록일</li>
 			<c:forEach var="answerDTO" items="${list }">
 				<li>${answerDTO.no }</li>
-				<li><a href="answerView?no=${answerDTO.no}">${answerDTO.title }</a></li>
+				<li>
+					<!-- 공백이 있을 때 -->
+					<c:if test="${answerDTO.lvl>0 }">
+						<!-- 공백 처리 -->
+						<c:forEach var="i" begin="${1 }" end="${answerDTO.lvl }">
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+						</c:forEach>
+						<!-- ↳ 표시 -->
+						↳
+					</c:if>
+					<a href="answerView?no=${answerDTO.no}">${answerDTO.title }</a>
+				</li>
 				<li>${answerDTO.userid }</li>
 				<li>${answerDTO.hit }</li>
 				<li>${answerDTO.writedate }</li>
