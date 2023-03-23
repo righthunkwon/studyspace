@@ -21,4 +21,14 @@ public interface AnswerService {
 	public int stepUp(AnswerDTO orgDataDTO);
 	// 답글 등록
 	public int replyWrite(AnswerDTO dto);
+	// 계층형게시판 글수정(폼)
+	public AnswerDTO getAnswerSelect(int no);
+	// 계층형게시판 글수정(DB)
+	public int answerUpdate(AnswerDTO dto);
+	// lvl 가져오기(삭제 시 필요)
+	public int getLevel(int no);
+	// 삭제하기 - delete
+	public int answerDelete(int no);
+	// 삭제하기 - update
+	public int answerDeleteUpdate(int no);
 }

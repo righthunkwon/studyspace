@@ -52,6 +52,31 @@ public class AnswerServiceImpl implements AnswerService {
 	public int replyWrite(AnswerDTO dto) {
 		return dao.replyWrite(dto);
 	}
+
+	@Override
+	public AnswerDTO getAnswerSelect(int no) {
+		return dao.getAnswerSelect(no);
+	}
+
+	@Override
+	public int answerUpdate(AnswerDTO dto) {
+		return dao.answerUpdate(dto);
+	}
+
+	@Override
+	public int getLevel(int no) {
+		return dao.getLevel(no);
+	}
+
+	@Override
+	public int answerDelete(int no) {
+		return dao.answerDelete(no);
+	}
+
+	@Override
+	public int answerDeleteUpdate(int no) {
+		return dao.answerDeleteUpdate(no);
+	}
 	
 	
 }

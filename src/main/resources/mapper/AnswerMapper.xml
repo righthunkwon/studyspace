@@ -35,4 +35,22 @@
 		insert into answerboard(no, title, content, userid, ip, ref, lvl, step)
 		values(answer_sq.nextval, #{title}, #{content}, #{userid}, #{ip}, ${ref}, ${lvl+1}, ${step+1})
 	</insert>
+	<select id="getAnswerSelect" resultType="com.multi.campus.dto.AnswerDTO">
+		select no, title, content from answerboard where no=${param1}
+	</select>
+	<update id="answerUpdate">
+		update answerboard set title=#{title}, content=#{content} where no=${no} and userid=#{userid}
+	</update>
+	<select id="getLevel" resultType="int">
+		select lvl from answerboard where no=${param1}
+	</select>
+	<delete id="answerDelete">
+		delete from answerboard where ref=${param1}
+	</delete>
+	<update id="answerDeleteUpdate">
+		<![CDATA[
+		update answerboard set title='삭제된 글입니다.', content='<p>글 내용이 삭제되었습니다.</p>', hit = 0, writedate=sysdate
+		where no=${param1}
+		]]>
+	</update>
 </mapper>

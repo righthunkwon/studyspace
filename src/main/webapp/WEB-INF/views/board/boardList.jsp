@@ -104,7 +104,10 @@
 			<li>작성자</li>
 			<li>조회수</li>
 			<li>등록일</li>
-			
+			<!-- List 출력-->
+			<!-- 번호 예쁘게 정렬 -->
+			<!-- 시작 번호 설정 -->
+			<c:set var="recordNum" value="${vo.totalRecord - (vo.nowPage - 1) * vo.onePageRecord}"/>
 			<c:forEach var="bDTO" items="${list }">
 				<li>
 					<!-- 해당 회원이 작성한 글일 경우 -->
@@ -116,12 +119,13 @@
 						<input type="checkbox" disabled/>
 					</c:if>
 				</li>
-				<li>${bDTO.no }</li>
+				<li>${recordNum }</li>
 					<!-- 글내용보기 레코드번호, 현재페이지, 검색어가 있으면 검색키, 검색어를 가지고 뷰페이지로 이동하여야 다시 목록으로 해당 검색과 페이지로 이동할 수 있다. -->
 				<li><a href="boardView?no=${bDTO.no}&nowPage=${vo.nowPage}<c:if test="${vo.searchWord!=null}">&searchKey=${vo.searchKey}&searchWord=${vo.searchWord}</c:if>">${bDTO.subject }</a></li>
 				<li>${bDTO.username }</li>
 				<li>${bDTO.hit }</li>
 				<li>${bDTO.writedate }</li>
+				<c:set var="recordNum" value="${recordNum-1 }"/>
 			</c:forEach>
 		</ul>
 	</form>

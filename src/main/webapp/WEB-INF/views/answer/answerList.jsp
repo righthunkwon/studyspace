@@ -70,8 +70,10 @@
 			<li>작성자</li>
 			<li>조회수</li>
 			<li>등록일</li>
+			<!-- jstl로 변수를 만들어 총 레코드 수를 보관 -->
+			<c:set var="noNum" value="${totalRecord }"/>
 			<c:forEach var="answerDTO" items="${list }">
-				<li>${answerDTO.no }</li>
+				<li>${noNum }</li>
 				<li>
 					<!-- 공백이 있을 때 -->
 					<c:if test="${answerDTO.lvl>0 }">
@@ -87,6 +89,7 @@
 				<li>${answerDTO.userid }</li>
 				<li>${answerDTO.hit }</li>
 				<li>${answerDTO.writedate }</li>
+				<c:set var="noNum" value="${noNum-1 }"/>
 			</c:forEach>
 		</ul>
 </div>
