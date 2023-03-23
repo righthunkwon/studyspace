@@ -2,16 +2,21 @@ package com.multi.campus.controller;
 
 import java.util.List;
 
+import javax.mail.MessagingException;
+import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
+import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.multi.campus.dto.RegisterDTO;
@@ -23,6 +28,8 @@ public class RegisterController {
 	
 	@Autowired
 	RegisterService service;
+	@Autowired
+	JavaMailSenderImpl mailSender;
 	
 	// 로그인폼
 	@GetMapping("/loginForm")
@@ -130,5 +137,52 @@ public class RegisterController {
 			mav.setViewName("register/joinOkResult");
 		}
 		return mav;
+	}
+	
+	// 아이디 찾기
+	@GetMapping("/idSearchForm")
+	public String idSearchForm() {
+		return "register/idSearchForm";
+	}
+	
+	@PostMapping("idSearchEmailSend")
+	@ResponseBody
+	public String idSearchEmailSend(RegisterDTO dto) {
+		// 이름과 이메일이 일치하는 회원의 아이디
+		String userid = service.idSearch(dto.getUsername(), dto.getEmail());
+		
+		// 아이디가 없으면 이를 ajax에 전달하고,	아이디가 있으면 DB에 조회한 아이디를 이메일로 보내고 안내
+		if(userid==null || userid.equals("")) { // 아이디가 없으면
+			return "N";
+		} else { // 아이디가 있으면
+			String emailSubject = "아이디 찾기 결과";
+			String emailContent = "<div style='background:beige; margin:50px; padding:50px; ";
+			emailContent += "border:2px solid beige; font-size:2em; text-align:center'>";
+			emailContent += "검색한 아이디입니다.";
+			emailContent += "아이디: "+userid;
+			emailContent += "</div>";
+			
+
+			try {
+				// mimeMessage -> mimeMessageHelper
+				MimeMessage message = mailSender.createMimeMessage();
+				MimeMessageHelper messageHelper = new MimeMessageHelper(message, true, "UTF-8");
+				
+				// 보내는 메일주소
+				messageHelper.setFrom("dhtmxk8134@naver.com");
+				messageHelper.setTo("dhtmxk8135@gmail.com");
+				messageHelper.setSubject(emailSubject);
+				messageHelper.setText("text/html; charset=UTF-8", emailContent);
+				
+				mailSender.send(message);
+				return "Y";
+				
+			} catch (MessagingException e) {
+				e.printStackTrace();
+				return "N";
+			}
+			
+
+		}
 	}
 }

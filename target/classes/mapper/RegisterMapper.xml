@@ -26,4 +26,7 @@
 		update register set tel=#{tel}, email=#{email}, zipcode=#{zipcode}, addr=#{addr}, addrdetail=#{addrdetail}, hobby=#{hobby}
 		where userid=#{userid} and userpwd=#{userpwd}
 	</update>
+	<select id="idSearch" resultType="string">
+		select rpad(substr(userid, 1, length(userid)/2), length(userid),'*') userid from register where username=#{param1} and email=#{param2}
+	</select>
 </mapper>

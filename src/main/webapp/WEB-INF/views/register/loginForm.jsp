@@ -19,7 +19,7 @@
 	<div style="margin:5px 2px;">
 		<a href="join" style="color:black">회원가입</a>
 		<!-- 숙제 -->
-		<a href="" style="color:black">아이디찾기</a>
+		<a href="idSearchForm" style="color:black">아이디찾기</a>
 		<a href="" style="color:black">비밀번호찾기</a>
 	</div>
 </div>
