@@ -16,7 +16,7 @@ grabMe.addEventListener("click", handleTitleClick);
 // (2) 개선된 코드 : 변수 활용
 /*
 function handleTitleClick() {
-    const currentColor = got.style.color;
+    const currentColor = grabMe.style.color;
     let newColor;
     if(currentColor === "blue") {
         newColor = "tomato";

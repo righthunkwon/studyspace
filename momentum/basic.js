@@ -141,7 +141,7 @@ console.log("============================================================");
 const studyMember = {
     name: "Kwon",
     sayHelloToMember: function(otherPersonName) {
-        console.log("Hello" + otherPersonName + ". nice to meet you!");
+        console.log("Hello " + otherPersonName + ". nice to meet you!");
     }
 };
 studyMember.sayHelloToMember("Kim");

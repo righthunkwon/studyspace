@@ -1,5 +1,5 @@
 // JavaScript는 HTML에 접근하고 읽을 수 있고, 심지어 바꿀 수도 있다.
-// 이것의 시작은 document이다. (document = website, document = HTML)
+// 이것의 시작은 document이다. (document = DOM, document = website, document = HTML)
 
 // document
 // document.title
@@ -11,7 +11,7 @@
 const got = document.getElementById("title");
 console.log(got);
 console.dir(got);
-title.innerText = "Got you!"; // HTML의 Grab me!를 JavaScript에 의해 변경
+got.innerText = "Got you!"; // HTML의 Grab me!를 JavaScript에 의해 변경
 
 // getElementsByClassName
 const hellos = document.getElementsByClassName("hello");
