@@ -1,0 +1,20 @@
+.hidden {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+#greeting-logout {
+    display: flex;
+    align-items: center;
+}
+
+#greeting {
+    margin-right:15px;
+}
+
+#logout-form button {
+    display: flex;
+}
