@@ -51,4 +51,4 @@ const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 // Math.floor()     : 버림
 
 quote.innerText = todaysQuote.quote;
-author.innerText = "- " + todaysQuote.author;
+author.innerText = "\n\n - " + todaysQuote.author;
