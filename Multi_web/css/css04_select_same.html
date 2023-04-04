@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sibling selector</title>
+    <style>
+        /*
+            동위 선택자
+                + : 선택자A + 선택자 B -> 선택자A 바로 다음에 있는 선택자B를 선택한다.
+                ~ : 선택자A ~ 선택자 B -> 선택자A 다음에 있는 모든 선택자B를 선택한다.
+        */
+        h1 + h2 {
+            background-color: steelblue;
+        }
+        h1 ~ h2 {
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <h1>동위 선택자 테스트 11111</h1>
+    <h2>동위 선택자 테스트 22222</h2>
+    <h2>동위 선택자 테스트 33333</h2>
+    <h2>동위 선택자 테스트 44444</h2>
+    <h2>동위 선택자 테스트 55555</h2>
+    <h2>동위 선택자 테스트 66666</h2>
+    <h2>동위 선택자 테스트 77777</h2>
+    <h3>~~~~~~~~~~~~~~~~~~~~~~</h3>
+
+    <h1>동위 선택자 테스트 11111</h1>
+    <h2>동위 선택자 테스트 22222</h2>
+    <h2>동위 선택자 테스트 33333</h2>
+    <h2>동위 선택자 테스트 44444</h2>
+    <h3>~~~~~~~~~~~~~~~~~~~~~~</h3>
+    <h2>동위 선택자 테스트 55555</h2>
+    <h2>동위 선택자 테스트 66666</h2>
+    <h2>동위 선택자 테스트 77777</h2>
+    <h3>~~~~~~~~~~~~~~~~~~~~~~</h3>
+
+</body>
+</html>

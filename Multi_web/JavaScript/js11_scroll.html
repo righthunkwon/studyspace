@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>scroll</title>
+    <script>
+        var imgName = ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg'];
+        function setImage() {
+            var imgTag = "";
+            for(var i=0; i<imgName.length ; i++){ // 0,1,2,3,4
+                imgTag += "<img src='../img/" + imgName[i] + "'/><br/>"
+           }
+           console.log(imgTag);
+           document.getElementById("imgView").innerHTML = imgTag;
+
+            // 현재 스크롤바의 위치
+            // window.scrollTo(x, y) : 절대좌표,    window.scrollBy(x, y) : 상대좌표
+            console.log(window.scrollY, document.documentElement.scrollTop);
+        }
+
+        function scrollAuto() {
+            window.scrollBy(0, 10);
+            console.log('y=', window.scrollY);
+        }
+        var timer;
+    </script>
+</head>
+<body onload="setImage(); timer = setInterval('scrollAuto()', 10);">
+    <h1>스크롤 이벤트</h1>
+    <!--
+        onmouseover, onmouseenter : 객체에 마우스가 들어오면 발생하는 이벤트
+        onmouseout, onmouseleave : 객체에 마우스가 나가면 발생하는 이벤트
+    -->
+    <div id="imgView" onmouseover="clearInterval(timer)" onmouseout="timer=setInterval('scrollAuto()', 10)"></div>
+    <!--
+        HTML내부에서 JavaScript에 있는 코드를 멈추게 하고 싶을 때는 HTML코드 내에 바로 해당 메서드를 넣지는 못한다.
+        이는 JavaScript에 있는 코드를 변수에 담아서 변수를 넣어줌으로써 해결할 수 있다.
+    -->
+</body>
+</html>

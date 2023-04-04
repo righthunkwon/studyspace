@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>anchor 태그로 링크 걸기</title>
+</head>
+<body>
+    <h1>같은 페이지의 특정 위치로 이동하기</h1>
+    <ol>
+        <li><a href="#a1">html이란?</a></li>
+        <li><a href="#a2">CSS란?</a></li>
+        <li><a href="#a3">JavaScript란?</a></li>
+        <li><a href="#a4">데이터베이스란?</a></li>
+    </ol>
+    <hr/>
+    <h1 id="top">문자에 링크 걸기</h1>
+    <pre>
+        href : 이동할 페이지
+        target : _blank, 새 창에서 열기 
+    </pre>
+    <a href="./html01_index.html">홈으로 이동</a>
+    <a href="https://www.naver.com/" target="_blank">네이버로 이동</a>
+    <a href="https://www.mk.co.kr/news/culture/10113894" target="_blank">고양이는 왜 목욕을 싫어할까?</a>
+    
+    <h1>이미지 링크 걸기</h1>
+    <pre>
+        텍스트를 a태그 사이에 넣어 링크를 만들었듯이, 이미지를 a태그 사이에 표시해주면 이미지에 링크를 걸 수 있다.
+    </pre>
+    <div style="text-align: center;">
+        <a href="./html04_img.html"><img src="../img/03.jpg" width="80%" height="80%" alt="노란 바탕에 위를 쳐다보는 고양이"></a>
+    </div>
+    <h1>다운로드 구현(이미지, java, pdf, pptx, xlsx, txt, exe, zip)</h1>
+    <pre>
+        파일 확장자에 따라 다운로드가 되는 파일이 있고, 다운로드가 되지 않고 실행이 되는 파일이 있는데, 이때 download 속성을 넣어주면 다운로드가 되지 않는 파일도 다운로드가 된다.
+        단, 하단 Status Bar에 Go Live로 서버를 동작해야 작동한다.
+    </pre>
+    <a href="../다운로드/01.jpg" download>img</a>
+    <a href="../다운로드/HelloWorld.java" download>java</a>
+    <a href="../다운로드/pdf_sample.pdf" download>pdf</a>
+    <a href="../다운로드/ppt_sample.pptx" download>pptx</a>
+    <a href="../다운로드/test.xlsx" download>xlsx</a>
+    <a href="../다운로드/txt_sample.txt" download>txt</a>
+    <a href="../다운로드/VSCodeUserSetup-x64-1.74.2.exe" download>exe</a>
+    <a href="../다운로드/zip.zip" download>zip</a>
+
+    <hr/>
+    <a id="a1">HTML이란?</a><p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>HTML이란?<p/>
+    <a id="a2">CSS란?</a><p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>CSS란?<p/>
+    <a id="a3">JavaScript란?</a><p/>JavaScript란?<p/>JavaScript란?<p/>JavaScript란?<p/>JavaScript란?<p/>JavaScript란?<p/>JavaScript란?<p/>JavaScript란?<p/>JavaScript란?<p/>JavaScript란?<p/>JavaScript란?<p/>JavaScript란?<p/>JavaScript란?<p/>JavaScript란?<p/>JavaScript란?<p/>JavaScript란?<p/>JavaScript란?<p/>JavaScript란?<p/>JavaScript란?<p/>JavaScript란?<p/>JavaScript란?<p/>
+    <a id="a4">데이터베이스란?</a><p/>데이터베이스란?<p/>데이터베이스란?<p/>데이터베이스란?<p/>데이터베이스란?<p/>데이터베이스란?<p/>데이터베이스란?<p/>데이터베이스란?<p/>데이터베이스란?<p/>데이터베이스란?<p/>데이터베이스란?<p/>데이터베이스란?<p/>데이터베이스란?<p/>데이터베이스란?<p/>데이터베이스란?<p/>데이터베이스란?<p/>데이터베이스란?<p/>데이터베이스란?<p/>데이터베이스란?<p/>데이터베이스란?<p/>
+
+    <a href="#top">맨위로</a>
+</body>
+</html>
