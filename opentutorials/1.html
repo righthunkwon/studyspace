@@ -1,0 +1,94 @@
+<!--
+    HTML 태그의 근본구조
+    <!doctype html> - html 문서임을 알려주는 약속
+    <html>
+        <head>
+            <title></title>
+            <meta charset="">
+        </head>
+        <body>
+        </body>
+    </html>
+
+
+-->
+
+<!doctype html>
+<html>
+<head>
+<title>WEB1 - HTML</title>
+<meta charset="utf-8">
+<script src="colors.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+    <div id="grid">
+    <ol>
+        <li><a href="1.html">HTML</a></li>
+        <li><a href="2.html">CSS</a></li>
+        <li><a href="3.html">JavaScript</a></li>
+        <input id="night_day" type="button" value="night" onclick="
+        nightDayHandler(this);
+        ">
+    </ol>
+    <div id="article">
+<!--
+    부모태그와 자식태그(유동적/고정적)
+    <parent>
+        <child></child>
+    </parent>
+
+    <ol>                 ordered list 1. 2. 3.
+        <li></li>
+    </ol>
+
+    <ul>                 unordered list ㆍ ㆍ ㆍ
+        <li></li>
+    </ul>
+
+-->
+
+<!--여러 줄 코딩: ALT + 마우스 클릭-->
+
+<h2>HTML</h2>
+
+<!--
+    <a></a>
+    anchor 닻
+    도시의 길, 인체의 혈관
+    HyperText, 링크
+
+    (1) href : hypertext reference (링크 주소)
+    (2) target="_blank": 새 창으로 열기
+    (3) title : 링크의 내용 미리보기(툴팁)
+-->
+
+<p><a href="https://www.w3.org/TR/html5/" target="_blank" title="html5 specification">HTML(HyperText Markup Language)</a> 은 웹을 이루는 가장 기초적인 구성 요소로, 웹 콘텐츠의 의미와 구조를 정의할 때 사용합니다. HTML 이외의 다른 기술은 일반적으로 웹 페이지의 모양/표현 (CSS), 또는 기능/동작 (JavaScript)을 설명하는 데 사용됩니다.</p>
+
+<!--<img>태그-->
+<!--속성(attribute) : src, width-->
+
+<p style="text-align: center;"><img src="coding img.jpg" width="80%"></p>
+
+<!--이미지를 가운데 정렬하는 법-->
+<!--해당 이미지를 p로 묶고 p에 style="text-align: center;" 속성 부여-->
+
+<p style="margin-top:45px;">"Hypertext(하이퍼텍스트)"란 웹 페이지를 다른 페이지로 연결하는 링크를 말합니다. 링크는 웹의 근본적인 속성으로, 인터넷에 자료를 올리고 다른 사람이 만든 페이지로 링크함으로써 여러분도 월드 와이드 웹 세계의 능동적인 일원이 될 수 있습니다.</p>
+
+<p style="margin-top:45px;">HTML은 웹 브라우저에 표시되는 글과 이미지 등의 다양한 콘텐츠를 표시하기 위해 "마크업"을 사용합니다. HTML 마크업은 다양한 "요소"를 사용하는데, 요소에는 head, title, body, header, footer, article, section, p, div, span, img, aside, audio, canvas, datalist, details, embed, nav, output, progress, video, ul, ol, li 등 많은 종류가 존재합니다.<br><br><br></p>
+    </div>
+<!--style 부분은 CSS-->
+<!--<br>보다 <p>로 단락을 나누는 것이 정보로서의 가치가 더 높다-->
+<!--일반인의 제목(strong, font사이즈 키우기) vs 지식인의 제목(h1)-->
+</div>
+</body>
+</html>
+
+
+<!--
+    웹페이지 : 페이지
+    웹사이트 : 웹페이지의 그룹
+    웹브라우저 : 웹을 탐색할 수 있게 하는 도구(edge, chrome, ...)
+-->
