@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<style>
+	ul, li{list-style-type:none; margin:0; padding:0;}
+	li{float:left; width:200px; height:200px; margin:5px; padding:5px; border: 2px solid gray;}
+	li>img{width:100%; height:100%;}
+</style>
+<script>
+
+	$(function(){
+		// before() : 선택자 이전에 객체 추가
+		// insertBefor() : 선택자 이전에 객체 추가 (before()과 문법적 차이만 존재)
+		$('.img').before("<li class='test'><img src='../img/02.jpg'/></li>");
+		$("<li><img src='../img/03.jpg'/></li>").insertBefore(".img");
+		
+		// append() : 선택자 마지막에 객체 추가
+		// appendTo() : 선택자 마지막에 객체로추가 (append()와 문법적 차이만 존재)
+		$('ul').append("<li><img src='../img/04.jpg'></li>");
+		$("<li><img src='../img/05.jpg'></li>").appendTo('ul');
+		
+		/*
+		setInterval(function() {
+			$("li:first").appendTo('ul');
+		}, 2000);
+		*/
+		
+		// prepend() : 선택자 맨 앞에 객체 추가
+		// prependTo() : 선택자 맨 앞에 객체 추가 (prepend()와 문법적 차이만 존재)
+		
+		// clone() : 선택자를 복사한다 (한 번만 사용 가능)
+		var imgClone = $(".img").clone();
+		
+		// attr() : 태그의 속성을 얻어오거나 변경할 때 사용 - 속성과 속성값이 있을 때
+		// prop() : 태그의 속성을 얻어오거나 변경할 때 사용 - 속성만 있을 때
+		imgClone.attr("class", "imgTest");
+		$('ul').prepend(imgClone);
+		
+		// empty() : 선택자의 내용 삭제
+		$(".img").empty();
+		
+		// remove() : 선택자와 내용을 모두 삭제
+		$(".test").remove();
+		
+		// replaceAll() : 선택자의 객체를 다른 객체로 치환
+		// replaceWith() : 선택자의 객체를 다른 객체로 치환 (replaceAll()와 문법적 차이만 존재)
+		$("<li>replaceAll<hr/>다른 객체로 치환</li>").replaceAll(".imgTest")
+		$(".img").replaceWith("<li>replaceWith<hr/>다른 객체로 치환</li>");
+		
+	});
+</script>
+</head>
+<body>
+	<ul>
+		<li class="img"><img src="../img/01.jpg"></li>
+	</ul>
+</body>
+</html>

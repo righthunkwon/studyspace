@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+	$(function() {
+		// $('div:first')
+		// eq(n) : n번째
+		// gt(n) : n번째 초과
+		$('div:eq(0)').css('border', '2px solid gray');
+		$('div:gt(0)').css('width', '330px').css('height', '330px')
+			.css('background-color', 'khaki').css('border', '2px solid gray')
+			.css('padding', '20px').css('margin', '20px');
+		$('div:eq(2)').css('position', 'absolute').css('left', '400px')
+			.css('top', '150px').css('right', '100px')
+			.css('background-color', 'lightblue');
+		
+		// 세 번째 div의 폭과 높이 구하기(단, 이때의 값은 border와 margin은 제외된 값이다)
+		var width = $("div:eq(2)").width();
+		var height = $("div:eq(2)").height();
+		
+		$("div:eq(2)").append("<br>width = "+ width + ", height = " + height);
+		
+		// 세 번째 div의 크기 변경
+		// innerWidth(), innerHeight() : padding을 포함한 폭과 높이를 구한다.
+		var innerWidth = $("div:eq(2)").innerWidth();
+		var innerHeight = $("div:eq(2)").innerHeight();
+		
+		$("div:eq(2)").append("<br>innerWidth = "+ innerWidth + ", innerHeight = " + innerHeight);
+		
+		// outerWidth(), outerHeight() : border와 padding을 포함한 폭과 높이
+		var outerWidth = $("div:eq(2)").outerWidth();
+		var outerHeight = $("div:eq(2)").outerHeight();
+		
+		$("div:eq(2)").append("<br>outerWidth = "+ outerWidth + ", outerHeight = " + outerHeight);
+				
+		// offset() : HTML 문서를 기준으로 절대좌표를 구한다(left, top).
+		var xy1 = $('div:eq(1)').offset();
+		$('div:eq(1)').append('<br/>offset().left=' + xy1.left +', offset().top='+xy1.top);
+				
+		// position() : 부모요소를 기준으로 하는 상대좌표를 구한다(left, top).
+		var xy2 = $('div:eq(1)').position();
+		$('div:eq(1)').append('<br/>position().left=' + xy2.left + ', position().top=' + xy2.top);
+		
+		
+		// scroll 바의 위치를 설정하거나 구하기
+		$(window).scrollTop(150); // $(document).scrollTop(150);
+		$(window).scrollLeft(150); // $(document).scrollLeft(150);
+		
+		$('div:eq(1)').append('<br/>scrollTop()=' + $(window).scrollTop() +
+				", scrollLeft()=" + $(window).scrollLeft());
+		
+		
+		
+	});
+	
+</script>
+
+</head>
+<body>
+	<div>수치 조작 메소드</div>
+	<div>12345</div>
+	<div>ABCDE</div>
+</body>
+</html>

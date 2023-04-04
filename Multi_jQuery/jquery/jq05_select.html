@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<style>
+	/* 스타일시트 */
+	.c1{color:ivory; background:gray;}
+	.c2{color:orange; background:navy;}
+</style>
+
+<script>
+	$(function() {
+		// addClass() : 클래스 추가
+		// removeCalss() : 클래스 삭제
+		// toggleClass() : 클래스값을 on/off
+		$("#test>li:odd").addClass('c1');
+		$("#test>li:even").addClass('c2');
+		$("#test>li:eq(0)").removeClass('c2');
+		$("#test>li:eq(1)").removeClass('c1');
+	});
+	
+	// toggleClass()는 보통 다음과 같이 스위치로 구현한다.
+	$("#test>li:eq(4)").click(function() {
+		$(this).toggleClass('c1 c2');
+	});
+	
+</script>
+</head>
+<body>
+	<ul id="test">
+		<li>테스트 텍스트</li>
+		<li>테스트 텍스트</li>
+		<li>테스트 텍스트</li>
+		<li>테스트 텍스트</li>
+		<li>테스트 텍스트</li>
+		<li>테스트 텍스트</li>
+		<li>테스트 텍스트</li>
+		<li>테스트 텍스트</li>
+	</ul>
+</body>
+</html>

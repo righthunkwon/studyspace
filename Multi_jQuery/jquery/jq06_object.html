@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<style>
+	div{border:2px solid gray; margin:5px;}
+	.c1{border:5px solid gray;}
+</style>
+<script>
+	$(function(){
+		// wrap() : 선택자를 특정 태그로 감싼다.
+		$('.c1').wrap('<h3/>');
+		
+		// wrapAll() : 선택자를 특정 태그로 한 번에 감싼다.
+		$('.c2').wrapAll('<div/>');
+		
+		// wrapInner() : 선택자의 하위 요소를 특정 태그로 감싼다.
+		$('.c3').wrapInner('<b/>');
+		
+		// unwrap() : 선택자의 부모 태그를 삭제한다.
+		$('.c4').unwrap();
+		
+		// each() : 선택한 객체를 순서대로 반복 적용할 수 있게하는 반복문
+		// $('#list>li:odd').text("<img src='../img/shiba_dog.webp'/>")		--> img 적용 X
+		// $('#list>li:even').html("<img src='../img/shiba_dog.webp'/>")	--> img 적용 O
+		
+		$("#list>li").each(function(idx, obj) {
+			$(obj).html("each()를 이용한 반복처리 (" + idx +")");
+			$(obj).addClass('c1');
+		})
+		
+		// map() : 배열을 이용한 반복문
+		// 배열을 이용해 <select> 태그를 만들어 body의 첫번째 태그로 추가
+		var hobby = ['농구', '복싱', '클라이밍', '모바일 게임', '핸드드립'];
+		var tag = "<select>";
+		hobby.map(function(txt, idx) {
+			tag += "<option>"+txt+"("+idx+")</option>";	
+		});
+		tag += "</select>";
+		
+		// prepend() : 맨 처음에 요소 추가
+		// append() : 맨 마지막에 요소 추가
+		// html() : 기존 내용 삭제 후 새로운 요소로 변경
+		$('body').prepend(tag);
+	})
+</script>
+</head>
+<body>
+	<div class="c1">객체조작 메소드 1111</div>
+	<div class="c2">객체조작 메소드 2222</div>
+	<div class="c2">객체조작 메소드 2222</div>
+	<div class="c3">객체조작 메소드 3333</div>
+	<div class="c4">객체조작 메소드 4444</div>
+	
+	<ul id="list">
+		<li>객체조작 메소드 AAAA</li>
+		<li>객체조작 메소드 BBBB</li>
+		<li>객체조작 메소드 CCCC</li>
+		<li>객체조작 메소드 DDDD</li>
+		<li>객체조작 메소드 EEEE</li>
+		<li>객체조작 메소드 FFFF</li>
+		<li>객체조작 메소드 GGGG</li>
+	</ul>
+</body>
+</html>

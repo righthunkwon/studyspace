@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01</title>
+    <style>
+        /*
+            상단 띠를 구현하지 못했었다. div태그로 구현할 수 있다! (높이는 조정해가면서 맞춰감)
+        */
+        #pink {
+            height: 40px;
+            background-color: #ED8597;
+        }
+        #blue {
+            height: 22px;
+            background-color: #54AEC8;
+        }
+        body {
+            margin: 0px;
+        }
+        .titleLayer {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .glass1 {
+            position: fixed;
+            left: 400px;
+            top: 73px;
+        }
+        .glass2 {
+            position: fixed;
+            left: 550px;
+            top: 123px;
+        }
+        .glass3 {
+            position: fixed;
+            left: 470px;
+            top: 173px;
+        }
+    </style>
+</head>
+<body>
+    <div id="pink"></div>
+    <div id="blue"></div>
+    <div class="titleLayer">
+        <img src="../img/title_layer.gif" alt="배경">
+    </div>
+    <div class="glass1">
+        <img src="../img/glass1.gif" alt="빨간 유리잔">
+    </div>
+    <div class="glass2">
+        <img src="../img/glass2.gif" alt="노란 유리잔">
+    </div>
+    <div class="glass3">
+        <img src="../img/glass3.gif" alt="파란 유리잔">
+    </div>
+</body>
+</html>

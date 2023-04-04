@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<style>
+	img{width:80%};
+	div{width:100px; margin:0 auto};
+</style>
+<script>
+	$(function() {
+		////////////////////////////////////
+		// 숨기기 : hide()
+		$('#hide').click(function() {
+			$("img:eq(0)").hide(2000);			
+		});
+	
+		// 보여주기 : show()
+		$('#show').click(function() {
+			$("img:eq(0)").show(1000);			
+		});
+	
+		// toggle
+		$('#toggle').click(function() {
+			$("img:eq(0)").toggle(100);			
+		});
+		
+		////////////////////////////////////
+		// fadeIn(진하게)
+		$('#fadeIn').click(function() {
+			$("img:eq(0)").fadeIn(1000);			
+		});
+	
+		// fadeOut(흐리게)
+		$('#fadeOut').click(function() {
+			$("img:eq(0)").fadeOut(1000);			
+		});
+	
+		// fadeToggle
+		$('#fadeToggle').click(function() {
+			$("img:eq(0)").fadeToggle(1000);			
+		});
+		
+		////////////////////////////////////
+		// slideUp
+		$('#slideUp').click(function() {
+			$("img:eq(0)").slideUp(1000);			
+		});
+	
+		// slideDown
+		$('#slideDown').click(function() {
+			$("img:eq(0)").slideDown(1000);			
+		});
+		
+		// slideToggle
+		$('#slideToggle').click(function() {
+			$("img:eq(0)").slideToggle(1000);			
+		});
+	
+	
+	});
+</script>
+</head>
+<body>
+	<div>
+		<input type="button" value="hide" id="hide"/>
+		<input type="button" value="show" id="show"/>
+		<input type="button" value="toggle" id="toggle"/>
+		
+		<input type="button" value="fadeIn" id="fadeIn"/>
+		<input type="button" value="fadeOut" id="fadeOut"/>
+		<input type="button" value="fadeToggle" id="fadeToggle"/>
+		
+		<input type="button" value="slideUp" id="slideUp"/>
+		<input type="button" value="slideDown" id="slideDown"/>
+		<input type="button" value="slideToggle" id="slideToggle"/>
+		
+		
+		
+	</div>
+	<img src="../img/01.jpg"/>
+	<img src="../img/02.jpg"/>
+</body>
+</html>

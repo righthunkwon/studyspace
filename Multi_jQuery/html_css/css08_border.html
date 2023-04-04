@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경계</title>
+    <style>
+        body {
+            background-color: burlywood;
+        }
+        /*
+            테두리 스타일 지정
+            border-style: 선의 모양(solid 실선, dotted 점선, dashed 짧은 직선, double 이중선, none 테두리 없음, ...)
+            border-color : 선의 색상
+            border-width : 선의 두께
+        */
+        div {
+            /*원래는 border-top-style, border-bottom-style, border-right-style, border left-style로 되어 있던 걸 
+            border-style로 일차적으로 그룹화를 한 것이다.*/
+            border-style: solid;
+            border-color: greenyellow;
+            border-width: 20px;
+            border-radius: 10px;
+            /*당연히 이차적으로 그룹화도 가능하다(중복제거).
+            border: 5px solid greenyellow*/
+            width: 200px;
+            height: 200px;
+            margin: 30px;
+            overflow: scroll;
+            /*
+            visible: 내용이 넘쳐도 상자 밖에 이를 표현
+            hidden: 내용이 넘치면 이를 잘라냄
+            scroll: 콘텐츠를 잘라내지만 스크롤바로 이를 확인 가능 
+            auto : 넘치지 않으면 그대로, 넘치면 scroll
+            */
+        }
+        img {
+            border: 5px solid greenyellow;
+            border-radius: 5px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere facilis tempora at ullam laudantium ea placeat consequuntur quam maiores. Voluptas deleniti sed est error asperiores corporis adipisci delectus vero exercitationem!</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere facilis tempora at ullam laudantium ea placeat consequuntur quam maiores. Voluptas deleniti sed est error asperiores corporis adipisci delectus vero exercitationem!</div>
+    <img src="../img/naver_logo.png" alt="네이버 로고">
+</body>
+</html>

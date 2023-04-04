@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display, visibility</title>
+    <style>
+        img {
+            width: 200px;
+            height: 350px;
+        }
+        /*
+            visibility : 레이아웃을 변경하지 않고(기존 공간 유지) 객체를 보여주거나 숨길 수 있다. (hidden, visible)
+        */
+        #i2 {
+            visibility: hidden;
+        }
+
+        /*
+            display : 객체를 보여주는 방법을 설정한다. 보여주거나 숨길 수도 있지만, visibility: hidden;과 달리 공간을 반납한다. 
+                (none, block(보여주기. 블록박스), inline, inline-block(중간 형태))
+        */
+        #i3 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <img src="../img/03.jpg" id="i1" alt="">
+    <img src="../img/04.jpg" id="i2" alt="">
+    <img src="../img/05.jpg" id="i3" alt="">
+    <img src="../img/06.jpg" id="i4" alt="">
+</body>
+</html>

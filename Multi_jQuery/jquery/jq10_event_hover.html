@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<style>
+	li {color:gray};
+</style>
+<script>
+	$(function() {
+		// li 태그에 마우스 오버 시 처리할 이벤트 - mouseover, mouseenter
+		// li 태그에 마우스 아웃 시 처리할 이벤트 - mouseout, mouseleave
+		var cnt = 0;
+		// hover를 이용한 구현 : .hover(over일 때 실행함수, out일 때 실행함수)
+		// $('li').hover(function(){}, function(){});
+		$('li').hover(function(){
+			$(this).css('color', 'black');
+			cnt++;
+			// over 이벤트가 10회 발생하면 이벤트 종료
+			if(cnt>=10) {
+				$(this).off();
+			}
+		}, function(){
+			$(this).css('color', 'gray');
+		});
+	});
+</script>
+
+</head>
+<body>
+	<h1>의류 판매 플랫폼</h1>
+	<ul>
+		<li>상의</li>
+		<li>하의</li>
+		<li>아우터</li>
+		<li>신발</li>
+		<li>가방</li>
+		<li>언더웨어</li>
+	</ul>
+</body>
+</html>
