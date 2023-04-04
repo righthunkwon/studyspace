@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.multi.campus.dao.RegisterDAO">
+	<select id="loginOk" resultType="com.multi.campus.dto.RegisterDTO">
+		select userid, username from register
+		where userid=#{param1} and userpwd=#{param2}
+	</select>
+	<select id="idCheckCount" resultType="int">
+		select count(userid) cnt from register where userid=#{param1}
+	</select>
+	<select id="zipSearch" resultType="com.multi.campus.dto.ZipcodeDTO">
+		select zipcode, sido, doroname, build_num1, build_num2, buildname, dong, bungi1, bungi2 from zipcode
+		where doroname like '%${param1}%' order by doroname asc
+	</select>
+	<insert id="registerInsert">
+		insert into register(userid, userpwd, username, tel, email, zipcode, addr, addrdetail, hobby)
+		values(#{userid}, #{userpwd}, #{username}, #{tel}, #{email}, #{zipcode}, #{addr}, #{addrdetail}, #{hobby})
+	</insert>
+	<select id="registerEdit" resultType="com.multi.campus.dto.RegisterDTO">
+		select userid, username, tel, email, zipcode, addr, addrdetail, hobby from register
+		where userid=#{param1}
+	</select>
+	<update id="registerEditOk">
+		update register set tel=#{tel}, email=#{email}, zipcode=#{zipcode}, addr=#{addr}, addrdetail=#{addrdetail}, hobby=#{hobby}
+		where userid=#{userid} and userpwd=#{userpwd}
+	</update>
+	<select id="idSearch" resultType="string">
+		select rpad(substr(userid, 1, length(userid)/2), length(userid),'*') userid from register where username=#{param1} and email=#{param2}
+	</select>
+</mapper>

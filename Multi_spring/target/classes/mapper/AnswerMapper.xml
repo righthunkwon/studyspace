@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace는 mapper 인터페이스와 연결된 DAO 인터페이스의 패키지와 이름을 정의 -->
+<mapper namespace="com.multi.campus.dao.AnswerDAO">
+	<select id="answerTotalRecord" resultType="int">
+		select count(no) from answerboard
+	</select>
+	<select id="answerAllSelect" resultType="com.multi.campus.dto.AnswerDTO">
+		select no, title, userid, hit, writedate, lvl
+		from answerboard order by ref desc, step asc
+	</select>
+	<insert id="answerInsert">
+		insert into answerboard(no, title, content, userid, ip, ref)
+		values(answer_sq.nextval, #{title}, #{content}, #{userid}, #{ip}, answer_sq.currval)
+	</insert>
+	<update id="hitCount">
+		update answerboard set hit = hit + 1
+		where no = #{param1}
+	</update>
+	<select id="answerSelect" resultType="com.multi.campus.dto.AnswerDTO">
+		select no, title, userid, content, hit, writedate
+		from answerboard where no = ${param1}
+	</select>
+	<select id="replyDataSelect" resultType="com.multi.campus.dto.AnswerDTO">
+		select ref, lvl, step from answerboard
+		where no=${param1}
+	</select>
+	<update id="stepUp">
+		update answerboard set step = step + 1
+		where ref = ${ref} and step > ${step}
+	</update>
+	<insert id="replyWrite">
+		insert into answerboard(no, title, content, userid, ip, ref, lvl, step)
+		values(answer_sq.nextval, #{title}, #{content}, #{userid}, #{ip}, ${ref}, ${lvl+1}, ${step+1})
+	</insert>
+	<select id="getAnswerSelect" resultType="com.multi.campus.dto.AnswerDTO">
+		select no, title, content from answerboard where no=${param1}
+	</select>
+	<update id="answerUpdate">
+		update answerboard set title=#{title}, content=#{content} where no=${no} and userid=#{userid}
+	</update>
+	<select id="getLevel" resultType="int">
+		select lvl from answerboard where no=${param1}
+	</select>
+	<delete id="answerDelete">
+		delete from answerboard where ref=${param1}
+	</delete>
+	<update id="answerDeleteUpdate">
+		<![CDATA[
+		update answerboard set title='삭제된 글입니다.', content='<p>글 내용이 삭제되었습니다.</p>', hit = 0, writedate=sysdate
+		where no=${param1}
+		]]>
+	</update>
+</mapper>

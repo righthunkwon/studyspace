@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.multi.campus.dao.BoardDAO">
+	<insert id="boardInsert">
+		insert into board(no, subject, content, userid, ip)
+		values(board_sq.nextval, #{subject}, #{content}, #{userid}, #{ip})
+	</insert>
+	<select id="totalRecord" resultType="int">
+		select count(b.no) totalRecord from board b join register r on b.userid=r.userid 
+		<if test="searchWord!=null">
+			where ${searchKey} like '%${searchWord}%'
+		</if>
+	</select>
+	<select id="pageSelect" resultType="com.multi.campus.dto.BoardDTO">
+		select * from	
+			(select * from
+				(
+					select b.no, b.subject, b.userid, r.username, b.hit, to_char(b.writedate,'MM-DD HH:MI') writedate 
+					from board b join register r on b.userid = r.userid 
+					<if test="searchWord!=null"> <!-- 검색어가 있을 때 -->
+						and ${searchKey} like '%${searchWord}%'
+					</if>
+					order by b.no desc
+				)
+			<![CDATA[
+			where rownum <= ${onePageRecord*nowPage} order by no asc
+			]]>
+			)
+			<choose>
+				<when test="nowPage!=totalPage">
+					<![CDATA[
+					where rownum <= ${onePageRecord} order by no desc
+					]]>
+				</when>
+				<when test="nowPage==totalPage">
+					<![CDATA[
+					where rownum <= ${lastPageRecord} order by no desc
+					]]>
+				</when>
+			</choose>
+	</select>
+	<select id="boardSelect" resultType="com.multi.campus.dto.BoardDTO">
+		select b.no, b.userid, b.subject, b.content, r.username, b.hit, b.writedate
+		from board b join register r on b.userid=r.userid
+		and b.no=${param1}
+	</select>
+	<select id="boardEditSelect" resultType="com.multi.campus.dto.BoardDTO">
+		select no, subject, content from board where no = ${param1}
+	</select>
+	<update id="boardUpdate" parameterType="com.multi.campus.dto.BoardDTO">
+		update board set subject=#{subject}, content=#{content} where no=${no} and userid=#{userid}
+	</update>
+	<update id="boardHitCount">
+		update board set hit=hit+1 where no=${param1}
+	</update>
+	<delete id="boardDelete">
+		delete from board where no=${no} and userid=#{userid}
+	</delete>
+	<delete id="boardMultiLineDelete">
+		<!-- delete from board where no in (num1, num2, num3, ...) 문을 만드는 쿼리문 (반복문 활용) -->
+		delete from board where
+		<foreach item="item" collection="list" open="no in (" separator=", " close=")">
+			#{item}
+		</foreach>
+	</delete>
+</mapper>

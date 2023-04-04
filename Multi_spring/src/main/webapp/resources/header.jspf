@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>header jspf</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<link rel="stylesheet" href="/campus/inc/style.css" type="text/css"/>
+<script src="/campus/inc/script.js"></script>
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="/campus/">멀티캠퍼스</a>
+		</div>
+		<div class="menu">
+			<ul>
+				<c:if test="${logStatus!='Y'}"> <!-- 비로그인 상태 -->
+					<li><a href="/campus/loginForm">로그인</a></li>
+					<li><a href="/campus/join">회원가입</a></li>
+				</c:if>
+				
+				<c:if test="${logStatus=='Y'}"> <!-- 로그인 상태 -->
+					<li><a href="/campus/logout">로그아웃</a></li>
+					<li><a href="/campus/joinEdit">회원정보수정</a></li>
+				</c:if>
+
+				<li><a href="/campus/board/boardList">게시판</a></li>
+				<li><a href="<%=request.getContextPath() %>/data/dataList">자료실</a></li>
+				<li><a href="<%=request.getContextPath() %>/answer/answerList">계층형게시판</a></li>
+				<li><a href="/campus/transaction">트랜잭션</a></li>
+			</ul>
+		</div>
+	</header>
+
+	
