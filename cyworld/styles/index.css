@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.background {
+    width: 1024px;
+    height: 600px;
+    background-image: url("../images/background.png"); /* ../ : 상위폴더 */
+    padding: 20px 0px 0px 20px; /* 12시부터 시계방향 순 */
+}
+
+.outerbox {
+    width: 800px;
+    height: 544px;
+    background-image: url("../images/outerbox.png");
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 32px 0px 0px 32px;
+}
+
+.wrapper__left {
+    width: 208px;
+    height: 472px;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper__left__header {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CSS는 상속된다(부모 → 자식) */
+.today {
+    font-size: 9px;
+}
+
+.zero {
+    color: red;
+    font-size: 11px;
+}
+
+.count {
+    font-size: 11px;
+}
+
+.wrapper__left__body {
+    width: 100%;
+    height: 100%; /* wrapper__left 472px - 30px = 442px = 100% */
+    border: 1px solid gray;
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.left__body__header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.left__body__header__gray {
+    width: 148px;
+    height: 133px;
+    background-color: gray;
+}
+
+.left__body__header__line {
+    border-top: 1px dotted black;
+    margin: 12px 0px; /* 상하, 좌우 */ 
+}
+
+.left__body__profile {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.profile__detail {
+    color: #999999;
+    font-size: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 3px;
+}
+
+.fas {
+    color: black;
+    margin-right: 10px;
+    width: 5px;
+    height: 5px;
+}
+
+.left__body__footer {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.footer__feel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer__feel__title {
+    font-size: 11px;
+    margin-bottom: 5px;
+    color: gray;
+}
+
+.footer__feel__select {
+    font-size: 11px;
+}
+
+.wrapper__right {
+    width: 524px;
+    height: 472px;
+}

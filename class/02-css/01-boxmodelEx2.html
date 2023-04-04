@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <title>박스 모델</title>
+    <style>
+        div {
+            width: 80px;
+            height: 80px;
+            border: 1px solid darkorange;
+            padding: 10px;
+        }
+
+        #contentBox {
+            box-sizing: content-box;
+        }
+
+        #borderBox {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div>박스 1</div> <!-- default box : content-box -->
+    <div id="contentBox">박스 2</div> <!-- content-box -->
+    <div id="borderBox">박스 3</div> <!-- border-box -->
+</body>
+</html>
