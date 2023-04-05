@@ -12,3 +12,4 @@ classmates[0].school
 // '다람쥐초등학교'
 classmates[2].age
 // 11
+
