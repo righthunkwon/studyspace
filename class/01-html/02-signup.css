@@ -23,12 +23,10 @@
     width: 100%;
     height: 100%;
     background-color: #FFFFFF;
-
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
 }
 
 .main {
@@ -40,16 +38,15 @@
     box-shadow: 7px 7px 39px rgba(0, 104, 255, 0.25);
     border-radius: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* row의 가로정렬, column의 세로정렬 */
 }
 
 .main2 {
     width: 470px;
     height: 818px;
-    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* row의 세로정렬, column의 가로정렬,  */
 }
 
 #introduce {
@@ -66,7 +63,6 @@
 #group1 {
     width: 466px;
     height: 80px;
-    /* border: 1px solid red; */
 }
 
 #email {
@@ -91,14 +87,12 @@
     height: 23.94px;
     display: flex;
     justify-content: space-between;
-
     font-family: 'Noto Sans CJK KR';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     color: #000000
-        /* border:1px solid #0068FF */
 }
 
 #checkbox {
@@ -124,7 +118,6 @@ button {
     background-color: #FFFFFF;
     border: 1px solid #0068FF;
     border-radius: 10px;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,7 +126,6 @@ button {
 #button_text {
     width: 70px;
     height: 27px;
-
     font-family: 'Noto Sans CJK KR';
     font-style: normal;
     font-weight: 400;
