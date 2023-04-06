@@ -85,6 +85,8 @@ html, body {
     width: 130px;
     height: 24px;
     border-radius: 5px;
+    font-size: 9px;
+    padding-left: 15px;
 }
 
 .search {
