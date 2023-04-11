@@ -78,3 +78,52 @@
     text-align: right;
     margin-top: 20px;
 }
+
+.header {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+
+.header__inner {
+    width: 700px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+}
+
+.logo h1 a {
+    text-decoration: none;
+    color: tomato;
+}
+
+.menu__ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu__ul li {
+    list-style: none;
+}
+
+.menu__ul li a {
+    display: block;
+    padding: 10px 20px; /* 링크 영역의 사이즈를 패딩을 통해 키워 UI를 개선 */
+    text-decoration: none;
+    color: tomato;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.user {
+    width: 100px;
+}
