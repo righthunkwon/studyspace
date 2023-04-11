@@ -1,0 +1,26 @@
+.title {
+    color: tomato;
+    background-color: lightskyblue;
+}
+
+/* 자손선택자 */
+.box1 .title {
+    color: goldenrod;
+}
+
+/* 다중선택자 */
+.title#headline {
+    background-color: lightskyblue;
+}
+
+.contents {
+    font-size: 20px;
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: 600; 
+}
+
+/* 
+    font-weight의 기본값은 400정도이다.
+    숫자가 커질수록 두꺼워지고 낮을수록 얇아진다.
+*/
