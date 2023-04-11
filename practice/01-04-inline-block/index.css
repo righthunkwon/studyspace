@@ -1,0 +1,23 @@
+.block-container {
+    border: 3px solid darkgoldenrod;
+    margin-bottom: 10px;
+}
+
+/* block 요소에는 width, height 적용 O */ 
+.block-container div {
+    background-color: antiquewhite;
+    width: 400px;
+
+}
+
+.inline-container {
+    border: 3px solid darkcyan;
+    margin-bottom: 10px;
+}
+
+/* span 요소에는 width, height 적용 X */
+.inline-container span {
+    background-color: aquamarine;
+    width: 400px;
+    /*  display: block; 을 통해 의도적으로 block요소로 변경 가능 */
+}

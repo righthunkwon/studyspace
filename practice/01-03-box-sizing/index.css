@@ -1,0 +1,39 @@
+.container {
+    background-color: lightblue;
+}
+
+/* box-sizing: content-box; */
+.box1 {
+    width: 200px;
+    height: 200px;
+    background-color: lightgray;
+    border: 3px solid tomato;
+    box-sizing: content-box;
+    padding: 50px;
+}
+
+/* box-sizing: border-box; */
+.box2 {
+    width: 200px;
+    height: 200px;
+    background-color: lightgray;
+    border: 3px solid cornflowerblue;
+    box-sizing: border-box;
+    padding: 50px;
+}
+
+/* box-sizing의 기본값(content-box) */
+.box3 {
+    width: 200px;
+    height: 200px;
+    background-color: lightgray;
+    border: 3px solid seagreen;
+    padding: 50px;
+}
+
+/* div와 달리 span에는 width와 height가 적용되지 않는다. */
+.text {
+    width: 200px;
+    height: 50px;
+    background-color:  lightsalmon;
+}
