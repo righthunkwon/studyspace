@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 600px;
+    height: 500px;
+    background-color: #eeeeee;
+    border: 2px solid tomato;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.container div {
+    background-color: steelblue;
+    margin: 5px;
+    width: 270px;
+    color: white;
+}
+
+/* order의 기본값 : 0 */
+.box4 {
+    order: 2;
+}
+
+.box5 {
+    order: 1;
+}
