@@ -1,0 +1,15 @@
+* {
+    background-color: sandybrown;
+}
+
+div {
+    background-color: aqua;
+}
+
+.text-class {
+    background-color:dodgerblue;
+}
+
+#text-id {
+    background-color: tomato;
+}
