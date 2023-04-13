@@ -18,18 +18,21 @@
 
 .item1 {
     position: relative;
+    z-index: 3;
 }
 
 .item2 {
     position: absolute;
     top: 70px;
     left: 70px;
+    z-index: 2;
 }
 
 .item3 {
     position: absolute;
     top: 100px;
     left: 100px;
+    z-index: 1;
 }
 
 .item4 {
