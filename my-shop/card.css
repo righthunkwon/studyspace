@@ -12,12 +12,12 @@ html, body {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* 넘치면 개행 */
 }
 
 .item {
     width: calc(25% - 7px);
-    aspect-ratio: 6 / 5; /* 비율 고정 */
+    aspect-ratio: 6 / 5; /* 비율 고정(가로 / 세로) */
     position: relative;
     overflow: hidden;
     border-radius: 10px;
@@ -56,14 +56,14 @@ html, body {
 }
 
 .textBox__name {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     opacity: 0; /* 텍스트를 안 보이게 해둠 */
     transform: translateY(50px);
 }
 
 .textBox__price {
-    font-size: 14px;
+    font-size: 12px;
     opacity: 0; /* 텍스트를 안 보이게 해둠 */
     transform: translateY(50px);
 }
@@ -107,5 +107,9 @@ html, body {
 .item .imgBox img,
 .item .textBox__name,
 .item .textBox__price {
-    transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out 0.05s;
+}
+
+.item .textBox__price {
+    transition: all 0.4s ease-in-out 0.15s;
 }
