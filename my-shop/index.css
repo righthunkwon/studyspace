@@ -1,0 +1,403 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mainBanner {
+    width: 100%;
+    height: 280px;
+    background-image: url(./img/banner.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.mainBanner .text {
+    font-size: 54px;
+    font-weight: 700;
+    color: wheat;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation: titleText 1s ease-in-out;
+}
+
+@keyframes titleText {
+    0% {
+        transform: translateY(70px);
+        opacity: 0;
+    }
+
+    92% {
+        transform: translateY(-1px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1320px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 10px;
+}
+
+.sidebar {
+    width: 170px;
+}
+
+.mainMenu {
+    background-color: tomato;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.mainMenu ul {
+    padding: 0px;
+    display: block;
+}
+
+.mainMenu ul li {
+    list-style: none;
+    display: block;
+}
+
+.mainMenu ul li a {
+    padding: 10px;
+    display: block;
+    color: whitesmoke;
+    border-radius: 20px;
+    font-weight: 700px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.writeBtnBox {
+    margin-top: 7px;
+}
+
+.writeBtn {
+    width: 100%;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.writeBtn .arrow {
+    display: inline-block;
+    padding-left: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.itemWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* 넘치면 개행 */
+    width: calc(100% - 170px);
+    padding-left: 15px;
+}
+
+.item {
+    width: calc(25% - 7px);
+    aspect-ratio: 6 / 5;
+    /* 비율 고정(가로 / 세로) */
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.imgBox {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 이미지 왜곡 방지 */
+}
+
+.textBox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 20px;
+    z-index: 3;
+}
+
+.textBox p {
+    color: whitesmoke;
+    margin: 5px 0px 0px 0px;
+}
+
+.textBox__name {
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0;
+    /* 텍스트를 안 보이게 해둠 */
+    transform: translateY(50px);
+}
+
+.textBox__price {
+    font-size: 12px;
+    opacity: 0;
+    /* 텍스트를 안 보이게 해둠 */
+    transform: translateY(50px);
+}
+
+/* 가상요소 */
+.item:after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    /* 음영처리가 안 보이게 함 */
+}
+
+/* transition 일괄 처리 */
+.item:after,
+.item .imgBox img,
+.item .textBox__name,
+.item .textBox__price {
+    transition: all 0.4s ease-in-out 0.05s;
+}
+
+.item .textBox__price {
+    transition: all 0.4s ease-in-out 0.15s;
+}
+
+@media screen and (max-width: 767px) {
+
+    /* mobile */
+    .mainBanner {
+        height: 160px;
+        margin-bottom: 0;
+    }
+
+    .mainBanner .text {
+        font-size: 26px
+    }
+
+    .wrapper {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .mainMenu {
+        padding: 0;
+        border-radius: 0;
+    }
+    .mainMenu ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .mainMenu ul li a {
+        font-size: 14px;
+        padding: 12px 10px;
+    }
+
+    .writeBtnBox {
+        display: none;
+    }
+
+    .itemWrap {
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .item {
+        width: calc(50% - 7px);
+        overflow: visible;
+        border: 1px solid #dddddd;
+    }
+
+    .textBox {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .textBox p {
+        color: black;
+    }
+
+    .textBox__name {
+        font-size: 16px;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .textBox__price {
+        font-size: 10px;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* tablet */
+    .mainBanner {
+        height: 160px;
+        margin-bottom: 0;
+    }
+
+    .mainBanner .text {
+        font-size: 26px
+    }
+
+    .wrapper {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .mainMenu {
+        padding: 0;
+        border-radius: 0;
+    }
+    .mainMenu ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .mainMenu ul li a {
+        font-size: 14px;
+        padding: 12px 10px;
+    }
+
+    .writeBtnBox {
+        display: none;
+    }
+
+    .itemWrap {
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .item {
+        overflow: visible;
+        border: 1px solid #dddddd;
+    }
+
+    .textBox {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .textBox p {
+        color: black;
+    }
+
+    .textBox__name {
+        font-size: 16px;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .textBox__price {
+        font-size: 10px;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    /* desktop */
+    /* pc일 때만 hover 속성 적용 가능(모바일 불가) */
+    .mainMenu ul li a:hover {
+        background-color: red;
+        padding-left: 20px;
+    }
+
+    .writeBtn:hover {
+        background-color: #ffffff;
+        color: #333333;
+    }
+
+    .writeBtn:hover .arrow {
+        transform: translateX(50px);
+    }
+
+    .item:hover .textBox__name {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .item:hover .textBox__price {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* item이 hover 됐을 때 after라는 가상요소에 처리할 일 */
+    .item:hover:after {
+        opacity: 1;
+    }
+
+    .item:hover .imgBox img {
+        transform: scale(1.1);
+        filter: blur(3px);
+    }
+}
