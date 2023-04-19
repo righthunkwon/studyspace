@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +9,37 @@
     <link rel="stylesheet" href="./index.css">
     <script src="./index.js"></script>
 </head>
+
 <body>
     <div class="container">
-        <section class="wrapper">
-            <div>D-Day-Counter</div>
-            <input type="text" id="target-year-input" class="target-input">
-            <input type="text" id="target-month-input" class="target-input">
-            <input type="text" id="target-date-input" class="target-input">
-            <button onclick="counterMaker()">Check</button>
-        </section>
+        <h1 class="main-banner">D-Day Counter</h1>
+        <div id="d-day-container">
+            <div class="d-day-child-container">
+                <span id="days">0</span>
+                <span>일</span>
+            </div>
+            <div class="d-day-child-container">
+                <span id="hours">0</span>
+                <span>시간</span>
+            </div>
+            <div class="d-day-child-container">
+                <span id="min">0</span>
+                <span>분</span>
+            </div>
+            <div class="d-day-child-container" id="sec-container">
+                <span id="sec">0</span>
+                <span>초</span>
+            </div>
+        </div>
+        <div id="input-container">
+            <div id="target-selector">
+                <input type="text" id="target-year-input" class="target-input" placeholder="year" /> -
+                <input type="text" id="target-month-input" class="target-input" placeholder="month" /> -
+                <input type="text" id="target-date-input" class="target-input" placeholder="day" />
+            </div>
+            <button onclick="counterMaker()" id="start-btn">Check</button>
+        </div>
     </div>
 </body>
+
 </html>
