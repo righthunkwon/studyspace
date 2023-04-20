@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D-Day-Counter</title>
     <link rel="stylesheet" href="./index.css">
-    <script src="./index.js"></script>
+    <!-- defer : 페이지가 모두 로드된 후에 해당 외부 스크립트가 실행되게 만듦  -->
+    <script src="./index.js" defer></script>
 </head>
 
 <body>
@@ -31,6 +32,7 @@
                 <span>초</span>
             </div>
         </div>
+        <div id="d-day-message"></div>
         <div id="input-container">
             <div id="target-selector">
                 <input type="text" id="target-year-input" class="target-input" placeholder="year" /> -
