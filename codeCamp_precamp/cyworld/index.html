@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>권정훈님의 미니홈피 :: 사이좋은 사람들, 싸이월드</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="https://kit.fontawesome.com/461424dc9e.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <div class="background">
+        <div class="outerbox">
+            <div class="wrapper">
+                <div class="wrapper__left">
+                    <div class="wrapper__left__header">
+                        <div class="today">
+                            <span>TODAY</span>
+                            <span class="zero">0</span>
+                            <span> | TOTAL</span>
+                            <span class="count">12345</span>
+                        </div>
+                    </div>
+                    <div class="wrapper__left__body">
+                        <div class="left__body__header">
+                            <div class="left__body__header__gray"></div>
+                            <div class="left__body__header__line"></div>
+                        </div>
+                        <div class="left__body__profile">
+                            <!-- font awesome -->
+                            <div class="profile__detail">
+                                <i class="fa-solid fa-circle-user"></i>&nbsp;
+                                이름
+                            </div>
+                            <div class="profile__detail">
+                                <i class="fa-solid fa-phone"></i>&nbsp;
+                                연락처
+                            </div>
+                            <div class="profile__detail">
+                                <i class="fa-solid fa-envelope"></i>&nbsp;
+                                메일
+                            </div>
+                            <div class="profile__detail">
+                                <i class="fa-solid fa-link"></i>&nbsp;
+                                인스타그램
+                            </div>
+                        </div>
+                        <div class="left__body__footer">
+                            <div class="footer__feel">
+                                <div class="footer__feel__title">오늘의 기분</div>
+                                <select class="footer__feel__select">
+                                    <option disabled="true" selected="true">선택하기</option>
+                                    <option>기쁨 😊</option>
+                                    <option>그냥 😐</option>
+                                    <option>슬픔 😭</option>
+                                    <option>화남 😡</option>
+                                    <option>좌절 😔</option>
+                                    <option>혼란 🤯</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper__right">
+                    <div class="wrapper__right__header">
+                        <div class="right__header__title">
+                            사이좋은 사람들, 싸이월드
+                        </div>
+                        <div class="right__header__setting">
+                            사생활보호설정
+                        </div>
+                    </div>
+                    <div class="wrapper__right__body">
+                        <iframe id="contentFrame" src="./home.html"></iframe>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <div class="navigation__item" id="menuHome" onclick="menuHome()">홈</div>
+                    <div class="navigation__item" id="menuJukebox" onclick="menuJukebox()">쥬크박스</div>
+                    <div class="navigation__item" id="menuGame" onclick="menuGame()">게임</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
