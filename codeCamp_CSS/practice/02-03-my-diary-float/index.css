@@ -1,0 +1,151 @@
+/* 기본 설정 */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px; /* 상하, 좌우 */
+}
+
+.wrapper {
+    width: 620px;
+    padding: 40px 30px; /* 상하, 좌우 */
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.wrapper__header {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed gray;
+}
+
+.wrapper__header__title {
+    font-size: 32px;
+    color: seashell;
+    text-align: center;
+    background-color: tomato;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.wrapper__header__subtitle {
+    font-size: 16px;
+    padding: 10px 0px;
+    font-weight: 600;
+}
+
+/* #point는 span, 즉 inline요소이므로 block으로 변경해야 margin을 적용할 수 있다. */
+#point {
+    color: tomato;
+    font-size: 21px;
+    font-weight: 700;
+    text-decoration: underline;
+    display: block;
+    margin-top: 15px
+}
+
+.wrapper__body {
+    border: 1px solid #dddddd;
+    padding:20px 30px;
+    font-size: 16px;
+}
+
+.diary__title {
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #f4f4f4;
+    margin-bottom: 20px;
+}
+
+.strong {
+    color: tomato;
+    font-weight: 700;
+    background-color: beige;
+}
+
+.diary__date {
+    color: #919191;
+    font-size: 12px;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.header {
+    border-bottom: 1px solid gray;
+}
+
+.header__inner {
+    width: 900px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.logo {
+    background-color: tomato;
+    float: left;
+    width: 100px;
+    height: 80px;
+    padding-top: 17px;
+}
+
+.logo a {
+    padding-left: 5px;
+    text-decoration: none;
+    color: beige;
+}
+
+.logo a:hover {
+    color: black;
+}
+
+.menu {
+    float: left;
+    width: calc(100% - 200px);
+    height: 80px;
+    text-align: center;
+}
+
+.menu__ul {
+    display: inline-block;
+}
+
+.menu__ul li {
+    float: left;
+    list-style: none;
+}
+
+.menu__ul li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 29px 20px;
+    font-size: 14px;
+    font-weight: 5500;
+
+}
+
+.menu__ul li a:hover {
+    background-color: beige;
+    font-weight: 700;
+}
+
+.user {
+    float: left;
+    width: 100px;
+    height: 80px;
+    padding-top: 23px;
+}
+
+.clearfix {
+    clear: both;
+}
+

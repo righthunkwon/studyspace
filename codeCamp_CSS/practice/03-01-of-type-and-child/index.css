@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+/* 적용 X */
+.container p:first-child {
+    background-color: tomato;
+}
+
+/* 적용 O */
+.container h1:first-child {
+    background-color: royalblue;
+}
+
+/* 적용 O */
+.container p:first-of-type {
+    background-color: coral;
+}
+
+/* 적용 O */
+.container p:last-of-type {
+    background-color: sienna;
+}
+
+/* 적용 O */
+.container p:nth-of-type(2) {
+    background-color: yellowgreen;
+}
+
+/* 적용 X */
+.container span:first-of-type {
+    background-color: wheat;
+}
+
+/* 적용 O */
+.container span:first-of-type {
+    background-color: indianred;
+}

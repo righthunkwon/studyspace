@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    border: 2px solid tomato;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr 2fr);
+    grid-template-rows: repeat(4, 100px);
+    grid-gap: 5px; /* grid 사이의 margin */
+}
+
+.item {
+    border: 2px solid cornflowerblue;
+    margin: 2px;
+    padding: 5px;
+}
+
+.item1 {
+    background-color: cornflowerblue;
+    grid-row: 2 / 3; /* 행 : 2 to 3*/
+    grid-column: 1 / 3 ; /* 열 : 1 to 3 */
+}

@@ -1,0 +1,11 @@
+.button1:active {
+    background-color: tomato;
+}
+
+.input1:focus {
+    background-color: beige;
+}
+
+.link1:visited {
+    color: teal;
+}

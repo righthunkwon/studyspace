@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    width: 300px;
+    padding: 20px;
+}
+
+.box1 {
+    height: 400px;
+    background-color: tomato;
+    float: left;
+}
+
+.box2 {
+    height: 200px;
+    background-color: darkcyan;
+    float: right;
+}
+
+.text {
+    clear: both;
+}

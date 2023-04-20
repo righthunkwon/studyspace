@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sidebar {
+    width: 170px;
+    background-color: tomato;
+    padding: 5px 15px;
+}
+
+.sidebar ul {
+    width: 100%;
+}
+
+.sidebar ul li {
+    list-style: none;
+    padding: 5px 0px;
+    color: wheat;
+    border-bottom: 1px dashed rgba(214, 214, 214, 0.3);
+}
+
+.contents {
+    width: calc(100% - 170px); /* 100% - sidebar */
+    background-color: sandybrown;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0px 10px;
+}
+
+.item {
+    width: 24%;
+    height: 180px;
+    background-image: url(../img/slamdunk.jpg);
+    margin-bottom: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

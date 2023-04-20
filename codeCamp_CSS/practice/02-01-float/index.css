@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+.float__box {
+    width: 200px;
+    height: 200px;
+    background-color: blanchedalmond;
+    padding: 30px;
+    float: right; /* 오른쪽 정렬*/
+}
+
+p {
+    clear: right; /* float: right; 와 호응하여 clear가 적용되어 기존 레이아웃으로 원상복구 */
+}

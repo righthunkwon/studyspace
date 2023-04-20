@@ -1,0 +1,18 @@
+.box {
+    background-color: lightsalmon;
+    width: 150x;
+    height: 100px;
+    border: 2px solid tomato;
+    padding: 50px; /* border 안의 여백 */
+    margin: 50px; /* border 밖의 여백 */ 
+} 
+
+div {
+    width: 200px;
+    height: 200px;
+    background-color: lightseagreen;
+}
+
+.box1 {
+    padding: 50px;
+}
