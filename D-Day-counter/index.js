@@ -20,7 +20,7 @@ const counterMaker = function () {
     const targetDate = new Date(targetDateInput).setHours(0, 0, 0, 0); // setHours(0, 0, 0, 0) : 기준 시간은 09시인데 이를 0시로 초기화
     const remaining = (targetDate - nowDate) / 1000;
     if (remaining <= 0) {
-
+        msgContainer.innerHTML = '유효한 시간대가 아닙니다.';
     } else if (isNaN(remaining)) {
         msgContainer.innerHTML = '유효한 시간대가 아닙니다.';
     }
@@ -40,14 +40,10 @@ const counterMaker = function () {
     }
 
     const timeKeys = Object.keys(remainingObj);
+    const docKeys = Object.keys(documentObj);
 
     for (let i = 0; i < 10; i = i + 1) {
-
+        documentObj[docKeys[i]].textContent = remainingObj[timeKeys[i]];
     }
-
-    documentObj.days.textContent = remainingObj.remainingDate;
-    documentObj.hours.textContent = remainingObj.remainingHours;
-    documentObj.min.textContent = remainingObj.remainingMin;
-    documentObj.sec.textContent = remainingObj.remainingSec;
 
 }
