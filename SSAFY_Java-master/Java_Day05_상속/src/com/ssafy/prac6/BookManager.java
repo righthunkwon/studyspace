@@ -80,7 +80,7 @@ public class BookManager {
 	public Magazine[] getMagazines() {
 		int cnt = 0;
 		for (int i = 0; i < this.size; i++) {
-			if (!(books[i] instanceof Book)) {
+			if (books[i] instanceof Magazine) {
 				cnt++;
 			}
 		}
@@ -92,7 +92,7 @@ public class BookManager {
 		Magazine[] mg = new Magazine[cnt];
 
 		for (int i = 0, idx = 0; i < this.size; i++) {
-			if (!(books[i] instanceof Book)) {
+			if (books[i] instanceof Magazine) {
 				mg[idx++] = (Magazine) books[i];
 			}
 		}
@@ -102,7 +102,7 @@ public class BookManager {
 	public Book[] getBooks() {
 		int cnt = 0;
 		for (int i = 0; i < this.size; i++) {
-			if (books[i] instanceof Book) {
+			if (!(books[i] instanceof Magazine)) {
 				cnt++;
 			}
 		}
@@ -114,7 +114,7 @@ public class BookManager {
 		Book[] b = new Book[cnt];
 
 		for (int i = 0, idx = 0; i < this.size; i++) {
-			if (b[i] instanceof Book) {
+			if (!(books[i] instanceof Magazine)) {
 				b[idx++] = books[i];
 			}
 		}
@@ -132,4 +132,5 @@ public class BookManager {
 	public double getPriceAvg() {
 		return getTotalPrice() / (double) this.size;
 	}
+	
 }

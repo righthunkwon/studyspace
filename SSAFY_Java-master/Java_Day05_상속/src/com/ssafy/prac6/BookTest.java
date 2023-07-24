@@ -14,8 +14,48 @@ public class BookTest {
 		bm.add(b2);
 		bm.add(b3);
 		bm.add(m1);
-		
-		System.out.println(Arrays.toString(bm.getList()));
-	}
-}
 
+		System.out.println("**********************도서 전체 목록**********************");
+		printBookList(bm.getList());
+		System.out.println("**********************일반 도서 목록**********************");
+		printBooks(bm.getBooks());
+		System.out.println("**********************잡지 목록**********************");
+		printMagazines(bm.getMagazines());
+		System.out.println("**********************도시 제목 포함검색: Java**********************");
+		printTargetBook(bm.searchByTitle("Java"));
+
+	}
+
+	public static void printBookList(Book[] books) {
+		for (Book book : books) {
+			if (book != null) {
+				System.out.print(book);
+			}
+		}
+	}
+	
+	public static void printBooks(Book[] books) {
+		for (Book book : books) {
+			if (book != null) {
+				System.out.print(book);
+			}
+		}
+	}
+
+	public static void printMagazines(Magazine[] magazines) {
+		for (Magazine magazine : magazines) {
+			if (magazine != null) {
+				System.out.print(magazine);
+			}
+		}
+	}
+	
+	public static void printTargetBook(Book[] books) {
+		for (Book book : books) {
+			if (book != null) {
+				System.out.print(book);
+			}
+		}
+	}
+
+}
