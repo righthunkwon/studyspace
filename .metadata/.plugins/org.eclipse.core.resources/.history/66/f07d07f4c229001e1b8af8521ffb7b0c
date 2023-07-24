@@ -1,0 +1,8 @@
+package ploymorphism01;
+
+public class TypeCastingTest {
+	public static void main(String[] args) {
+		Person p = new Person();
+		Object obj = p; // 자동형변환
+	}
+}

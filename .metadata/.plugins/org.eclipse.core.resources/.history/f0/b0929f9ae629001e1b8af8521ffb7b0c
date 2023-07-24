@@ -1,0 +1,28 @@
+package test06_extends;
+
+class Parent {
+	int data = 10;
+	public void print() {
+		System.out.println(data);
+	}
+}
+
+class Child extends Parent {
+	int data = 20;
+	public void print() {
+		int data = 30;
+		System.out.println(data); // 30
+		System.out.println(this.data); // 20
+		System.out.println(super.data); // 10
+	}
+}
+
+public class ExtendsTest {
+	public static void main(String[] args) {
+		Child c = new Child();
+		c.print(); // 30, 20, 10
+		
+		Parent p = new Child();
+		p.print(); // 10 X / 30, 20, 10 O (동적 바인딩)
+	} 
+}
