@@ -14,10 +14,11 @@ public class MovieTest {
 		imm.add(smv1);
 
 		// 인터페이스를 이용하지 않고도 이렇게 작성해도 동작한다.
-		// MovieManagerImpl imm = MovieManagerImpl.getInstance();
-		// imm.add(mv1);
-		// imm.add(mv2);
-		// imm.add(smv1);
+		// 단, MovieManagerImpl의 getInstance() 메소드의 반환형을 MovieManagerImpl로 수정해야 한다. 
+//		MovieManagerImpl imm = MovieManagerImpl.getInstance();
+//		imm.add(mv1);
+//		imm.add(mv2);
+//		imm.add(smv1);
 		
 		System.out.println(Arrays.toString(imm.searchByTitle("아이언")));
 		System.out.println(Arrays.toString(imm.getMovies()));
