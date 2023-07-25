@@ -7,7 +7,7 @@ public class Book {
 	private String publisher;
 	private int price;
 	private String desc;
-	
+
 	public Book() {
 	}
 
@@ -67,6 +67,9 @@ public class Book {
 	public void setDesc(String desc) {
 		this.desc = desc;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return isbn + "\t|  " + title + "\t|  " + author + "\t|  " + publisher + "\t|  " + price + "\t|  " + desc + "\n";
+	}
 }

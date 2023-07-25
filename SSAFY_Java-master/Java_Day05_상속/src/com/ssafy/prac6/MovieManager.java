@@ -7,7 +7,6 @@ public class MovieManager {
 	private int size = 0;
 	
 	private Movie[] movieList = new Movie[MAX_SIZE];
-	private SeriesMovie[] seriesMovieList = new SeriesMovie[MAX_SIZE];
 	
 	private MovieManager() {
 	}

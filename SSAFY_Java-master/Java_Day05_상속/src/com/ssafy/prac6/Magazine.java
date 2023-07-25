@@ -31,10 +31,7 @@ public class Magazine extends Book{
 
 	@Override
 	public String toString() {
-		return "Magazine [year=" + year + ", month=" + month + ", getIsbn()=" + getIsbn() + ", getTitle()=" + getTitle()
-				+ ", getAuthor()=" + getAuthor() + ", getPublisher()=" + getPublisher() + ", getPrice()=" + getPrice()
-				+ ", getDesc()=" + getDesc() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
+		return getIsbn() + "\t|  " + getTitle() + "\t|  " + getAuthor() + "\t|  " + getPublisher() + "\t|  " + getPrice() + "\t|  " + getDesc() + "\t|  " + year + "\t|  " + month + "\n";
 	}
 	
 }
