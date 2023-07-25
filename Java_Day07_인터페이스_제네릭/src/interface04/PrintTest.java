@@ -14,7 +14,7 @@ interface MyPrint2 {
 
 class PrintClass implements MyPrint1, MyPrint2 {
 
-	// print()를 두 개 만들 수는 없다.
+	// MyPrint1과 2중 print()를 선택하여 오버라이드 해야 한다.
 	@Override
 	public void print() {
 		MyPrint1.super.print();

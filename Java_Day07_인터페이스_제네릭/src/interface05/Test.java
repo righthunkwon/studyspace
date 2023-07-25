@@ -7,12 +7,11 @@ public class Test {
 		// 모니터
 		HdmiOutput monitor = new Monitor();
 		computer.setOutput(monitor);
+		computer.show();
 
 		// 티비
 		HdmiOutput tv = new TV();
 		computer.setOutput(tv);
-		
-		// 출력
 		computer.show();
 	}
 }
