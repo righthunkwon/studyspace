@@ -1,7 +1,0 @@
-package abstractclass02;
-
-public class KFoodChef {
-	public void cook() {
-		System.out.println("한식을 한다");
-	}
-}

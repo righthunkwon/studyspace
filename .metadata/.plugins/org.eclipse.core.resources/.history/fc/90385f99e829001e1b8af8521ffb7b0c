@@ -1,7 +1,0 @@
-package abstractclass02;
-
-public class JFoodChef {
-	public void cook() {
-		System.out.println("일식을 한다.");
-	}
-}

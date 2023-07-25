@@ -1,7 +1,5 @@
 package java02.variable;
 
-import com.sun.xml.internal.fastinfoset.algorithm.IEEE754FloatingPointEncodingAlgorithm;
-
 public class Var01_VariableTest {
 
 	// 변수 : 데이터를 저장할 메모리의 위치, 적절한 메모리 공간을 확보하기 위해 변수의 타입 존재
