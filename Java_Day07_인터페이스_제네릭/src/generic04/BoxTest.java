@@ -1,5 +1,9 @@
 package generic04;
 
+// 제너릭 타입에서의 와일드 카드 이용
+// Generic type<?> : 타입에 제한이 없음
+// Generic type<? extends T> : T와 T를 상속받은 타입들만 사용 가능
+// Generic type<? super T> : T와 T의 조상 타입만 사용 가능
 class Person {
 	
 }

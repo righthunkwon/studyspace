@@ -31,8 +31,10 @@ public class BoxTest {
 	public static void main(String[] args) {
 		// 제한된 제네릭 클래스로 인해 타입변수가 제한된다.
 		Box<Kwon> box1 = new Box<Kwon>();
-		
-		// 단, 해당 클래스를 상속받고 있다면 타입변수로 사용할 수 있다.
+		// Box<Kwon> box2 = new Box<KwonJunior>(); 제네릭은 상속관계에 있어도 결코 다르게 쓸 수 없다.
+		// Box<KwonJunior> box3 = new Box<Kwon>(); 부모자식 포함관계에 관계없이 제네릭은 통일해서 쓴다.
+
+		// 단, 해당 클래스를 상속받고 있다면 타입 매개변수를 동일하게 하여서는 사용할 수 있다.
 		Box<KwonJunior> box2 = new Box<KwonJunior>();
 		
 		// 부모 클래스는 사용할 수 없다.
