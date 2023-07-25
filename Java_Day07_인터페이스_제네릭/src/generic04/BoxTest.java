@@ -21,7 +21,7 @@ public class BoxTest {
 		PersonBox<Object> po = new PersonBox<Object>();
 		PersonBox<Person> pp = new PersonBox<Person>();
 		PersonBox<Student> ps = new PersonBox<Student>();
-		
+		 
 		// (1) default : 기본
 		PersonBox<?> pAll = po;
 		pAll = pp;
