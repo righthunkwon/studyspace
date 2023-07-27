@@ -6,272 +6,10 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
 Framework arguments:  -product org.eclipse.epp.package.java.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
 
-This is a continuation of log file C:\Users\SSAFY\workspace\.metadata\.bak_0.log
-Created Time: 2023-07-27 09:04:37.861
+This is a continuation of log file C:\Users\SSAFY\workspace\.metadata\.bak_5.log
+Created Time: 2023-07-27 16:24:39.561
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:04:37.861
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39528, pubDate=, guid=https://newsroom.eclipse.org/39528]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:04:37.862
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39503, pubDate=, guid=https://newsroom.eclipse.org/39503]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:04:37.862
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39468, pubDate=, guid=https://newsroom.eclipse.org/39468]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:04:37.862
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39437, pubDate=, guid=https://newsroom.eclipse.org/39437]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:04:37.862
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39434, pubDate=, guid=https://newsroom.eclipse.org/39434]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:04:37.863
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39421, pubDate=, guid=https://newsroom.eclipse.org/39421]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:04:37.863
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39398, pubDate=, guid=https://newsroom.eclipse.org/39398]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:04:37.864
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39370, pubDate=, guid=https://newsroom.eclipse.org/39370]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:04:37.864
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39377, pubDate=, guid=https://newsroom.eclipse.org/39377]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:04:37.879
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39593, pubDate=, guid=https://newsroom.eclipse.org/39593]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler$1.run(UIEventObjectSupplier.java:67)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3933)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3564)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:04:37.879
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39528, pubDate=, guid=https://newsroom.eclipse.org/39528]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler$1.run(UIEventObjectSupplier.java:67)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3933)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3564)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:04:37.880
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:24:39.561
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39503, pubDate=, guid=https://newsroom.eclipse.org/39503]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -289,8 +27,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -321,7 +58,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:04:37.880
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:24:39.561
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39468, pubDate=, guid=https://newsroom.eclipse.org/39468]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -339,8 +76,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -371,7 +107,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:04:37.880
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:24:39.561
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39437, pubDate=, guid=https://newsroom.eclipse.org/39437]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -389,8 +125,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -421,7 +156,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:04:37.881
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:24:39.561
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39434, pubDate=, guid=https://newsroom.eclipse.org/39434]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -439,8 +174,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -471,7 +205,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:04:37.881
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:24:39.561
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39421, pubDate=, guid=https://newsroom.eclipse.org/39421]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -489,8 +223,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -521,7 +254,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:04:37.882
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:24:39.561
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39398, pubDate=, guid=https://newsroom.eclipse.org/39398]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -539,8 +272,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -571,7 +303,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:04:37.882
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:24:39.561
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39370, pubDate=, guid=https://newsroom.eclipse.org/39370]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -589,8 +321,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -621,7 +352,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:04:37.883
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:24:39.561
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39377, pubDate=, guid=https://newsroom.eclipse.org/39377]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -639,8 +370,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -671,7 +401,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:09:37.884
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:29:39.543
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39593, pubDate=, guid=https://newsroom.eclipse.org/39593]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -689,7 +419,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:09:37.885
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:29:39.543
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39528, pubDate=, guid=https://newsroom.eclipse.org/39528]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -707,7 +437,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:09:37.885
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:29:39.543
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39503, pubDate=, guid=https://newsroom.eclipse.org/39503]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -725,7 +455,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:09:37.886
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:29:39.543
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39468, pubDate=, guid=https://newsroom.eclipse.org/39468]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -743,7 +473,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:09:37.886
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:29:39.543
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39437, pubDate=, guid=https://newsroom.eclipse.org/39437]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -761,7 +491,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:09:37.886
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:29:39.543
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39434, pubDate=, guid=https://newsroom.eclipse.org/39434]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -779,7 +509,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:09:37.887
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:29:39.543
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39421, pubDate=, guid=https://newsroom.eclipse.org/39421]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -797,7 +527,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:09:37.887
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:29:39.543
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39398, pubDate=, guid=https://newsroom.eclipse.org/39398]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -815,7 +545,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:09:37.887
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:29:39.543
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39370, pubDate=, guid=https://newsroom.eclipse.org/39370]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -833,7 +563,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:09:37.888
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:29:39.543
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39377, pubDate=, guid=https://newsroom.eclipse.org/39377]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -851,7 +581,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:09:37.902
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:29:39.557
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39593, pubDate=, guid=https://newsroom.eclipse.org/39593]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -869,8 +599,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -901,7 +630,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:09:37.903
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:29:39.557
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39528, pubDate=, guid=https://newsroom.eclipse.org/39528]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -919,8 +648,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -951,7 +679,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:09:37.903
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:29:39.557
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39503, pubDate=, guid=https://newsroom.eclipse.org/39503]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -969,8 +697,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -1001,7 +728,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:09:37.904
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:29:39.557
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39468, pubDate=, guid=https://newsroom.eclipse.org/39468]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1019,8 +746,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -1051,7 +777,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:09:37.904
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:29:39.557
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39437, pubDate=, guid=https://newsroom.eclipse.org/39437]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1069,8 +795,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -1101,7 +826,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:09:37.905
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:29:39.557
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39434, pubDate=, guid=https://newsroom.eclipse.org/39434]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1119,8 +844,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -1151,7 +875,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:09:37.905
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:29:39.557
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39421, pubDate=, guid=https://newsroom.eclipse.org/39421]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1169,8 +893,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -1201,7 +924,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:09:37.905
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:29:39.557
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39398, pubDate=, guid=https://newsroom.eclipse.org/39398]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1219,8 +942,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -1251,7 +973,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:09:37.906
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:29:39.557
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39370, pubDate=, guid=https://newsroom.eclipse.org/39370]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1269,8 +991,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -1301,7 +1022,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:09:37.906
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:29:39.557
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39377, pubDate=, guid=https://newsroom.eclipse.org/39377]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1319,8 +1040,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -1351,7 +1071,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:14:37.903
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:34:39.568
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39593, pubDate=, guid=https://newsroom.eclipse.org/39593]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1369,7 +1089,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:14:37.904
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:34:39.568
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39528, pubDate=, guid=https://newsroom.eclipse.org/39528]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1387,7 +1107,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:14:37.904
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:34:39.568
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39503, pubDate=, guid=https://newsroom.eclipse.org/39503]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1405,7 +1125,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:14:37.905
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:34:39.569
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39468, pubDate=, guid=https://newsroom.eclipse.org/39468]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1423,7 +1143,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:14:37.905
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:34:39.569
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39437, pubDate=, guid=https://newsroom.eclipse.org/39437]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1441,7 +1161,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:14:37.905
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:34:39.569
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39434, pubDate=, guid=https://newsroom.eclipse.org/39434]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1459,7 +1179,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:14:37.906
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:34:39.569
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39421, pubDate=, guid=https://newsroom.eclipse.org/39421]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1477,7 +1197,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:14:37.906
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:34:39.570
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39398, pubDate=, guid=https://newsroom.eclipse.org/39398]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1495,7 +1215,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:14:37.906
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:34:39.570
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39370, pubDate=, guid=https://newsroom.eclipse.org/39370]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1513,7 +1233,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:14:37.907
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:34:39.570
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39377, pubDate=, guid=https://newsroom.eclipse.org/39377]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1531,7 +1251,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:14:37.921
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:34:39.580
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39593, pubDate=, guid=https://newsroom.eclipse.org/39593]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1549,8 +1269,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -1581,7 +1300,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:14:37.922
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:34:39.581
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39528, pubDate=, guid=https://newsroom.eclipse.org/39528]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1599,8 +1318,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -1631,7 +1349,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:14:37.922
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:34:39.582
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39503, pubDate=, guid=https://newsroom.eclipse.org/39503]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1649,8 +1367,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -1681,7 +1398,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:14:37.923
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:34:39.582
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39468, pubDate=, guid=https://newsroom.eclipse.org/39468]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1699,8 +1416,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -1731,7 +1447,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:14:37.923
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:34:39.582
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39437, pubDate=, guid=https://newsroom.eclipse.org/39437]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1749,8 +1465,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -1781,7 +1496,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:14:37.924
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:34:39.583
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39434, pubDate=, guid=https://newsroom.eclipse.org/39434]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1799,8 +1514,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -1831,7 +1545,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:14:37.924
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:34:39.583
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39421, pubDate=, guid=https://newsroom.eclipse.org/39421]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1849,8 +1563,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -1881,7 +1594,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:14:37.925
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:34:39.583
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39398, pubDate=, guid=https://newsroom.eclipse.org/39398]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1899,8 +1612,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -1931,7 +1643,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:14:37.925
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:34:39.590
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39370, pubDate=, guid=https://newsroom.eclipse.org/39370]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1949,8 +1661,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -1981,7 +1692,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:14:37.926
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:34:39.591
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39377, pubDate=, guid=https://newsroom.eclipse.org/39377]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -1999,8 +1710,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -2031,7 +1741,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:19:37.936
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:39:39.585
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39593, pubDate=, guid=https://newsroom.eclipse.org/39593]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -2049,7 +1759,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:19:37.936
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:39:39.585
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39528, pubDate=, guid=https://newsroom.eclipse.org/39528]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -2067,7 +1777,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:19:37.937
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:39:39.585
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39503, pubDate=, guid=https://newsroom.eclipse.org/39503]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -2085,7 +1795,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:19:37.937
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:39:39.586
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39468, pubDate=, guid=https://newsroom.eclipse.org/39468]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -2103,7 +1813,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:19:37.937
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:39:39.586
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39437, pubDate=, guid=https://newsroom.eclipse.org/39437]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -2121,7 +1831,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:19:37.938
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:39:39.586
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39434, pubDate=, guid=https://newsroom.eclipse.org/39434]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -2139,7 +1849,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:19:37.938
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:39:39.586
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39421, pubDate=, guid=https://newsroom.eclipse.org/39421]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -2157,7 +1867,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:19:37.938
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:39:39.587
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39398, pubDate=, guid=https://newsroom.eclipse.org/39398]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -2175,7 +1885,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:19:37.939
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:39:39.587
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39370, pubDate=, guid=https://newsroom.eclipse.org/39370]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -2193,7 +1903,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:19:37.939
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:39:39.587
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39377, pubDate=, guid=https://newsroom.eclipse.org/39377]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -2211,7 +1921,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:19:37.953
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:39:39.597
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39593, pubDate=, guid=https://newsroom.eclipse.org/39593]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -2229,8 +1939,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -2261,7 +1970,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:19:37.953
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:39:39.598
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39528, pubDate=, guid=https://newsroom.eclipse.org/39528]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -2279,8 +1988,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -2311,7 +2019,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:19:37.954
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:39:39.598
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39503, pubDate=, guid=https://newsroom.eclipse.org/39503]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -2329,8 +2037,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -2361,7 +2068,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:19:37.954
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:39:39.598
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39468, pubDate=, guid=https://newsroom.eclipse.org/39468]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -2379,8 +2086,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -2411,7 +2117,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:19:37.955
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:39:39.599
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39437, pubDate=, guid=https://newsroom.eclipse.org/39437]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -2429,8 +2135,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -2461,7 +2166,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:19:37.955
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:39:39.599
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39434, pubDate=, guid=https://newsroom.eclipse.org/39434]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -2479,8 +2184,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -2511,7 +2215,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:19:37.955
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:39:39.599
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39421, pubDate=, guid=https://newsroom.eclipse.org/39421]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -2529,8 +2233,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -2561,7 +2264,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:19:37.956
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:39:39.600
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39398, pubDate=, guid=https://newsroom.eclipse.org/39398]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -2579,8 +2282,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -2611,7 +2313,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:19:37.956
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:39:39.600
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39370, pubDate=, guid=https://newsroom.eclipse.org/39370]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -2629,8 +2331,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
@@ -2661,7 +2362,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
 
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:19:37.957
+!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 16:39:39.600
 !MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39377, pubDate=, guid=https://newsroom.eclipse.org/39377]" failed
 !STACK 0
 java.text.ParseException: Unparseable date: ""
@@ -2679,688 +2380,7 @@ java.text.ParseException: Unparseable date: ""
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
 	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler$1.run(UIEventObjectSupplier.java:67)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3933)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3564)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:24:37.965
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39593, pubDate=, guid=https://newsroom.eclipse.org/39593]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:24:37.965
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39528, pubDate=, guid=https://newsroom.eclipse.org/39528]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:24:37.966
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39503, pubDate=, guid=https://newsroom.eclipse.org/39503]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:24:37.966
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39468, pubDate=, guid=https://newsroom.eclipse.org/39468]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:24:37.966
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39437, pubDate=, guid=https://newsroom.eclipse.org/39437]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:24:37.967
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39434, pubDate=, guid=https://newsroom.eclipse.org/39434]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:24:37.967
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39421, pubDate=, guid=https://newsroom.eclipse.org/39421]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:24:37.968
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39398, pubDate=, guid=https://newsroom.eclipse.org/39398]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:24:37.968
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39370, pubDate=, guid=https://newsroom.eclipse.org/39370]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:24:37.968
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39377, pubDate=, guid=https://newsroom.eclipse.org/39377]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:24:37.981
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39593, pubDate=, guid=https://newsroom.eclipse.org/39593]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler$1.run(UIEventObjectSupplier.java:67)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3933)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3564)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:24:37.983
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39528, pubDate=, guid=https://newsroom.eclipse.org/39528]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler$1.run(UIEventObjectSupplier.java:67)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3933)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3564)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:24:37.983
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39503, pubDate=, guid=https://newsroom.eclipse.org/39503]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler$1.run(UIEventObjectSupplier.java:67)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3933)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3564)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:24:37.984
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39468, pubDate=, guid=https://newsroom.eclipse.org/39468]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler$1.run(UIEventObjectSupplier.java:67)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3933)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3564)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:24:37.984
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39437, pubDate=, guid=https://newsroom.eclipse.org/39437]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler$1.run(UIEventObjectSupplier.java:67)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3933)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3564)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:24:37.985
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39434, pubDate=, guid=https://newsroom.eclipse.org/39434]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler$1.run(UIEventObjectSupplier.java:67)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3933)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3564)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:24:37.985
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39421, pubDate=, guid=https://newsroom.eclipse.org/39421]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler$1.run(UIEventObjectSupplier.java:67)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3933)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3564)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:24:37.986
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39398, pubDate=, guid=https://newsroom.eclipse.org/39398]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler$1.run(UIEventObjectSupplier.java:67)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3933)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3564)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:24:37.986
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39370, pubDate=, guid=https://newsroom.eclipse.org/39370]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler$1.run(UIEventObjectSupplier.java:67)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3933)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3564)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
-
-!ENTRY org.eclipse.mylyn.commons.notifications.feed 4 0 2023-07-27 09:24:37.986
-!MESSAGE Processing pub date of "RSSItem [title=, link=https://newsroom.eclipse.org/39377, pubDate=, guid=https://newsroom.eclipse.org/39377]" failed
-!STACK 0
-java.text.ParseException: Unparseable date: ""
-	at java.text.DateFormat.parse(DateFormat.java:366)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.getDate(FeedEntry.java:50)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedEntry.<init>(FeedEntry.java:44)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.createEntry(FeedReader.java:92)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore$1.createEntry(DefaultFeedItemStore.java:95)
-	at org.eclipse.mylyn.internal.commons.notifications.feed.FeedReader.parse(FeedReader.java:57)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.parseNewsItems(DefaultFeedItemStore.java:135)
-	at org.eclipse.recommenders.news.impl.poll.DefaultFeedItemStore.udpate(DefaultFeedItemStore.java:53)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.fallbackToLocalStore(DefaultNewsPollingService.java:136)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:104)
-	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.retrieveFeedContents(NewsToolControl.java:352)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.refreshUnreadItemsStatus(NewsToolControl.java:318)
-	at org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl.handlePollingResults(NewsToolControl.java:307)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.GeneratedMethodAccessor75.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
