@@ -79,14 +79,46 @@ public class BookManagerImpl implements IBookManager {
 
 	public int getTotalPrice() {
 		int sum = 0;
-		for (int i = 0; i < this.size; i++) {
+		for (int i = 0; i < bookList.size(); i++) {
 			sum += (bookList.get(i)).getPrice();
 		}
 		return sum;
 	}
 
 	public double getPriceAvg() {
-		return getTotalPrice() / (double) this.size;
+		return getTotalPrice() / (double) bookList.size();
+	}
+
+	@Override
+	public void sell(String isbn, int quantity) throws ISBNNotFoundException, QuantityException {
+		for (int i = 0; i < bookList.size(); i++) {
+			if ((bookList.get(i)).getIsbn() == null) {
+				throw new ISBNNotFoundException(isbn);
+			}
+			if ((bookList.get(i)).getQuantity() - quantity <= 0 ) {
+				System.out.println("수량이 부족합니다.");
+				throw new QuantityException();
+			}
+			if ((bookList.get(i)).getIsbn() == isbn) {
+				int stock = (bookList.get(i)).getQuantity();
+				stock -= quantity;
+				(bookList.get(i)).setQuantity(stock);
+			}
+		}
+	}
+
+	@Override
+	public void buy(String isbn, int quantity) throws ISBNNotFoundException {
+		for (int i = 0; i < bookList.size(); i++) {
+			if ((bookList.get(i)).getIsbn() == null) {
+				throw new ISBNNotFoundException(isbn);
+			}
+			if ((bookList.get(i)).getIsbn() == isbn) {
+				int stock = (bookList.get(i)).getQuantity();
+				stock += quantity;
+				(bookList.get(i)).setQuantity(stock);
+			}
+		}
 	}
 
 }

@@ -7,17 +7,20 @@ public class Book {
 	private String publisher;
 	private int price;
 	private String desc;
+	private int quantity;
 
 	public Book() {
 	}
 
-	public Book(String isbn, String title, String author, String publisher, int price, String desc) {
+	public Book(String isbn, String title, String author, String publisher, int price, String desc, int quantitiy) {
+		super();
 		this.isbn = isbn;
 		this.title = title;
 		this.author = author;
 		this.publisher = publisher;
 		this.price = price;
 		this.desc = desc;
+		this.quantity = quantitiy;
 	}
 
 	public String getIsbn() {
@@ -67,9 +70,17 @@ public class Book {
 	public void setDesc(String desc) {
 		this.desc = desc;
 	}
+	
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantitiy) {
+		this.quantity = quantitiy;
+	}
 
 	@Override
 	public String toString() {
-		return isbn + "\t|  " + title + "\t|  " + author + "\t|  " + publisher + "\t|  " + price + "\t|  " + desc + "\n";
+		return isbn + "\t|  " + title + "\t|  " + author + "\t|  " + publisher + "\t|  " + price + "\t|  " + desc + "\t|  " + quantity + "\n";
 	}
 }

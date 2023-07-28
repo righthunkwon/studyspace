@@ -7,8 +7,8 @@ public class Magazine extends Book{
 	public Magazine() {
 	}
 
-	public Magazine(String isbn, String title, String author, String publisher, int price, String desc, int year, int month) {
-		super(isbn, title, author, publisher, price, desc);
+	public Magazine(String isbn, String title, String author, String publisher, int price, String desc, int quantity, int year, int month) {
+		super(isbn, title, author, publisher, price, desc, quantity);
 		this.year = year;
 		this.month = month;
 	}
@@ -31,7 +31,7 @@ public class Magazine extends Book{
 
 	@Override
 	public String toString() {
-		return getIsbn() + "\t|  " + getTitle() + "\t|  " + getAuthor() + "\t|  " + getPublisher() + "\t|  " + getPrice() + "\t|  " + getDesc() + "\t|  " + year + "\t|  " + month + "\n";
+		return getIsbn() + "\t|  " + getTitle() + "\t|  " + getAuthor() + "\t|  " + getPublisher() + "\t|  " + getPrice() + "\t|  " + getDesc() + "\t|  " + getQuantity() + "\t|  " + year + "\t|  " + month + "\n";
 	}
 	
 }
