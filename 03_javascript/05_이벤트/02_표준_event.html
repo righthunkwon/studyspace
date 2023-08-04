@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <a href="https://www.naver.com/">Naver</a>
+  <button id="actionBtn">zero to nine</button>
+</body>
+<script>
+  function writeNum() {
+    for (let i = 0; i < 10; i++) {
+      console.log(i);
+    }
+  }
+
+  let actionBtn = document.getElementById("actionBtn");
+  actionBtn.addEventListener("click", writeNum);
+
+  // addEventListner에 함수를 바로 작성할 수도 있다.
+  let naver = document.querySelector("a");
+  naver.addEventListener("click", function (event) {
+    event.preventDefault(); // 네이버 창 열림을 막는다.
+    console.log(event); // 이벤트 객체 확인
+    alert("Never Naver");
+  })
+</script>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Window 객체</title>
+</head>
+
+<body>
+  <script>
+    // window : 전역객체(최상위 객체)
+    // (1) DOM : document, ... (웹 페이지 조작)
+    // (2) BOM : navigator, screen, location, frames, history, ...
+    // (3) JavaScript : Object, Array, Function, ...
+
+    // window 제공 함수
+    // window === this
+    // window === self
+    // window === frames
+    // alert(), confirm(), prompt(), open(), parseInt, ...
+    // Java에서는 Integer 클래스에 parseInt()가 static method로 들어가있지만,
+    // JavaScript에서는 window 객체에 parseInt()가 method로 들어가 있다.
+
+    // globalThis : 전역객체 식별자
+    console.log(this === globalThis); // true
+    console.log(self === globalThis); // true
+    console.log(frames === globalThis); // true
+    console.log(window === globalThis); // true
+
+    // alert("window"); // window는 생략 가능
+    // window.alert("window");
+    // this.alert("window");
+    // self.alert("window");
+    // frames.alert("window");
+
+    // let isTrue = confirm("true / false") // window 생략
+    // console.log(isTrue);
+
+    // open("http://naver.com", "_blank"); // window 생략
+
+    setTimeout(function () {
+      console.log("3초 후 console.log")
+    }, 3000);
+  </script>
+</body>
+
+</html>

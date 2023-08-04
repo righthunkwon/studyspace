@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-container {
+        width: 1000px;
+        height: 300px;
+        display: flex;
+
+        flex-direction: row;
+      }
+
+      /* .flex-container > div {
+        flex-grow:0;
+      } */
+
+      .flex-container > div:nth-child(2) {
+        flex-grow: 1;
+        background-color: red;
+      }
+
+      .flex-container > div:nth-child(3) {
+        flex-grow: 9;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>flex-grow : 기본(0), 음수 안됨, 양수 가능</h2>
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+  </body>
+</html>

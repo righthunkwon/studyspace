@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사용자 정보 관리 사이트</title>
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+  <body>
+    <!-- 화면 상단에 나타낼 요소 -->
+    <header>
+      <nav class="header-nav">
+
+        <div class="logo">
+          <a href="./index.html"><img src="./img/netflix.png" alt="logo"></a>
+        </div>
+
+        <div class="nav-info">
+          
+          <div class="form">
+            <!-- 검색을 위한 입력 요소-->
+            <form action="#">
+              <!-- 값 입력, 값 type 설정 -->
+              <input type="text" placeholder="제목을 입력하세요" />
+              <!-- 값 제출 -->
+              <input type="submit" value="검색" />
+            </form>
+          </div>
+  
+          <div class="login">
+            <a href="#">로그인</a>
+            <a href="#">로그아웃</a>
+            <a href="#">회원가입</a>
+            <a href="#">게시판</a>
+            <a href="#">마이페이지</a>
+          </div>
+        </div>
+
+      </nav>
+    </header>
+    
+    <div>
+      <!-- 메인 컨텐츠 -->
+      <main>
+        <!-- 사이드 바 -->
+        <div>
+         <aside class="movie-like-list">
+            <h3>찜 목록</h3><br />
+            아직 찜한 영화가 없습니다.<br>
+         </aside>
+        </div>
+        <!-- 화면 중앙에 나타낼 내용 -->
+        <section>
+          <h1 id="user">영화 목록</h1>
+          <br />
+          <ul class="movie-list">
+            <li>
+              <div>
+                <div>
+                  <!--이미지 경로 지정-->
+                  <img src="./img/eternals.jpg" alt="" />
+                </div>
+                <div>
+                  <div class="movie-info-wrap">
+                    <div class="movie-title-genre">
+                      <div>이터널스</div>
+                      <div>액션</div>
+                    </div>
+                    <div class="movie-director">
+                      <div>클로이자오</div>
+                      <div>155분</div>
+                    </div>
+                    <button class="movie-like-btn">찜</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <div>
+                  <img src="./img/dune.jpg" alt="" />
+                </div>
+                <div>
+                  <div class="movie-info-wrap">
+                    <div class="movie-title-genre">
+                      <div>듄</div>
+                      <div>모험</div>
+                    </div>
+                    <div class="movie-director">
+                      <div>드니 뷜뇌브</div>
+                      <div>155분</div>
+                    </div>
+                    <button class="movie-like-btn">찜</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <div>
+                  <img src="./img/parasite.jpg" alt="" />
+                </div>
+                <div>
+                  <div class="movie-info-wrap">
+                    <div class="movie-title-genre">
+                      <div>기생충</div>
+                      <div>드라마</div>
+                    </div>
+                    <div class="movie-director">
+                      <div>봉준호</div>
+                      <div>131분</div>
+                    </div>
+                    <button class="movie-like-btn">찜</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <div>
+                  <img src="./img/harrypoter_room.jpg" alt="" />
+                </div>
+                <div>
+                  <div class="movie-info-wrap">
+                    <div class="movie-title-genre">
+                      <div>비밀의 방</div>
+                      <div>판타지</div>
+                    </div>
+                    <div class="movie-director">
+                      <div>콜럼버스</div>
+                      <div>161분</div>
+                    </div>
+                    <button class="movie-like-btn">찜</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <div>
+                  <img src="./img/harrypoter_stone.jpg" alt="" />
+                </div>
+                <div>
+                  <div class="movie-info-wrap">
+                    <div class="movie-title-genre">
+                      <div>마법사의 돌</div>
+                      <div>판타지</div>
+                    </div>
+                    <div class="movie-director">
+                      <div>콜럼버스</div>
+                      <div>151분</div>
+                    </div>
+                    <button class="movie-like-btn">찜</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <div>
+                  <img src="./img/load_of_ring.jpg" alt="" />
+                </div>
+                <div>
+                  <div class="movie-info-wrap">
+                    <div class="movie-title-genre">
+                      <div>반지의 제왕</div>
+                      <div>판타지</div>
+                    </div>
+                    <div class="movie-director">
+                      <div>피터 잭슨</div>
+                      <div>228분</div>
+                    </div>
+                    <button class="movie-like-btn">찜</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <div>
+                  <img src="./img/tomb_of_the_river.jpg" alt="" />
+                </div>
+                <div>
+                  <div class="movie-info-wrap">
+                    <div class="movie-title-genre">
+                      <div>강릉</div>
+                      <div>범죄</div>
+                    </div>
+                    <div class="movie-director">
+                      <div>윤영빈</div>
+                      <div>119분</div>
+                    </div>
+                    <button class="movie-like-btn">찜</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="empty-div"></div>
+        </section>
+      </main>
+    </div>
+    <!-- 화면 하단에 나타낼 요소 -->
+    <footer>
+      <!-- 리스트 태그-->
+      <li class="footer-list">
+        <ul><a href="#">개인정보 처리방침</a></ul>
+        <ul><a href="#">이용 약관</a></ul>
+        <ul><a href="#">오시는 길</a></ul>
+        <ul>&copy; SSAFLIX</ul>
+      </li>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자동차정보사이트</title>
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="header-nav">
+            <div>
+                <a href="#">자동차관리</a>
+            </div>
+            <div>
+                <form action="#">
+                    <input type="text" placeholder="모델명을 입력하세요" />
+                    <input type="submit" value="검색" />
+                </form>
+            </div>
+            <div>
+                <a href="#">로그인</a>
+                <a href="#">로그아웃</a>
+                <a href="#">회원가입</a>
+                <a href="#">게시판</a>
+                <a href="#">마이페이지</a>
+            </div>
+        </nav>
+    </header>
+    <main class="content">
+        <section class="content-car-list">
+            <h2>자동차 목록</h2>
+            <br />
+            <ul class="content-car-list-ul">
+                <li>
+                    <div class="list-item">
+                        <div>
+                            <img src="img/Sonata.jpg" alt="" />
+                        </div>
+                        <div class="car-info">
+                            <div>
+                                <div>KMHXX00XXXX000000</div>
+                                <div>소나타</div>
+                                <div>dark blue</div>
+                                <div>20000 km</div>
+                            </div>
+                            <button class="like-btn">찜</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-item">
+                        <div>
+                            <img src="img/K5.jpg" alt="" />
+                        </div>
+                        <div class="car-info">
+                            <div>
+                                <div>KNHXX00XXXX000000</div>
+                                <div>K5</div>
+                                <div>dark blue</div>
+                                <div>35000 km</div>
+                            </div>
+                            <button class="like-btn">찜</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-item">
+                        <div>
+                            <img src="img/Avante.jpg" alt="" />
+                        </div>
+                        <div class="car-info">
+                            <div>
+                                <div>KMHXX00XXXX000001</div>
+                                <div>아반떼</div>
+                                <div>gray</div>
+                                <div>1000 km</div>
+                            </div>
+                            <button class="like-btn">찜</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-item">
+                        <div>
+                            <img src="img/Sorento.jpg" alt="" />
+                        </div>
+                        <div class="car-info">
+                            <div>
+                                <div>KNHXX00XXXX000001</div>
+                                <div>쏘렌토</div>
+                                <div>black</div>
+                                <div>100000 km</div>
+                            </div>
+                            <button class="like-btn">찜</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-item">
+                        <div>
+                            <img src="img/Santafe.jpg" alt="" />
+                        </div>
+                        <div class="car-info">
+                            <div>
+                                <div>KMHXX00XXXX000002</div>
+                                <div>산타페</div>
+                                <div>black</div>
+                                <div>150000 km</div>
+                            </div>
+                            <button class="like-btn">찜</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-item">
+                        <div>
+                            <img src="img/Ray.jpg" alt="" />
+                        </div>
+                        <div class="car-info">
+                            <div>
+                                <div>KNHXX00XXXX000002</div>
+                                <div>레이</div>
+                                <div>aqua</div>
+                                <div>3000 km</div>
+                            </div>
+                            <button class="like-btn">찜</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <aside class="content-car-like">
+            <h3>찜 리스트</h3>
+            <div>아직 찜한 자동차가 없습니다...</div>
+        </aside>
+    </main>
+    <footer>
+        <ul class="footer-list">
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">이용 약관</a></li>
+            <li><a href="#">오시는 길</a></li>
+            <li>&copy; SSAFY</li>
+        </ul>
+    </footer>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

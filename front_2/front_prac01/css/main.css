@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* 박스의 크기 결정법을 설정 */
+  box-sizing: border-box;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+/* 화면의 윗 부분을 담당하는 태그 */
+header {
+  height: 70px;
+  /* 배경색 수정 */
+  background-color: #03dbfc;
+  color: white;
+  line-height: 70px;
+  padding: 0px 30px;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* main 태그 안에 CSS 속성 */
+.content {
+  margin: 10px 30px;
+  display: flex;
+}
+
+/* section 공간 */
+.content-car-list {
+  width: 75%;
+}
+
+/* asdie 공간 */
+.content-car-like {
+  /* 찜리스트의 위치를 고정시키기 위한 */
+  position: fixed;
+  width: 25%;
+  top: 100px;
+  right: 20px;
+}
+
+.content-car-list-ul {
+  display: flex;
+  /* 요소들이 밖으로 벗어나지 않게 하는 설정 */
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.list-item {
+  margin: 10px;
+}
+
+/* 자동차 정보를 위한 CSS 선택자 */
+.car-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.like-btn {
+  margin: 20px;
+  padding: 5px;
+}
+
+/* footer 태그 안에 CSS 속성 */
+footer {
+  /* 배경색 수정 */
+  background-color: #03dbfc;
+  color: white;
+  height: 50px;
+  line-height: 50px;
+}
+
+/* footer의 목록을 가로로 가운데에 나열 */
+.footer-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-list a {
+  margin: 0px 10px;
+}
