@@ -1,0 +1,39 @@
+package array01;
+
+import java.util.Scanner;
+
+public class P_1206 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int tc = 10;
+
+		// test case
+		for (int i = 0; i < tc; i++) {
+
+			// 건물의 개수
+			int n = sc.nextInt();
+			int[] heights = new int[n]; 
+			
+			// 배열 입력 반복문
+			for (int j = 0; j < n; j++) {
+				heights[j] = sc.nextInt();
+			}
+			
+			// bubble sort(오름차순)
+			// total cycle : nums.length - 1
+			// each cycle : nums.length - 1++
+			for (int j = 0; j < heights.length; j++) {
+				for (int k = 1; k < heights.length - j; k++) {
+					if (heights[k-1] > heights[k]) {
+						int tmp = heights[k];
+						heights[k] = heights[k-1];
+						heights[k-1] = tmp;
+					}
+				}
+			}
+
+			
+			System.out.print("#" + (i + 1) + " ");
+		}
+	}
+}

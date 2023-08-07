@@ -1,0 +1,24 @@
+package array01;
+
+import java.util.Scanner;
+
+public class P_1206 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int tc = 10;
+
+		// test case
+		for (int i = 0; i < tc; i++) {
+
+			// 건물의 개수
+			int n = sc.nextInt();
+			int[] heights = new int[n]; 
+			
+			// 배열 입력 반복문
+			for (int i = 0; i < n; i++) {
+				
+			}
+			System.out.print("#" + (i + 1) + " ");
+		}
+	}
+}

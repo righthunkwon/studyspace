@@ -1,0 +1,8 @@
+
+public class Array01_03_BubbleSort {
+	public static void main(String[] args) {
+		// 오름차순 버블정렬
+		int[] nums = { 24, 18, 99, 31, 213124, 7, 35 };
+		int N = nums.length; // 6
+	}
+}
