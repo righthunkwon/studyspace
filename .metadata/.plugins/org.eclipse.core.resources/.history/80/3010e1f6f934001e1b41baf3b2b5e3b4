@@ -2,7 +2,8 @@ package array01;
 
 import java.util.Scanner;
 
-public class P_gravity_solution {
+public class P_gravity {
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int width = sc.nextInt(); // 박스 가로 길이
@@ -12,16 +13,18 @@ public class P_gravity_solution {
 		for (int i = 0; i < width; i++) {
 			height[i] = sc.nextInt();
 		}
+		int cnt = 0; // 낙차
 		int max = 0; // 최대 낙차
 		int ans = 0; // 정답
 
 		for (int i = 0; i < width - 1; i++) {
-			// 초기화
+			cnt = 0;
 			max = 0;
 
-			for (int j = i + 1; j < width; j++) {
+			for (int j = 1; j < width; j++) {
 				if (height[i] > height[j]) {
-					max++;
+					cnt++;
+					max = cnt;
 				}
 				if (max > ans) {
 					ans = max;
@@ -30,4 +33,5 @@ public class P_gravity_solution {
 		}
 		System.out.println(ans);
 	}
+
 }

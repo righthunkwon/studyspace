@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class P_gravity {
 
+	// Solution 코드 살펴보기
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int width = sc.nextInt(); // 박스 가로 길이
