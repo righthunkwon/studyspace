@@ -1,0 +1,41 @@
+package array04;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class P_1954 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		// test case
+		int tc = sc.nextInt();
+		for (int t = 1; t <= tc; t++) {
+			// test case마다 열과 행 초기화
+			r = 0;
+			c = 0;
+
+			// 배열 선언
+			int n = sc.nextInt();
+			int[][] arr = new int[n][n];
+
+			// 달팽이 숫자 출력
+			int i = 0; // 초기식
+			int cnt = n * n; // 조건식(배열 전체 크기: n*n)
+			int val = 1; // 달팽이 숫자
+			while (i < cnt) {
+				arr[r][c] = val;
+				int nr = r + dr[dir];
+				int nc = c + dc[dir];
+				if (!inRange(nr, nc, n)) {
+					changeDir();
+				}
+				move(dir); // r, c 값 증가 (다음 배열로 증가)
+
+				val++; // 달팽이 숫자 증가
+				i++; // 반복 횟주 증가
+			}
+			System.out.printf("#%d", t);
+			printArr(arr, n);
+		}
+	}
+}

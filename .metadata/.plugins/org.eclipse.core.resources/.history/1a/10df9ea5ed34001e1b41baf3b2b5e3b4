@@ -1,9 +1,0 @@
-package array01;
-
-public class P_gravity {
-
-	public static void main(String[] args) {
-		
-	}
-
-}

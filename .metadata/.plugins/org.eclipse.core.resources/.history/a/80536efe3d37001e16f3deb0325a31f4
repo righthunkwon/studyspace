@@ -1,0 +1,35 @@
+package array04;
+
+import java.util.Scanner;
+
+public class P_1954 {
+	// 오른쪽 아래쪽 왼쪽 위쪽
+	static int[] dr = {0, 1, -1, 0};
+	static int[] dc = {1, 0, 0, -1};
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		// test case
+		int tc = sc.nextInt();
+		for (int t = 1; t <= tc; t++) {
+			// 배열 생성
+			int r = 0; // 행
+			int c = 0; // 열
+			int n = sc.nextInt();
+			int[][] arr = new int[n][n];
+			
+			// 배열에 값 집어넣기
+			int cnt = 1; // 값
+			while (cnt <= n*n) {
+				arr[r][c] = cnt;
+				cnt++;
+			}
+			
+			// 방향 판단
+			
+			// 
+			
+			System.out.printf("#%d\n", t);
+		}
+	}
+}

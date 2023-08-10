@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+	// 오른쪽, 아래쪽, 왼쪽, 위쪽
+	static int[] dr = {0,1,0,-1};
+	static int[] dc = {1,0,-1,0};
+	
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int m = sc.nextInt();
+		
+		int[][] map = new int[n][m]; 
+	}
+}

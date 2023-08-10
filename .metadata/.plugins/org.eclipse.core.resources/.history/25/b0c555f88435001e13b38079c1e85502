@@ -1,0 +1,24 @@
+package array02;
+
+public class Array02_02_BinarySearch {
+	// 이진검색을 위한 정렬된 배열
+	public static int[] arr = { 2, 4, 7, 9, 11, 19, 23 };
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	public static boolean binarySearch(int key) {
+		int st = 0; // 시작점
+		int ed = arr.length - 1; // 종료점
+		
+		while(st <= ed) {
+			int mid = (st+ed) / 2;
+			if (arr[mid] == key) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+}

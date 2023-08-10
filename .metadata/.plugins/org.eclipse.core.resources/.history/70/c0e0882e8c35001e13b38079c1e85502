@@ -1,0 +1,8 @@
+package array02;
+
+public class Array02_04_CountingSort {
+	public static void main(String[] args) {
+		int[] arr = {8,8,24,12,19,3,45,60};
+		int n = arr.length;
+	}
+}

@@ -1,0 +1,17 @@
+package array02;
+
+import java.util.Scanner;
+
+public class P_1984 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int tc = 3;
+		int n = 10;
+		// test case
+		for (int i = 1; i <= tc; i++) {
+			
+		}
+		
+		
+	}
+}

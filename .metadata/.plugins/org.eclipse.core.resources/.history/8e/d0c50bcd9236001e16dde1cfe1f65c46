@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int tc = sc.nextInt();
+		
+		System.out.println(Math.pow(7, 10));
+		for (int t = 1; t <= tc; t++) {
+			long a = sc.nextInt();
+			long b = sc.nextInt();
+			int data = (int) Math.pow(a, b);
+			int ans = data % 10;
+			
+			if (ans == 0) {
+				ans = 10;
+			}
+			System.out.println(ans);
+		}
+		
+	}
+}

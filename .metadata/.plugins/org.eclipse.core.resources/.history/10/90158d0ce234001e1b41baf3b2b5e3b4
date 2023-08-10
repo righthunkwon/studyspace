@@ -1,9 +1,0 @@
-package array01;
-
-import java.util.Scanner;
-
-public class P_2068 {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);	
-	}
-}

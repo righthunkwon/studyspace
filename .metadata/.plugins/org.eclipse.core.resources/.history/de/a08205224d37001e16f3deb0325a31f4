@@ -1,0 +1,7 @@
+package array04;
+
+public class P_11315 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+	}
+}

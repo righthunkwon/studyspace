@@ -1,0 +1,32 @@
+package array04;
+
+import java.util.Scanner;
+
+public class P_11315 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		// test case
+		int tc = sc.nextInt();
+		for (int t = 1; t <= tc; t++) {
+
+			// 문자열 배열
+			int n = sc.nextInt();
+			String[] sarr = new String[n];
+			for (int i = 0; i < n; i++) {
+				sarr[i] = sc.next();
+			}
+
+			// 문자 배열
+			char[][] charr = new char[n][n];
+			
+			for (int i = 0; i < n; i++) {
+				for (int j = 0; j < n; j++) {
+					
+				}
+			}
+
+			System.out.printf("#%d", t);
+		}
+	}
+}

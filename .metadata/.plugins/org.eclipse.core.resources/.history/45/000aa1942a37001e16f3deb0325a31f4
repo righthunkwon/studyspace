@@ -1,0 +1,19 @@
+package array04;
+
+import java.util.Scanner;
+
+public class P_1954 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		// test case
+		int tc = sc.nextInt();
+		for (int t = 1; t <= tc; t++) {
+			int n = sc.nextInt();
+			int[][] arr = new int[n][n];
+
+			
+			System.out.printf("#%d", t);
+		}
+	}
+}

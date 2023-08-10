@@ -1,0 +1,27 @@
+package array02;
+
+public class Array02_04_CountingSort {
+	public static void main(String[] args) {
+		int[] arr = { 8, 8, 24, 12, 19, 3, 45, 60 };
+		int n = arr.length;
+
+		// 카운팅 정렬은 데이터 중 최대값을 알아야 한다.
+		int k = -1;
+
+		// 최대값 반복문
+		for (int i = 0; i < n; i++) {
+			if (k < arr[i]) {
+				k = arr[i];
+			}
+		}
+		
+		int[] cnt = new int[k+1]; // 61칸 배열
+		
+		// 개수 카운팅
+		for (int i =0; i<n;i++) {
+			// 해당 값을 인덱스로 하여 카운트를 증가시킨다.
+			cnt[arr[i]]++;
+		}
+		
+	}
+}

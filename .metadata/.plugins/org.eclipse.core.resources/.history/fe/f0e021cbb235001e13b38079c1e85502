@@ -1,0 +1,46 @@
+package array02;
+
+import java.util.Scanner;
+
+public class P_1984 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = 10;
+		int[] arr = new int[n];
+
+		// test case
+		int tc = sc.nextInt();
+		for (int t = 1; t <= tc; t++) {
+			
+			// 배열에 값 삽입
+			for (int i = 0; i < n; i++) {
+				arr[i] = sc.nextInt();
+			}
+			
+			// 최대값 최소값 제외한 평균 계산(선택정렬)
+			for (int i = 0; i < n - 1; i++) {
+				int minIdx = i; // 최소값을 가진 인덱스를 초기화
+				int maxIdx = i; // 최대값을 가진 인덱스를 초기화
+				
+				// 최소값을 가리키는 idx 검색
+				for (int j = i + 1; j < n; j++) {
+					if (arr[j] < arr[minIdx]) {
+						minIdx = j;
+					}
+				}
+								
+				
+				// 자리 교환
+				int tmp = arr[i];
+				arr[i] = arr[minIdx];
+				arr[minIdx] = tmp;
+			}
+			
+			
+			// 출력
+			// System.out.printf("#%d %d\n", t, );
+		}
+		
+		
+	}
+}

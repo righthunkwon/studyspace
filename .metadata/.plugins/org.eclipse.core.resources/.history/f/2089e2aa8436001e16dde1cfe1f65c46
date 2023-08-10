@@ -1,0 +1,53 @@
+package array03;
+
+import java.util.Scanner;
+
+public class P_1210 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		// test case
+		int tc = 10;
+		for (int t = 1; t <= tc; t++) {
+
+			// 범위 초과를 방지하기 위해 배열 크기를 좌우 2만큼 크게 생성
+			int[][] arr = new int[102][102];
+			int st = 0; // 출발점의 열 index
+			int ed = 0; // 도착점의 열 index
+
+			// 배열 값 입력 (index 조정 유의)
+			for (int i = 1; i <= 100; i++) {
+				for (int j = 1; j <= 100; j++) {
+					arr[i][j] = sc.nextInt();
+					if (arr[i][j] == 2) {
+						ed = j;
+					}
+				}
+			}
+
+			// ed를 기준으로 위로 탐색하되, 중간에 왼쪽이나 오른쪽에 1이 있을 경우 방향 전환
+			// 좌우 1 찾고 없으면 위의 1로 올라간다
+			// 시작점은 ed이다.
+			int i = 100;
+			while (true) {
+				i--;
+				while (arr[i][ed - 1] == 0 && arr[i][ed + 1] == 0 && i > 2) {
+					i--;
+				}
+				if (i == 1) {
+					st = ed;
+					break;
+				}
+				if (arr[i][ed - 1] != 0) { // 왼쪽 전진
+					while (arr[i][ed - 1] != 0)
+						ed--;
+				} else if (arr[i][ed + 1] != 0) { // 오른쪽 전진
+					while (arr[i][ed - 1] != 0)
+						ed++;
+				}
+
+			}
+			System.out.printf("#%d %d\n", t, st);
+		}
+	}
+}

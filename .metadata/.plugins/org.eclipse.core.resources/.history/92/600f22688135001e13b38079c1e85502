@@ -1,0 +1,14 @@
+package array02;
+
+public class Array02_01_SequentialSearch {
+	public static int[] arr = { 4, 9, 11, 23, 2, 19, 7 };
+
+	public static void main(String[] args) {
+
+	}
+
+	public static boolean searchForNoSort(int key) {
+
+		return false;
+	}
+}
