@@ -1,5 +1,0 @@
-package array02;
-
-public class Array02_02_BinarySearch {
-	public static int[] arr = { 2, 4, 7, 9, 11,19, 23};
-}

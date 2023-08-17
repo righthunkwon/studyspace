@@ -1,5 +1,0 @@
-package array02;
-
-public class Array02_03_SelectionSort {
-	public static int[] arr = { 64, 25, 10, 22, 11 };
-}

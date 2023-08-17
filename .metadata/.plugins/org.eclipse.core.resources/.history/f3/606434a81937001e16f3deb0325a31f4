@@ -1,6 +1,0 @@
-package array04;
-
-public class Array04_03_전치행렬 {
-	static int[][] arr = { { 1, 2, 3 }, { 4, 5, 6, }, { 7, 8, 9, } };
-	static int n = arr.length;
-}

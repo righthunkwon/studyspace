@@ -1,7 +1,0 @@
-package array02;
-
-public class P_1208 {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-	}
-}

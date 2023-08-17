@@ -1,6 +1,0 @@
-package array02;
-
-public class NumberChange {
-public static void main(String[] args) {
-	}
-}
