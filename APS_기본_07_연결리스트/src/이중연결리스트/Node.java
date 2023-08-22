@@ -6,4 +6,16 @@ public class Node {
 	public String data;
 	public Node prev; // 이전 노드 링크
 	public Node next; // 이후 노드 링크
+	
+	
+	// 기본생성자
+	public Node() {
+	}
+	
+	// 생성자
+	public Node(String data) {
+		this.data = data;
+	}
+	
+	
 }
