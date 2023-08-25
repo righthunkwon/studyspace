@@ -4,6 +4,8 @@ import java.util.Scanner;
 public class P_1974 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		
+		// test case
 		int tc = sc.nextInt();
 		for (int t = 1; t <= tc; t++) {
 
