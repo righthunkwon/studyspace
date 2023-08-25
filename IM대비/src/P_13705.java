@@ -13,7 +13,9 @@ public class P_13705 {
 			int d = sc.nextInt(); // 증감
 
 			int[][] arr = new int[n + 1][n + 1];
-			for (int i = 0; i < n; i++) {
+			for (int i = 0; i < n; i++) { // 파동의 크기에 따라 반복하여 값을 할당
+
+				// 대칭적인 파동 패턴(-i ~ i)
 				for (int j = -i; j <= i; j++) {
 					if (r - i > 0 && c + j > 0 && c + j <= n) {
 						arr[r - i][c + j] = m;
@@ -28,7 +30,7 @@ public class P_13705 {
 						arr[r + j][c + i] = m;
 					}
 				}
-				m += d;
+				m += d; // 파동 증감
 				if (m < 0) {
 					m = 0;
 				} else if (m > 255) {
