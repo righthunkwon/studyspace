@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 // 백만장자 프로젝트
 // 앞에서부터가 안 되면 뒤에서부터 해보자!
-public class P_1859 {
+public class S_1859 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 

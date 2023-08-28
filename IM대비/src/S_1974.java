@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 // 스도쿠 검증
-public class P_1974 {
+public class S_1974 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		

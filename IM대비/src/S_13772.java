@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 // 그는 내가 아는 전설의 폭탄마였어
-public class P_13772 {
+public class S_13772 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int tc = sc.nextInt();

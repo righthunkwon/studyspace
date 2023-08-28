@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 // 기지국
-public class P_13707 {
+public class S_13707 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int tc = sc.nextInt();

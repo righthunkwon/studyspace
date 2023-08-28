@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 // 간단한 369게임
-public class P_1926_2 {
+public class S_1926_2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 

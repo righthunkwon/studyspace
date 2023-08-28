@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 // 농작물 수확하기
 // 마름모는 영역을 반으로 나누어 더해주자
-public class P_2805 {
+public class S_2805 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int tc = sc.nextInt();
