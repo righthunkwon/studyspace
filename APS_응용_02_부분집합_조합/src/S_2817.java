@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 // 부분 수열의 합
-public class P_2817 {
+public class S_2817 {
 	static int n, k, ans;
 	static int[] arr;
 

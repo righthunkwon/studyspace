@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 // 햄버거 다이어트
-public class P_5215 {
+public class S_5215 {
 	private static int n, limit, ans;
 	private static int[] score, calorie;
 
@@ -41,7 +41,9 @@ public class P_5215 {
 		}
 
 		// 재귀부분
+		// (1) 재료를 미선택
 		pleaseletmeknowthehighestscore(idx + 1, s, c);
+		// (2) 재료를 선택
 		pleaseletmeknowthehighestscore(idx + 1, s + score[idx], c + calorie[idx]);
 	}
 }
