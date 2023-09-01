@@ -34,6 +34,5 @@ public class 백트래킹_03_순열 {
 				visited[i] = false; // i번째 사용 여부를 되돌림
 			}
 		}
-
 	}
 }
