@@ -1,7 +1,6 @@
 import java.util.Arrays;
 
 public class 조합_01 {
-
 	private static String[] topping = { "치즈", "감자", "새우", "베이컨", "양파" };
 	private static int n = 5; // 배열 길이
 	private static int r = 2; // 판단 부분
