@@ -1,0 +1,8 @@
+package com.ssafy.maservlet;
+
+import javax.servlet.http.HttpServlet;
+
+// HttpServlet을 활용하는 방법
+public class MyServlet3 extends HttpServlet {
+
+}

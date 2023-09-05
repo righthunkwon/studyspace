@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>04_gugu</title>
+</head>
+<body>
+	<h3>구구단</h3>
+
+	<!-- Front-Controller 방식 -->
+	<!-- MainServlet에서 여러 폼을 한 번에 처리할 수 있다(action을 MainServlet으로 변경). -->
+	<form action="ServletParameter04" method="get">
+		<input type="hidden" name="action" value="gugu">
+		<div>단 입력</div>
+		<input type="number" min="1" value="1" name="dan">
+		<button>계산</button>
+	</form>
+</body>
+</html>
