@@ -29,6 +29,7 @@
 			<td><%=Arrays.toString(p.getHobbies()) %></td>
 		</tr>
 	</table>
+	<!-- /BackEnd_02_JSP는 디렉터리 명으로 Context root -->
 	<a href="/BackEnd_02_JSP">홈으로</a>
 </body>
 </html>

@@ -32,19 +32,19 @@ th:nth-child(1) {
 		<tbody>
 			<tr>
 				<td>제목</td>
-				<td><%=request.getParameter("title")%></td>
+				<td><%=request.getAttribute("title")%></td>
 			</tr>
 			<tr>
 				<td>감독</td>
-				<td><%=request.getParameter("director")%></td>
+				<td><%=request.getAttribute("director")%></td>
 			</tr>
 			<tr>
 				<td>장르</td>
-				<td><%=request.getParameter("genre")%></td>
+				<td><%=request.getAttribute("genre")%></td>
 			</tr>
 			<tr>
 				<td>상영시간</td>
-				<td><%=request.getParameter("runningTime")%></td>
+				<td><%=request.getAttribute("runningTime")%></td>
 			</tr>
 		</tbody>
 	</table>

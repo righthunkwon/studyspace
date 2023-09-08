@@ -33,23 +33,23 @@ th:nth-child(1) {
 		<tbody>
 			<tr>
 				<td>아이디</td>
-				<td><%=request.getParameter("id")%></td>
+				<td><%=request.getAttribute("id")%></td>
 			</tr>
 			<tr>
 				<td>비밀번호</td>
-				<td><%=request.getParameter("password")%></td>
+				<td><%=request.getAttribute("password")%></td>
 			</tr>
 			<tr>
 				<td>이름</td>
-				<td><%=request.getParameter("name")%></td>
+				<td><%=request.getAttribute("name")%></td>
 			</tr>
 			<tr>
 				<td>이메일</td>
-				<td><%=request.getParameter("email")%></td>
+				<td><%=request.getAttribute("email")%></td>
 			</tr>
 			<tr>
 				<td>나이</td>
-				<td><%=request.getParameter("age")%></td>
+				<td><%=request.getAttribute("age")%></td>
 			</tr>
 		</tbody>
 	</table>
