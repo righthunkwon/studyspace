@@ -3,7 +3,7 @@ package lv7;
 import java.util.Scanner;
 
 // 색종이
-// 2차원 배열을 통한 넓이 구하기(색종이 영역: 1, 빈 영
+// 2차원 배열을 통한 넓이 구하기(색종이 영역: 1, 빈 영역: 0)
 public class P_2563 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
