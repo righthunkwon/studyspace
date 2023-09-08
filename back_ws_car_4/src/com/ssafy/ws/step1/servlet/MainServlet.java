@@ -96,9 +96,9 @@ public class MainServlet extends HttpServlet {
 	 */
 	private void doList(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// attribute에 지금까지 등록한 자동차 리스트 등록
-		request._________("cars", carList);
+		request.setAttribute("cars", carList);
 		// forward를 통해 list.jsp 호출
-		_________ disp = request._________("/list.jsp");
-		disp._________(request, response);
+		RequestDispatcher disp = request.getRequestDispatcher("/list.jsp");
+		disp.forward(request, response);
 	}
 }
