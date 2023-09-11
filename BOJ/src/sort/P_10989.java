@@ -29,6 +29,5 @@ public class P_10989 {
 		
 		// 정답 출력
 		System.out.println(sb);
-		
 	}
 }
