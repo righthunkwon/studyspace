@@ -1,6 +1,5 @@
 package stack;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 // 스택
@@ -12,6 +11,7 @@ public class P_10828 {
 	private static StringBuilder sb = new StringBuilder();
 
 	
+	// 사이즈 개념 다시 생각해야할듯 님...
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
@@ -35,8 +35,9 @@ public class P_10828 {
 	}
 
 	private static void push(int X) {
-		// 정수 X를 스택에 넣는다
-		stack[size++] = X;
+		// 정수 X를 스택에 넣는다(인덱스는 1부터 시작, 구현하기 위해 스택의 크기를 하나 늘렸다).
+		size++; // 사이즈를 증가시키고
+		stack[size] = X; // 요소를 삽입한다.
 	}
 
 	// 스택에서 가장 위에 있는 정수를 빼고 그 수를 출력, 만약에 스택에 수가 없다면 -1 출력
@@ -49,13 +50,14 @@ public class P_10828 {
 		
 		// 스택에서 가장 위에 있는 정수를 출력하고 스택의 사이즈를 하나 줄인다.
 		else {
-			sb.append(stack[size--]).append("\n");
+			sb.append(stack[size]).append("\n");
+			size--;
 		}
 	}
 
 	// 스택에 들어있는 정수의 개수 출력
 	private static void size() {
-		sb.append(size-1).append("\n");
+		sb.append(size).append("\n");
 	}
 
 	
@@ -79,7 +81,7 @@ public class P_10828 {
 		
 		// 스택에서 가장 위에 있는 정수를 출력한다.
 		else {
-			sb.append(stack[size-1]).append("\n");
+			sb.append(stack[size]).append("\n");
 		}
 	}
 }

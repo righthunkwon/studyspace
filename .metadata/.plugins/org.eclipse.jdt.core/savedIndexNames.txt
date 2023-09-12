@@ -22,10 +22,10 @@ INDEX VERSION 1.131+C:\Users\SSAFY\workspace-kjh\SSAFY_Algorithm\.metadata\.plug
 1593856350.index
 462423112.index
 2804485155.index
+4214106095.index
+502655342.index
 2915038773.index
 788392666.index
-502655342.index
-4214106095.index
 3748051815.index
 1370267064.index
 2545637268.index
