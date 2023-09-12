@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!-- bean 태그를 이용한 등록 -->
+	<!-- 설정자를 활용한 의존성 주입(action) -->
+	<bean class="com.ssafy.ws.K3" id="K3" />
+	<bean class="com.ssafy.ws.Sonata" id="sonata" />
+	<bean class="com.ssafy.ws.Driver" id="driver">
+		<property name="movie" ref="action"></property>
+	</bean>
+
+	<!-- component-scan을 통한 bean 등록 -->
+	<!-- <context:component-scan base-package="com.ssafy.ws"></context:component-scan> -->
+</beans>
