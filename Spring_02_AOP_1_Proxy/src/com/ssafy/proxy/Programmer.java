@@ -1,27 +1,11 @@
 package com.ssafy.proxy;
 
-import java.util.Random;
+public class Programmer implements Person {
 
-public class Programmer {
-	
+	// 프로그래머의 일상
+	// 핵심관심사항을 제외하고는 모두 삭제
+	// 나머지 관심사항은 Proxy를 통해 관리
 	public void coding() {
-		
-		System.out.println("컴퓨터 부팅");
-
-		try {
-			System.out.println("코드 작성");
-			// 랜덤하게 예외 발생
-			if (new Random().nextBoolean()) {
-				throw new OuchException();
-			}
-			System.out.println("Git push");
-		} catch (Exception e) {
-			// 예외 처리
-			System.out.println("반차 내기");
-		} finally {
-			// 마지막에 항상 실행
-			System.out.println("하루 끝");
-		}
-
+		System.out.println("열심히 코드를 작성한다."); // 핵심관심사항(기준)
 	}
 }

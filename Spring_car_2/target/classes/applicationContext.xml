@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	<!-- AOP 초기설정 -->
+	<aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
+
+	<!-- 빈 생성 -->
+	<bean class="com.ssafy.ws.CarAspect" id="carAspect"></bean>
+	<bean class="com.ssafy.ws.Driver" id="driver"></bean>
+
+	<!-- AOP -->
+	<aop:config>
+		<aop:pointcut expression="execution(public * com.ssafy.ws.*.doSomething())" id="mypt" />
+		<aop:aspect ref="carAspect">
+			<aop:before method="before" pointcut-ref="mypt" />
+			<aop:after-returning method="after_rt" pointcut-ref="mypt" />
+			<aop:after-throwing method="after_th" pointcut-ref="mypt" throwing="th"/>
+			<aop:after method="after" pointcut-ref="mypt" />
+		</aop:aspect>
+	</aop:config>
+</beans>

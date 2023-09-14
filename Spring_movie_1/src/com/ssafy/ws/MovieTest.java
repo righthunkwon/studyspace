@@ -8,6 +8,5 @@ public class MovieTest {
 		ApplicationContext context = new GenericXmlApplicationContext("applicationContext.xml");
 		Audience audience = context.getBean("audience", Audience.class);
 		audience.watch();
-
 	}
 }
