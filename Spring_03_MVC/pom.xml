@@ -2,13 +2,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>Spring_Day02_AOP_3_Annotation</groupId>
-	<artifactId>Spring_Day02_AOP_3_Annotation</artifactId>
+	<groupId>Spring_03_MVC</groupId>
+	<artifactId>Spring_03_MVC</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<properties>
-		<spring-version>5.3.18</spring-version>
-		<aspectj-version>1.9.8</aspectj-version>
-	</properties>
+	<packaging>war</packaging>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
@@ -20,24 +17,20 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.3</version>
+				<configuration>
+					<warSourceDirectory>WebContent</warSourceDirectory>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>${spring-version}</version>
+			<artifactId>spring-webmvc</artifactId>
+			<version>5.3.18</version>
 		</dependency>
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjweaver</artifactId>
-			<version>${aspectj-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjrt</artifactId>
-			<version>${aspectj-version}</version>
-		</dependency>
-
 	</dependencies>
 </project>
