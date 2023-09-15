@@ -160,7 +160,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\Users\SSAFY\workspace-kjh\SSAFY_Back\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\SSAFY\workspace-kjh\SSAFY_Back\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\back_ws_movie_4" path="/back_ws_movie_3" reloadable="true" source="org.eclipse.jst.jee.server:back_ws_movie_4"/><Context docBase="C:\Users\SSAFY\workspace-kjh\SSAFY_Back\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\back_hw_user_4" path="/back_hw_user_4" reloadable="true" source="org.eclipse.jst.jee.server:back_hw_user_4"/></Host>
+      <Context docBase="C:\Users\SSAFY\workspace-kjh\SSAFY_Back\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\SSAFY\workspace-kjh\SSAFY_Back\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\SSAFIT" path="/SSAFIT" reloadable="true" source="org.eclipse.jst.jee.server:SSAFIT"/></Host>
     </Engine>
   </Service>
 </Server>

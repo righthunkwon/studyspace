@@ -1,9 +1,0 @@
-package com.ssafy.ws.step2.dto;
-
-public class Movie {
-	private int id;
-	private String title;
-	private String director
-	private String genre;
-	private int runningTime;
-}

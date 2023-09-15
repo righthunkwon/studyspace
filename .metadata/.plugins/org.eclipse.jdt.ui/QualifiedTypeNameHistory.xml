@@ -10,5 +10,9 @@
 <fullyQualifiedTypeName name="java.net.URLEncoder"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="com.ssafy.board.model.service.BoardServiceImpl"/>
+<fullyQualifiedTypeName name="com.ssafy.fit.model.dao.MainDaoImpl"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.ssafy.fit.model.dto.Video"/>
 </qualifiedTypeNameHistroy>
