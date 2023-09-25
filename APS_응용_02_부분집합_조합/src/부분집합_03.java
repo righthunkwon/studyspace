@@ -1,4 +1,3 @@
-import java.util.Arrays;
 
 public class 부분집합_03 {
 	private static int n = 4;
@@ -23,11 +22,10 @@ public class 부분집합_03 {
 		}
 
 		// 재귀파트(반복수행부분)
-		sel[idx] = false;
-		powerset(idx + 1);
-
-		sel[idx] = true;
-		powerset(idx + 1);
+		sel[idx] = true; // 사용하고
+		powerset(idx + 1); // 넘어가고
+		sel[idx] = false; // 사용하지 않고
+		powerset(idx + 1); // 넘어가고
 
 		// 김밥 = FFFF
 		// 제육김밥 = FFFT

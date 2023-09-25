@@ -44,6 +44,6 @@ public class S_5215 {
 		// (1) 재료를 미선택
 		pleaseletmeknowthehighestscore(idx + 1, s, c);
 		// (2) 재료를 선택
-		pleaseletmeknowthehighestscore(idx + 1, s + score[idx], c + calorie[idx]);
+		pleaseletmeknowthehighestscore(idx + 1, s + score[idx], c + calorie[idx]); // 누적합
 	}
 }

@@ -22,9 +22,9 @@ public class 백트래킹_02_순열 {
 		
 		// 재귀조건(반복수행)
 		for (int i = idx; i < n; i++) {
-			swap(i, idx);
-			perm(idx+1);
-			swap(i, idx);
+			swap(i, idx); // 바꾸고
+			perm(idx+1); // 순열하고
+			swap(i, idx); // 되돌리고
 		}
 		
 	}

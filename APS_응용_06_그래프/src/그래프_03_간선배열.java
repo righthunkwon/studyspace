@@ -21,9 +21,9 @@ public class 그래프_03_간선배열 {
 
 		// 최대한 심플하게 배열을 이용해서 저장이 가능
 		// [i][0]: 시작정점, [i][1]: 끝정점, [i][2]: 가중치
-		int[][] edges1 = new int[E][3]; 
-		Edge[] edges2 = new Edge[E];
-		List<Edge> edges3 = new ArrayList<>();
+		int[][] edges1 = new int[E][3]; // 저장방법 1
+		Edge[] edges2 = new Edge[E]; // 저장방법 2
+		List<Edge> edges3 = new ArrayList<>(); // 저장방법 3
 
 		for (int i = 0; i < E; i++) {
 			int A = sc.nextInt();

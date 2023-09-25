@@ -37,7 +37,7 @@ public class S_2817 {
 			return;
 		}
 
-		recursion(idx+1, sum);
-		recursion(idx+1, sum + arr[idx]);
+		recursion(idx+1, sum); // 선택하지 않음
+		recursion(idx+1, sum + arr[idx]); // 선택(누적합)
 	}
 }
