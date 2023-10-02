@@ -9,6 +9,10 @@ h1 {
 	font: inherit;
 	vertical-align: baseline;
 }
+
+h2 {
+    margin-top:0;
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {

@@ -7,13 +7,14 @@ img {
     width: 100%;
 }
 
-#greeting-logout {
-    display: flex;
-    align-items: center;
-}
 
 #greeting {
     margin-right: 15px;
+}
+
+#greeting-logout {
+    display: flex;
+    align-items: center;
 }
 
 #logout-form button {
@@ -38,7 +39,7 @@ body {
 h2 {
     font-size: 80px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 input {
