@@ -27,7 +27,7 @@ function paintToDo(newTodoObj) {
     span.innerText = newTodoObj.text; // span에 newTodo 삽입
 
     const button = document.createElement("button"); // button 생성
-    button.innerText = " ✅ "; // button에 test 삽입
+    button.innerText = " ✨ "; // button에 test 삽입
     button.addEventListener("click", deleteTodo);
 
     li.appendChild(span); // li 안에 span 삽입 (이후에 delete를 위함)
@@ -44,7 +44,7 @@ function handleToDoSubmit(event) {
 
     // Object
     const newTodoObj = {
-        text:newTodo,
+        text: newTodo,
         id: Date.now(),
     }
     toDos.push(newTodoObj); // array에 저장
@@ -55,7 +55,7 @@ toDoForm.addEventListener("submit", handleToDoSubmit);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
-if(savedToDos !== null) {
+if (savedToDos !== null) {
     const parsedToDos = JSON.parse(savedToDos);
     toDos = parsedToDos;
     parsedToDos.forEach(paintToDo);

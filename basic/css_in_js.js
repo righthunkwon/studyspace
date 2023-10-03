@@ -57,10 +57,9 @@ grabMe.addEventListener("click", handleTitleClick);
 */
 
 // (5) 최종 코드 : toggle
+// toggle이 등장한 역사를 충분히 느끼자.
 // toggle : clicked class가 있는지 확인하고 없으면 add, 있으면 remove
-// toggle이 등장한 역사를
 function handleTitleClick() {
-    const clickedClass = "clicked";
     grabMe.classList.toggle("clicked");
 }
 grabMe.addEventListener("click", handleTitleClick);

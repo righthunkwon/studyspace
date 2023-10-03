@@ -13,13 +13,13 @@ const USERNAME_KEY = "username";
 // 1. greeting.innerText = `Hello ${username}`;  // ` : 백틱
 // 2. greeting.innerText = "Hello " + username;
 
-
+// addEventListener를 통해 호출된 함수는 첫 번째 인자에 event에 대한 정보를 담는다.
 function onLoginSubmit(event) {
-    event.preventDefault();
+    event.preventDefault(); // event의 기본 행동 방지(여기서는 submit시 새로고침을 방지하기 위함)
     loginForm.classList.add(HIDDEN_CLASSNAME);
-    const username = loginInput.value;
-    localStorage.setItem(USERNAME_KEY, username);
-    paintGreetings(username);
+    const typedUsername = loginInput.value;
+    localStorage.setItem(USERNAME_KEY, typedUsername); // localStorage.setItem()는 정보를 (key, value) 형식으로 저장
+    paintGreetings(typedUsername);
 }
 function handleLinkClick(event) {
     event.preventDefault();

@@ -13,9 +13,9 @@ const USERNAME_KEY = "username";
 function onLoginSubmit(event) {
     event.preventDefault();
     loginForm.classList.add(HIDDEN_CLASS_NAME);
-    const username = loginInput.value;
-    localStorage.setItem(USERNAME_KEY, username);
-    paintGreetings(username);
+    const typedUsername = loginInput.value;
+    localStorage.setItem(USERNAME_KEY, typedUsername);
+    paintGreetings(typedUsername);
     paintLogOutBtn();
 }
 function paintGreetings(username) {
