@@ -125,12 +125,14 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- 파일 업로드를 위한 의존성 -->
+		<!-- 파일 업로드를 위한 의존성 주입 -->
+		<!-- 해당 코드를 작성하면 프로젝트 내 Maven Dependencies에 해당 의존성이 주입된다. -->
 		<dependency>
 			<groupId>commons-fileupload</groupId>
 			<artifactId>commons-fileupload</artifactId>
 			<version>1.4</version>
 		</dependency>
+		
 	</dependencies>
 	<build>
 		<plugins>

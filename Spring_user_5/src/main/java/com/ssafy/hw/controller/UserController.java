@@ -60,19 +60,21 @@ public class UserController {
 	@PostMapping("/regist")
 	public String doRegist(@ModelAttribute User user, @RequestPart(required = false) MultipartFile file , Model model) throws IllegalStateException, IOException {
 		
-		//먼저 파일이 존재하는지 검사
-		// if(___________) {
-		// 	// 파일을 저장할 위치 지정
-		// 	Resource res = resLoader.___________("___________");
-		// 	// 중복방지를 위해 파일 이름앞에 현재 시간 추가
-		// 	user.setImg(System.currentTimeMillis() + "_" + file.___________());
-		// 	// User 객체에 원본 파일 이름 저장
-		// 	user.setOrgImg(file.___________());
-		// 	// 파일 저장
-		// 	file.___________(new File(___________));
-			
-		// }
-
+		// 먼저 파일이 존재하는지 검사
+		 if(file != null && file.getSize() > 0) {
+		 	// 파일을 저장할 위치 지정
+		 	Resource res = resLoader.getResource("resources/upload");
+		 	// 중복방지를 위해 파일 이름앞에 현재 시간 추가
+		 	user.setImg(System.currentTimeMillis() + "_" + file.getOriginalFilename());
+		 	// User 객체에 원본 파일 이름 저장
+		 	user.setOrgImg(file.getOriginalFilename());
+		 	// 파일 저장
+		 	// Java에서는 다음과 같이 File의 path를 가져오는 API를 제공합니다.
+		 	// getPath() : File에 입력된 경로 리턴
+		 	// getAbsolutePath() : File에 입력된 절대 경로 리턴
+		 	// getCanonicalPath() : Resolved된 절대 경로 리턴
+		 	file.transferTo(new File(res.getFile().getCanonicalPath() + "/" + user.getImg()));
+		 }
 		return "/regist_result";
 	}
 	

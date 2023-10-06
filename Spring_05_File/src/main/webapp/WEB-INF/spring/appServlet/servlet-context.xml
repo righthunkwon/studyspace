@@ -17,6 +17,8 @@
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
 		up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
+	
+	<!-- 업로드 요청이 들어왔을 때 업로드 폴더를 찾는다. -->
 	<resources mapping="/upload/**" location="/upload/" />
 	
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
@@ -30,29 +32,24 @@
 	<context:component-scan
 		base-package="com.ssafy.mvc.controller" />
 
-	<!-- 파일을 위한 리졸버 -->
+	<!-- 파일 업로드와 다운로드를 위한 리졸버 -->
 	<beans:bean
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
 		id="multipartResolver">
 		<!-- bean의 property는 프로터피가 아니라 getter와 setter에 해당한다. -->
-		<!-- maxUploadSizes는 byte단위, value의 값은 10MB 정도 -->
+		<!-- maxUploadSizes는 byte단위, 입력한 value의 값은 10MB 정도 -->
+		<!-- 실제 파일 용량을 제한할 때 maxUploadSize를 사용할 수 있다 -->
 		<!-- maxUploadSizes를 무제한으로 사용하려면 value에 -1을 입력하면 되지만 권장하지 않음 -->
-		<beans:property name="maxUploadSize" value="10485760" />  
-		<beans:property name="defaultEncoding" value="UTF-8" />
+		<beans:property name="maxUploadSize" value="10485760" />  <!-- 실제로는 setMaxUploadSize가 정의되어 있는 것 -->
+		<beans:property name="defaultEncoding" value="UTF-8" /> <!-- 실제로는 setDefaultEncoding이 정의되어 있는 것 -->
 	</beans:bean>
 
+	<!-- 파일 다운로드를 위한 FileDownLoadView를 등록 -->
 	<beans:bean class="com.ssafy.mvc.view.FileDownLoadView" id="fileDownLoadView"/>
+	
+	<!-- 빈 이름으로 뷰를 찾기 위한 BeanNameViewResolver를 등록 -->
 	<beans:bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
 		<beans:property name="order" value="0"></beans:property>
 	</beans:bean>
 	
-	
-	
-	
-	
-	
-
-
-
-
 </beans:beans>

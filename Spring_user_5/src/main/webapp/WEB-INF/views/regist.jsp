@@ -20,7 +20,7 @@
 <body>
 <%@ include file="include/header.jsp"%>
 	<h1>SSAFY 사용자 관리</h1>
-	<!-- <form method="post" action="regist" enctype="__________">
+	<form method="post" action="regist" enctype="multipart/form-data">
 		<fieldset>
 			<legend>사용자 정보 입력</legend>
 			<label for="id">아이디</label>
@@ -35,11 +35,12 @@
 			<input type="number" id="age" name="age"><br>
 			<div>
 				<label for="file">이미지</label>
-				<input type="__________" id="file" name="file" class="input-image" accept="__________" >
+				<!-- accept 속성 : 서버로 업로드할 수 있는 파일의 타입 명시 -->
+				<input type="file" id="file" name="file" class="input-image" accept="image/*" >
 			</div>
 			<input type="submit" value="등록">
 			<input type="reset" value="초기화">
 		</fieldset> 
-	</form>-->
+	</form>
 </body>
 </html>

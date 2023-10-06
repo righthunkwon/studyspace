@@ -128,19 +128,20 @@ public class CarController {
 	 * @param car
 	 * @return
 	 */
-	// @PostMapping("/regist")
-	// public String doRegist(__________, __________) throws IllegalStateException, IOException {
-	// 	if (_____________) {
-	// 		// 파일을 저장할 폴더 지정
-	// 		Resource res = resLoader.__________("resources/upload");
-	// 		// 파일이 비어있다면 처리할 필요가 없다.
-	// 		// prefix를 포함한 전체 이름
-	// 		car.setImg(System.currentTimeMillis() + "_" + file.getOriginalFilename());
-	// 		car.setOrgImg(file.getOriginalFilename());
-
-	// 		file.__________(new File(__________);
-	// 	}
-	// 	return "regist_result";
-	// }
+	 @PostMapping("/regist")
+	 public String doRegist(Car car, MultipartFile file) throws IllegalStateException, IOException {
+	 	if (file != null && file.getSize() > 0) {
+	 		// 파일을 저장할 폴더 지정
+	 		Resource res = resLoader.getResource("resources/upload");
+	 		// 파일이 비어있다면 처리할 필요가 없다.
+	 		// prefix를 포함한 전체 이름
+	 		
+	 		// '현재시간_파일이름'으로 파일을 저장
+	 		car.setImg(System.currentTimeMillis() + "_" + file.getOriginalFilename());
+	 		car.setOrgImg(file.getOriginalFilename()); // 원래 파일명으로도 파일 저장
+	 		file.transferTo(new File(res.getFile().getCanonicalPath() + "/" + car.getImg()));
+	 	}
+	 	return "regist_result";
+	 }
 
 }

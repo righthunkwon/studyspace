@@ -42,7 +42,7 @@ th:nth-child(1) {
 						<td>${car.vin }</td>
 						<!-- 실제 저장된 파일의 이미지를 경로로 사용한다. -->
 						<td rowspan="5">
-							<!-- <img id="cover" src="__________"> -->
+							<img id="cover" src="${root }/resources/upload/${car.img }">
 						</td>
 					</tr>
 					<tr>
