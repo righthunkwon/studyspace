@@ -15,7 +15,7 @@ CREATE TABLE ssafy_user (
     signup_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
--- 테이블 정보 확인(
+-- 테이블 정보 확인
 -- 열을 어떻게 지정했는지 확인 가능
 DESC ssafy_user;
 
