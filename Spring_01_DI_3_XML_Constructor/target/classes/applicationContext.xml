@@ -4,6 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- Spring을 통해 Class 관리 -->
+	<!-- bean은 DTO 혹은 VO를 나타내는 클래스이다. -->
 	<bean class="com.ssafy.di.Laptop" id="laptop"></bean>
 	<bean class="com.ssafy.di.Desktop" id="desktop"></bean>
 	<bean class="com.ssafy.di.Programmer" id="programmer">
