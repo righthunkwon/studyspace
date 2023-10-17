@@ -1,11 +1,2 @@
-/basic/
-/bruteforce/
-/dfs_bfs/
-/dijkstra/
-/dynamic_programming/
-/greedy/
-/stack_queue_deque/
-/string/
-/약수배수소스/
-/약수배수소수/
-/P_2206.class
+/dp/
+/backtracking/
