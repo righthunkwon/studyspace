@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-// 자바에서의 /는 직전 / 이후에 요소를 붙게 하여 기존재 존재하던 context root 등이 살아있지만,
+// 자바에서의 /는 직전 / 이후에 요소를 붙게 하여 기존에 존재하던 context root 등이 살아있지만,
 // HTML에서의 /는 port 번호 이후에 경로를 붙게 하여 기존에 존재하던 context root등 을 삭제한다. 
 @WebServlet("/MainServlet")
 public class MainServlet extends HttpServlet {
