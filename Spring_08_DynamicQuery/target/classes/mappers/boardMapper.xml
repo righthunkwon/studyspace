@@ -63,13 +63,14 @@
 		FROM board
 		
 		<!-- 동적 쿼리 -->
+		<!-- #{}은 ''붙어서 나옴, ${}는 ''안 붙어서 나옴 -->
 		<!-- 검색 기준 -->
 		<if test="key != 'none'">
-			WHERE #{key} LIKE concat('%', #{word}, '%')
+			WHERE ${key} LIKE concat('%', #{word}, '%')
 		</if>
 		<!-- 정렬기준, 정렬 방향 -->
 		<if test="orderBy != 'none'">
-			ORDER BY #{orderBy} #{orderByDir}
+			ORDER BY ${orderBy} ${orderByDir}
 		</if>
 	</select>
 </mapper>

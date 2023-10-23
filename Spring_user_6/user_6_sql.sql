@@ -16,3 +16,7 @@ VALUES ("ssafy", "1234", "김싸피", "ssafy.kim@ssafy.com", 20);
 
 SELECT * 
 FROM users;
+
+SELECT * 
+FROM users
+WHERE name LIKE concat('%싸피%');
