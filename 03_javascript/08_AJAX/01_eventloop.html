@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>이벤트루프</title>
+  </head>
+  <body>
+    <script>
+
+      // Ajax
+      // Asynchronous JavaScript and XML
+      // JS를 이용해 서버와 브라우저가 비동기 방식으로 데이터를 교환할 수 있는 통신 기능
+      // 리로드 시 모든 코드등을 모두 재요청할 경우 불필요한 리소스 낭비가 발생하게 되지만 
+      // Ajax는 웹 페이지 전체를 다시 로딩하지 않고도, 웹 페이지의 일부분만을 갱신하기에
+      // 비동기식 방식을 이용할 경우 필요한 부분만 불러와 사용할 수 있으므로 효율적이다.
+
+      // setTimeout
+      // 대표적인 비동기함수 중 하나
+      // 비동기함수는 이벤트 루프를 통해 비동기적으로 작동하는 함수로
+      // 암시적으로 Promise를 사용하여 결과를 반환, 함수의 실행을 일시 중지하고
+      // 전달된 Promise의 해결을 기다린 다음 async 함수의 실행을 다시 실행 후 완료 후 값 반환
+
+      console.log("Hi");
+
+      // WEB API - task queue - stack - 실행
+      // 대기 시간이 0초여도 우선 WEB API 영역으로 들어가므로 Bye보다 나중에 실행
+      setTimeout(function () {
+        console.log("0초 setTimeout");
+      }, 0);
+
+      setTimeout(function () {
+          console.log("3초 setTimeout");
+      }, 3000);
+
+      console.log("Bye");
+
+      // 1초 간격으로 배경 색 변화
+      setInterval(function () {
+        let bgColor = document.body.style.background;
+        if (bgColor == "cornflowerblue") document.body.style.background = "tomato";
+        else document.body.style.background = "cornflowerblue";
+      }, 1000);
+    </script>
+  </body>
+</html>

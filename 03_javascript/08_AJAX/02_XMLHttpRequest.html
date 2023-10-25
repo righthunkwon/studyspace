@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>XMLHttpRequest실습</title>
+  </head>
+  <body>
+    <script>
+
+      // XMLHttpRequest
+      // JS의 객체, 서버와 상호작용하기 위해 사용
+      // 전체 페이지의 새로고침 없이도 URL로부터 데이터를 받아올 수 있음
+      // 사용자의 작업을 방해하지 않고 페이지의 일부를 업데이트 할 수 있음
+      // AJAX 프로그래밍에 주로 이용되며, XML이라는 이름이 있지만 모든 종류의 데이터 취급
+
+      // XMLHttpRequest의 메서드
+      // (1) open : 요청 초기화, get/post 지정, 서버 url지정, 동기/비동기 설정
+      // (2) send : get방식은 null 적용, post방식은 파라미터 설정 처리
+
+      // XMLHttpRequest의 프로퍼티
+      // (1) onreadystatechange : 서버에서 응답이 도착했을 때 readyState에 따른 콜백함수 지정
+      // (2) readystate : 0(unsent), 1(opened), 2(headers_received), 3(loading), 4(done)
+      // (3) status : 서버 처리 결과 상태 코드(200, 404, 500 등)
+      // (4) responseText : 서버의 응답결과를 문자열로 받기
+      // (5) responseXML : 서버의 응답 결과를 XML Document로 받기
+
+      // AJAX 프로그래밍의 순서
+      // 1. 클라이언트 이벤트 발생
+      // 2. XMLHttpRequest 객체 생성
+      // 3. XMLHttpRequest 객체 콜백함수 설정
+      // 4. XMLHttpRequest 객체를 통한 비동기화 요청
+      // 5. 서버 응답결과를 생성 후 클라이언트로 전송
+      // 6. XMLHttpRequest 객체는 서버 결과를 처리할 콜백함수 호출
+      // 7. 결과를 클라이언트 화면에 반영
+
+      // JSON date 무료 변환 URL
+      // 아래의 URL로 요청을 보내면 JSON 형태의 데이터를 돌려준다.
+      const URL = "https://jsonplaceholder.typicode.com/todos/1";
+
+      // AJAX 통신
+      // XMLHttpRequest 객체 생성
+      const xhr = new XMLHttpRequest();
+
+      // XMLHttpRequest 객체를 통한 요청
+      xhr.open("GET", URL); // 초기화
+      xhr.send(); // 요청 전송
+
+      // 하단의 todo는 출력되지 않지만, 브라우저 콘솔창에서 xhr.response는 출력된다.
+      // 이는 자바스크립트가 싱글 스레드인데 XMLHttpRequest 객체를 처리하기 전에
+      // console.log를 먼저 실행해서 벌어진 일이다.
+      const todo = xhr.response;
+      console.log(todo);
+    </script>
+  </body>
+</html>

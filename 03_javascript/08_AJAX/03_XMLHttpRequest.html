@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>XMLHttpRequest실습</title>
+  </head>
+  <body>
+    <script>
+      const URL = "https://jsonplaceholder.typicode.com/todos/1";
+
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", URL);
+      xhr.send();
+
+      // onreadystatechange : 상태가 바뀔 때 마다 수행할 콜백메서드를 지정
+      xhr.onreadystatechange = function () {
+
+        // 서버와 통신이 잘 끝났고,
+        if (xhr.readyState == xhr.DONE) {
+          // 상태가 정상적일 때(200)
+          if (xhr.status == 200) {
+            // console.log 실행
+            const todo = xhr.response;
+            console.log(todo);
+          }
+        }
+        
+      };
+    </script>
+  </body>
+</html>

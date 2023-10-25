@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사용자 정보 관리 사이트</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="header-nav">
+        <div>
+          <a href="index.html"><h1>SSAFY USERS</h1></a>
+        </div>
+        <div>
+          <form action="#">
+            <input type="text" placeholder="이름을 입력하세요" />
+            <input type="submit" value="검색" />
+          </form>
+        </div>
+        <div>
+          <span class="nav-menu"><a href="login.html">로그인</a></span>
+          <span class="nav-menu"><a href="#">로그아웃</a></span>
+          <span class="nav-menu"><a href="#">정보수정</a></span>
+          <span class="nav-menu"><a href="#">회원탈퇴</a></span>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <section class="content-user-list">
+        <h1>사용자 목록</h1>
+        <br />
+        <ul class="content-user-list-ul">
+          <!--비동기로 사용자 정보 가져오기-->
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="footer-list">
+        <li><a href="#">개인정보 처리방침</a></li>
+        <li><a href="#">이용 약관</a></li>
+        <li><a href="#">오시는 길</a></li>
+        <li>&copy; SSAFY</li>
+      </ul>
+    </footer>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
