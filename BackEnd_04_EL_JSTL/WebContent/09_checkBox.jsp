@@ -10,7 +10,7 @@
 <body>
 	<h2>반찬 고르기</h2>
 	<form action="10_checkBoxResult.jsp">
-		<!-- label로 구현하는 걸 권장(input의 id를 label의 for에 연결하여 사용 -->
+		<!-- label도 구현하는 걸 권장(input의 id를 label의 for에 연결하여 사용 -->
 		<input type="checkBox" name="dish" value="계란말이">계란말이 
 		<input type="checkBox" name="dish" value="돈까스">돈까스 
 		<input type="checkBox" name="dish" value="무말랭이">무말랭이 <br/>
