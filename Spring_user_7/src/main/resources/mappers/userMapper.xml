@@ -19,8 +19,8 @@
 	<!-- 사용자 이름으로 검색하여 조회한다. id는 repo클래스의 메소드 이름과 일치시킨다. -->
 	<select id="searchByName" parameterType="string" resultType="User">
 		SELECT *
-		FROM users WHERE name LIKE
-		CONCAT('%',#{name},'%')
+		FROM users 
+		WHERE name LIKE CONCAT('%',#{name},'%')
 	</select>
 
 	<!-- 모든 사용자 정보를 검색한다. id는 repo클래스의 메소드 이름과 일치시킨다. -->

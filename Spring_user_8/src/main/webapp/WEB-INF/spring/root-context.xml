@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:mybatis="http://mybatis.org/schema/mybatis-spring"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<!-- 어노테이션으로 설정한 model 패키지 하위 클래스를 빈으로 등록하기 위해 컴포넌트 스캔 범위 지정 -->
+	<context:component-scan
+		base-package="com.ssafy.hw.model"></context:component-scan>
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp2.BasicDataSource">
+		<property name="driverClassName"
+			value="com.mysql.cj.jdbc.Driver"></property>
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/ssafydb?serverTimezone=UTC"></property>
+		<property name="username" value="ssafy"></property>
+		<property name="password" value="ssafy"></property>
+	</bean>
+
+	<!-- MyBatis를 사용하기 위한 sqlSessionFactory를 등록한다. -->
+	<bean id="sqlSessionFactory"
+		class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<!-- mapper xml 파일의 경로를 ant 표현식의 형태로 사용한다. -->
+		<property name="mapperLocations"
+			value="classpath*:mappers/**/*.xml" />
+		<!-- mapper에서 사용할 DTO들의 기본 패키지를 등록한다. -->
+		<property name="typeAliasesPackage" value="com.ssafy.hw.model.dto"></property>
+	</bean>
+
+	<!-- mybatis에서 제공하는 scan 태그를 통해 repository interface들의 위치를 지정한다. -->
+	<mybatis:scan base-package="com.ssafy.hw.model.dao" />
+	
+	<!-- Transaction 처리를 위한 transactionManager를 등록한다. 아이디는 언제나 고정한다. -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<constructor-arg ref="dataSource"></constructor-arg>
+	</bean>
+	
+	<!-- 트랜잭션 기능을 사용하기 위해 트랜잭션 매니저 등록 -->
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	
+	
+</beans>
