@@ -9,6 +9,7 @@ public class Review {
 	private int viewcnt;
 	private String regdate;
 	public Review() {
+		// TODO Auto-generated constructor stub
 	}
 	public Review(int reviewId, String userId, int videoId, String title, String content, int viewcnt,
 			String regdate) {

@@ -9,13 +9,32 @@ import com.ssafit.board.model.dao.VideoDao;
 import com.ssafit.board.model.dto.SearchCondition;
 import com.ssafit.board.model.dto.Video;
 
+/*
+ *  의존성 주입(@Autowired)
+ *  1. 필드 주입
+ *  @Autowired
+ *  private VideoDao videoDao;
+
+ *  2. 설정자 주입
+ *  @Autowired
+ *  public void setVideoDao(VideoDao videoDao) {
+ *     this.videoDao = videoDao;
+ *  }
+ * 
+ *  3. 생성자 주입(권장)
+ *  @Autowired
+ *  public VideoServiceImpl(VideoDao videoDao) {
+ *     this.videoDao = videoDao;
+ *  }
+ */
+
 @Service
 public class VideoServiceImpl implements VideoService {
 	
 	private VideoDao videoDao;
-	
-	@Autowired
-	public void setVideoDao(VideoDao videoDao) {
+
+	@Autowired // 의존성 주입: 생성자 주입(권장)
+	public VideoServiceImpl(VideoDao videoDao) {
 		this.videoDao = videoDao;
 	}
 	

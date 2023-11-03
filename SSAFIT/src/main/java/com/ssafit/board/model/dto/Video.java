@@ -10,7 +10,9 @@ public class Video {
 	private int viewcnt;
 	private String regdate;
 	public Video() {
+		// TODO Auto-generated constructor stub
 	}
+	
 	public Video(int videoId, String title, String content, String part, String creator, String link, int viewcnt,
 			String regdate) {
 		super();
@@ -84,5 +86,5 @@ public class Video {
 	public String toString() {
 		return "Video [videoId=" + videoId + ", title=" + title + ", content=" + content + ", part=" + part
 				+ ", creator=" + creator + ", link=" + link + ", regdate=" + regdate + ", viewcnt=" + viewcnt + "]";
-	}
+	}	
 }

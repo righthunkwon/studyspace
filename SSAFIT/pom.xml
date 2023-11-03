@@ -12,7 +12,7 @@
 	<artifactId>SSAFIT</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SSAFIT</name>
-	<description>SSAFIT Project</description>
+	<description>project</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -49,7 +49,7 @@
 			<version>2.3.1</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- swagger -->
+		<!-- Swagger 사용 -->
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-boot-starter</artifactId>

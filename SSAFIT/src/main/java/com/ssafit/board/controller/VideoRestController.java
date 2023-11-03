@@ -19,28 +19,34 @@ import com.ssafit.board.model.service.VideoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
+// @Controller		: return 값이 뷰 페이지 이름
+// @RestController 	: return 값이 데이터
+
 @RestController
-@RequestMapping("/api") // 반복되는 상위 경로 적용
-@Api(tags="게시판 컨트롤러") // 이름 
+@RequestMapping("/api") // 공통으로 적용되는 상위 주소를 세팅
+@Api(tags="비디오 컨트롤러") // API의 이름 설정
 // @CrossOrigin("*") -> WebConfig에서 설정
 public class VideoRestController {
 
-	@Autowired 
 	private VideoService videoService;
 
-	// 1. 전체 비디오 목록 조회
+	@Autowired // 의존성 주입(생성자)
+	public VideoRestController(VideoService videoService) {
+		this.videoService = videoService;
+	}
+
+	// (1) 전체 비디오 목록 조회
 	@GetMapping("/video")
 	@ApiOperation(value="비디오 조회", notes="전체 비디오 조회")
-	public ResponseEntity<?> list(){
+	public ResponseEntity<?> getVideoList(){
 		List<Video> list = videoService.getList();
-		
 		if(list == null || list.size() == 0) { // 단축평가
 			return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
 		}
 		return new ResponseEntity<List<Video>>(list, HttpStatus.OK);
 	}
 	
-	// 2. ID와 일치하는 단일 비디오 조회
+	// (2) ID와 일치하는 단일 비디오 조회
 	@GetMapping("/video/{id}")
 	@ApiOperation(value="비디오 상세 조회", notes="상세 비디오 조회")
 	public ResponseEntity<Video> detail(@PathVariable int id){
@@ -48,7 +54,7 @@ public class VideoRestController {
 		return new ResponseEntity<Video>(video, HttpStatus.OK);
 	}
 	
-	// 3. 비디오 등록
+	// (3) 비디오 등록
 	@PostMapping("/video")
 	@ApiOperation(value="비디오 등록", notes="비디오 등록")
 	public ResponseEntity<Video> write(Video video){
@@ -56,7 +62,7 @@ public class VideoRestController {
 		return new ResponseEntity<Video>(video, HttpStatus.CREATED);
 	}
 	
-	// 4. 비디오 삭제
+	// (4) 비디오 삭제
 	@DeleteMapping("/video/{id}")
 	@ApiOperation(value="비디오 삭제", notes="비디오 삭제")
 	public ResponseEntity<Void> delete(@PathVariable int id){
@@ -64,7 +70,7 @@ public class VideoRestController {
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 	
-	// 5. 조회수 많은 순으로 비디오 조회
+	// (5) 조회수 많은 순으로 비디오 조회
 	@GetMapping("/video-hits")
 	@ApiOperation(value="비디오 조회수 순 조회", notes="비디오 조회수 순 내림차순 조회")
 	public ResponseEntity<?> listByHits(){
@@ -75,7 +81,7 @@ public class VideoRestController {
 		return new ResponseEntity<List<Video>>(list, HttpStatus.OK);
 	}
 	
-	// 6. 운동 부위별 비디오 조회
+	// (6) 운동 부위별 비디오 조회
 	@GetMapping("/video-part")
 	@ApiOperation(value="운동 부위별 비디오 조회", notes="운동 부위별 비디오 조회")
 	public ResponseEntity<?> listByPart(SearchCondition condition){

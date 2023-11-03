@@ -6,6 +6,7 @@ import com.ssafit.board.model.dto.Video;
 import com.ssafit.board.model.dto.SearchCondition;
 
 public interface VideoDao {
+	
 	// 전체 비디오 조회
 	public List<Video> selectAll();
 

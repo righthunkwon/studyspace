@@ -5,6 +5,7 @@ public class Wishlist {
 	private String userId;
 	private int videoId;
 	public Wishlist() {
+		// TODO Auto-generated constructor stub
 	}
 	public Wishlist(int wishlistId, String userId, int videoId) {
 		super();
