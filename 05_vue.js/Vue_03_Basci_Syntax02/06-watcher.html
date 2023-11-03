@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Vue</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+
+  <!-- watch() -->
+  <!-- 반응형 데이터를 감시하고, 감시하는 데이터가 변경되면 콜백함수를 호출 -->
+
+  <!-- Computed vs Watchers-->
+  <!-- Computed와 Watchers는 둘 다 데이터의 변화를 감지하고 처리하지만, -->
+  <!-- Computed는 의존하는 데이터 속성의 계산된 값을 반환하고, Watchers는 특정 데이터 속성의 변화를 감시하고 작업을 수행한다. -->
+
+  <div id="app">
+    <p>{{count}}</p>
+    <button @click="count++">증가</button>
+    <hr />
+
+    <input type="text" v-model="message" />
+    <p>{{messageLength}}</p>
+  </div>
+
+  <script>
+    const { createApp, ref, watch } = Vue;
+
+    const app = createApp({
+      setup() {
+        const count = ref(0);
+        const message = ref("");
+        const messageLength = ref(0);
+
+        const countWatch = watch(count, (newValue, oldValue) => {
+          console.log(`new : ${newValue} / old : ${oldValue}`);
+        });
+
+        const messageWatch = watch(message, (newValue, oldValue) => {
+          messageLength.value = newValue.length;
+        });
+
+        return {
+          count,
+          message,
+          messageLength,
+        };
+      },
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

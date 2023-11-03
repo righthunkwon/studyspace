@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Vue</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- click 이벤트 발생 시 increment 함수 실행 -->
+    <button v-on:click="increment">{{count}}</button> <!-- v-on == @ -->
+  </div>
+
+  <script>
+    const { createApp, ref } = Vue;
+    const app = createApp({
+
+      setup() {
+        const count = ref(0);
+        const increment = function () {
+          console.log(typeof count); // object
+          console.log(typeof count.value); // number
+          count.value++;
+        };
+
+        return {
+          count,
+          increment,
+        };
+      },
+
+    });
+
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

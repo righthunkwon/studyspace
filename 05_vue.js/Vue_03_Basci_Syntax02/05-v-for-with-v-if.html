@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Vue</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+
+  <!-- 동일 요소에 v-for와 v-if를 함께 사용하지 말자. -->
+  <!-- 동일한 요소에서는 v-if가 v-for보다 우선순위가 높기 때문에, v-if 조건은 v-for의 범위의 변수에 접근할 수 없기 때문이다. -->
+
+  <div id="app">
+    <h3>완료된 일</h3>
+    <ul>
+      <li v-for="todo in completeTodos" :key="todo.id">{{todo.name}}</li>
+    </ul>
+    <hr />
+
+    <h3>미완료된 일</h3>
+    <ul>
+      <template v-for="todo in todos" :key="todo.id">
+        <li v-if="!todo.isComplete">{{todo.name}}</li>
+      </template>
+    </ul>
+  </div>
+
+  <script>
+    const { createApp, ref, computed } = Vue;
+    const app = createApp({
+      setup() {
+        let id = 0;
+        const todos = ref([
+          { id: id++, name: "복습", isComplete: true },
+          { id: id++, name: "예습", isComplete: false },
+          { id: id++, name: "저녁식사", isComplete: true },
+          { id: id++, name: "노래방", isComplete: false },
+        ]);
+        const completeTodos = computed(() => {
+          return todos.value.filter((todo) => todo.isComplete);
+        });
+        return {
+          todos,
+          completeTodos,
+        };
+      },
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

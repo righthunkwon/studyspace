@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Vue</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- v-model -->
+    <!-- 양방향 바인딩 -->
+    <p>회원 목록: Bella, John, Bob</p>
+    <input type="text" v-model="name">
+
+    <!-- v-if -->
+    <!-- 표현식의 true/false를 기반으로 조건부로 렌더링 -->
+    <!-- 초기 조건이 false인 경우 아무 작업도 수행하지 않지만 토글 비용이 높다 -->
+    <div v-if="name === 'Alice'">Alice 소개</div>
+    <div v-else-if="name === 'Bella'">Bella 소개</div>
+    <div v-else-if="name === 'John'">John 소개</div>
+    <div v-else-if="name === 'Bob'">Bob 소개</div>
+    <div v-else>그 누구도 아닙니다.</div>
+    <hr />
+
+    <!-- template -->
+    <!-- 여러 요소에 대한 v-if 적용 -->
+    <!-- template 속성에 v-if를 사용하여 하나 이상의 요소에 대해 적용 가능 -->
+    <!-- 페이지 로드 시 렌더링되지는 않지만ㅏ JS를 사용하여 나중에 문서에서 사용할 수 있도록 하는 HTML을 보유하기 위한 기술 -->
+    <template v-if="name === 'Bella'">
+      <div>Bella 입니다.</div>
+      <div>19살 입니다.</div>
+    </template>
+    <template v-if="name === 'John'">
+      <div>John입니다.</div>
+      <div>18살 입니다.</div>
+    </template>
+    <template v-if="name === 'Bob'">
+      <div>Bob입니다.</div>
+      <div>20살 입니다.</div>
+    </template>
+    <hr />
+
+    <!-- v-if & toggle button -->
+    <p v-if="isSeen">isSeen이 true일때 보여요</p>
+    <p v-else>isSeen이 false일때 보여요</p>
+    <button @click="isSeen = !isSeen">isSeen 토글</button>
+    <hr />
+
+    <!-- v-show -->
+    <!-- 표현식의 true/false를 기반으로 가시성을 전환(style="display:none" 처리) -->
+    <!-- 초기 렌더링 비용이 높지만 토글 비용이 들어가지 않는다. 따라서 무언가를 자주 전환할 때는 v-show를, 실행 중 조건이 잘 변하지 않는 때는 v-if를 사용하는 것이 좋다. -->
+    <div v-show="isSeen">isSeen이 true일때 보여요</div>
+    <hr />
+  </div>
+
+  <script>
+    const { createApp, ref } = Vue;
+    const app = createApp({
+      setup() {
+        const isSeen = ref(false);
+        const name = ref("");
+        return {
+          isSeen,
+          name,
+        };
+      },
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

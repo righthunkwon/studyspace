@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Vue</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+
+  <!-- v-on (@) -->
+  <!-- DOM 요소에 이벤트 리스너를 연결 및 수신 -->
+  <!-- 핸들러는 인라인 핸들러와 메서드 핸들러로 구분 -->
+
+  <div id="app">
+    <!-- 인라인 핸들러(JS 코드) -->
+    <p>Count : {{count}}</p>
+    <button @click="count++">증가</button>
+    <button @click="count--">감소</button>
+
+    <!-- 메서드 핸들러(컴포넌트에 별도 정의) -->
+    <!-- 메서드 핸들러는 이를 트리거하는 기본 DOM event 객체를 자동으로 수신 -->
+    <button @click="myFunc">메서드동작</button>
+    <button @click="greeting('하위하위')">하위</button>
+    <button @click="greeting('바위바위')">바위</button>
+    <button @click="warning('보보',$event)">보</button>
+
+    <!-- Vue는 v-on에 대한 Event Modifiers를 제공하여 -->
+    <!-- event.preventDefault()와 같은 구문을 메서드에서 작성하지 않고도 편리하게 작성할 수 있게 한다. -->
+    <a @click.stop.prevent="onLink" href="https://www.google.com">구글</a>
+
+    <!-- Vue는 키보드 이벤트를 수신할 때-->
+    <!-- 특정 키에 대한 별도의 modifiers를 사용할 수 있다. -->
+    <input type="text" @keyup.enter="onSubmit" /> <!-- 키가 엔터일 경우에만 onSubmit 이벤트 호출 -->
+  </div>
+  <script>
+    const { createApp, ref } = Vue;
+    const app = createApp({
+      setup() {
+        const count = ref(0);
+        const name = ref("Alice");
+        const myFunc = function (event) {
+          console.log(event);
+          console.log(event.target);
+        };
+        const greeting = function (message) {
+          console.log(message);
+        };
+        const warning = function (message) {
+          console.log(message);
+        };
+
+        const onLink = function () {
+          console.log("link click");
+        };
+
+        const onSubmit = function () {
+          console.log("onSubmit");
+        };
+
+        return { count, name, myFunc, greeting, warning, onLink, onSubmit };
+      },
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

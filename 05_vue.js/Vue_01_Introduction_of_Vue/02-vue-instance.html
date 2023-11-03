@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Vue</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> <!-- CDN 방식 -->
+</head>
+
+<body>
+  <div id="app">
+    <!-- Mustache syntax {{}} 를 통해 메세지 값을 기반으로 동적 텍스트를 렌더링 -->
+    <p>{{message}}</p> <!-- setup에서 꺼내 사용할 때는 .value가 필요없다. -->
+    <p>{{message.split('').reverse().join('')}}</p> <!-- Mustache syntax 내부 자바스크립트 표현식 사용 가능 -->
+  </div>
+
+  <!-- Vue의 기본 구조 -->
+  <!-- createApp()에 전달되는 객체는 Vue 컴포넌트 -->
+  <!-- 컴포넌트의 상태는 setup() 함수 내에서 선언되어야 하며 객체를 반환해야 함 -->
+
+  <script>
+    // 구조 분해 할당
+    const { createApp, ref } = Vue; // ref: 반응형 상태(데이터)를 선언하는 함수
+
+    // Application Instance
+    // 모든 Vue 어플리케이션은 createApp 함수로 새 Application Instance를 생성하는 것으로 시작된다.
+    const app = createApp({
+
+      setup() {
+        // 변수를 사용하기 위해서 ref 메서드로 감싸서 초기화
+        const message = ref("Hello Vue!"); // 반응형을 가진 참조변수 생성
+
+        console.log("setup test")
+        console.log(message); // ref 객체 반환
+        console.log(message.value); // Hello Vue! 반환
+        console.log(typeof message); // object
+        console.log(typeof message.value); // string
+
+        // 템플릿에서 사용하기 위해서는 
+        // setup 함수에서 선언 및 반환이 필요(객체 타입으로 반환)
+        return {
+          message,
+        };
+      },
+
+    });
+
+    // dom 연결
+    // 컨테이너 요소에 어플리케이션 인스턴스를 탑재(연결)
+    // 각 어플리케이션 인스턴스에 대해 mount()는 한 번만 호출할 수 있다.
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

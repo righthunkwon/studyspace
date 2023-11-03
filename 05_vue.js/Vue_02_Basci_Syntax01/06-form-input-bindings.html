@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Vue</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+
+  <!-- 양방향 바인딩 -->
+  <!-- 1. v-bind & v-on -->
+  <!-- 2. v-model -->
+
+  <!-- 가령, form을 처리할 때 사용자가 input에 입력하는 값을 -->
+  <!-- 실시간으로 JavaScript 상태에 동기화해야 하는 경우가 있는데 이때 양방향 바인딩이 필요하다. -->
+
+  <div id="app">
+    <!-- 양방향 바인딩 1 -->
+    <input type="text" @input="onInput" />
+    <p>{{inputText1}}</p>
+    <hr />
+    <!-- 양방향 바인딩 2 -->
+    <input type="text" v-model="inputText2" />
+    <p>{{inputText2}}</p>
+  </div>
+  <script>
+    const { createApp, ref } = Vue;
+    const app = createApp({
+      setup() {
+        const inputText1 = ref("");
+        const inputText2 = ref("");
+        const onInput = function () {
+          inputText1.value = event.currentTarget.value;
+        };
+        return {
+          inputText1,
+          inputText2,
+          onInput,
+        };
+      },
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

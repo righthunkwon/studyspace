@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Vue</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+
+  <!-- computed() -->
+  <!-- 계산된 속성을 정의하는 함수 -->
+  <!-- computed 속성은 의존된 반응형 데이터를 자동으로 추적 -->
+  <!-- 의존된 반응형 데이터를 기반으로 캐시(cached)되어 의존하는 데이터가 변경된 경우에만 재평가 -->
+  <!-- 즉, 의존된 반응형 데이터가 변경되지 않는 한 이미 계산된 결과에 대한 참조는 재평가되지 않고 이전 결과를 바로 반환-->
+  <!-- computed 속성 대신 method로도 동일한 기능을 정의할 수 있고, 실제로 두 접근 방식은 완전히 동일, 하지만 호출 횟수에서 차이(computed는 의미없는 반복 X) -->
+
+
+  <!-- computed : 의존된 데이터가 변경되면 자동으로 업데이트 -->
+  <!-- method   : 호출해야만 실행 -->
+  <div id="app">
+    <h2>남은 할일</h2>
+    <p>{{todos.length > 0 ? '남은 할일 존재...' : '모든 일을 마무리!'}}</p>
+    <h3>계산된 속성</h3>
+    <!-- computed 방식의 경우 이전과 호출된 값이 동일하면 호출 없이 값만 가져와서 효율적 -->
+    <p>{{ restOfTodos }}</p>
+    <p>{{ restOfTodos }}</p>
+
+    <h3>메서드 호출</h3>
+    <!-- method 호출은 선언할 때 매번 발생 -->
+    <p>{{ getRestOfTodos() }}</p>
+    <p>{{ getRestOfTodos() }}</p>
+  </div>
+  <script>
+    const { createApp, ref, computed } = Vue;
+    const app = createApp({
+      setup() {
+        const todos = ref([
+          { text: "Vue 공부하기" },
+          { text: "Vue 실습하기" },
+          { text: "Spring 복습하기" },
+          { text: "춤추기" },
+        ]);
+
+        const restOfTodos = computed(() => {
+          console.log("computed");
+          return todos.value.length > 0 ? '남은 할일 존재... 1' : '모든 일을 마무리! 1';
+        });
+
+        const getRestOfTodos = function () {
+          console.log("method");
+          return todos.value.length > 0 ? '남은 할일 존재... 2' : '모든 일을 마무리! 2';
+        };
+        return {
+          todos,
+          restOfTodos,
+          getRestOfTodos,
+        };
+      },
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>사각형의 특징</h1>
+        <p>가로 길이 : {{width}}</p>
+        <p>세로 길이 : {{height}}</p>
+        <p>넓이 : {{width * height}}</p>
+        <p>둘레 : {{2*(width * height)}}</p>
+        <hr>
+        <h3>정사각형이라면,</h3>
+        <p>한 변의 길이 : {{squareSide}}</p>
+        <p>정사각형 넓이 : {{squareSide*squareSide}}</p>
+        <p>정사각형 둘레 : {{4*squareSide}}</p>
+    </div>
+
+    <script>
+        const { createApp, ref } = Vue;
+        const app = createApp({
+            setup() {
+                const width = ref(4);
+                const height = ref(3);
+                const squareSide = ref(5);
+                return {
+                    width,
+                    height,
+                    squareSide,
+                };
+            },
+        });
+        app.mount("#app");
+    </script>
+</body>
+
+</html>

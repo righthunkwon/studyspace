@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Vue</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div>일반 변수 : {{normalValue}}</div>
+    <div>반응성 변수 : {{reactiveValue}}</div>
+    <button @click="updateValues">값 업데이트</button>
+  </div>
+  <script>
+    const { createApp, ref } = Vue;
+    const app = createApp({
+      setup() {
+        const normalValue = 10; // 일반 변수
+        const reactiveValue = ref(100); // 반응형 변수
+        const updateValues = function () {
+          normalValue++; // 일반 변수 값 증가(반영 X)
+          reactiveValue.value++; // 반응형 변수 값 증가(반영 O)
+        };
+        return {
+          reactiveValue,
+          normalValue,
+          updateValues,
+        };
+      },
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

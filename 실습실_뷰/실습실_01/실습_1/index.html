@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{hello}}
+    </div>
+    <script>
+        const { createApp, ref } = Vue;
+        const app = createApp({
+            setup() {
+                const hello = ref("Hello, Vue");
+                return {
+                    hello,
+                };
+            },
+        });
+        app.mount("#app");
+    </script>
+</body>
+
+</html>
