@@ -1,66 +1,74 @@
-3-2
-<template>
-  <div>
-    <h1>다양한 전시 정보</h1>
-    <label for="isActive">전시 중인 정보만 보기</label>
-    <input type="checkbox" id="isActive" v-model="isActive" />
-    <hr />
-    <ul>
-      <li v-for="item in (isActive? isActiveFilter:jeonsi)" :key="item.title">
-        <h3>{{item.title}}</h3>
-        <p>{{item.museum}}</p>
-        <p>가격 :{{item.price}}</p>
-        <hr />
-      </li>
-    </ul>
-  </div>
-</template>
+<!DOCTYPE html>
 
-<script setup>
-  import { ref, computed } from "vue";
-  const isActive = ref(false);
-  const jeonsi = ref([
-    {
-      title: "무라카미 다카시 : 무라카시좀비",
-      museum: "부산 시립 미술관",
-      price: 1000,
-      isActive: "전시 중",
-    },
-    {
-      title: "마우라치오 카텔란 개인전",
-      museum: "리움 미술관",
-      price: 30000,
-      isActive: "전시 중",
-    },
-    {
-      title: "조선백자전",
-      museum: "리움 미술관",
-      price: 30000,
-      isActive: "전시 중",
-    },
-    {
-      title: "한국 실험미술 1960 - 1970",
-      museum: "국립현대미술관",
-      price: 0,
-      isActive: "전시 중",
-    },
-    {
-      title: "에드워드 호퍼 : 길 위에서",
-      museum: "서울 시립 미술관",
-      price: 1000,
-      isActive: "전시 종",
-    },
-    {
-      title: "알렉산더 칼더 x 이우환",
-      museum: "국제갤러리 서울점",
-      price: 15000,
-      isActive: "전시 종료",
-    },
-  ]);
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <div id="app">
+      <h1>다양한 전시 정보</h1>
+      <label for="isActive">전시 중인 정보만 보기</label>
+      <input type="checkbox" id="isActive" v-model="isActive" />
+      <!-- v-model로 바인딩을 해줘야 작동한다. -->
+      <ul>
+        <template v-for="(info, key) in info">
+          <!-- for랑 if랑 같은 레이어에 두면 생각한 것과 다른 결과가 나온다. -->
+          <li v-if="(info.isActive || !isActive)">
+            <h3>{{ key }}</h3>
+            <hr />
+            <p>{{ info.location }}</p>
+            <p>가격 : {{ info.price }} 원</p>
+            <hr />
+          </li>
+        </template>
+      </ul>
+    </div>
 
-  const isActiveFilter = computed(() => {
-    return jeonsi.value.filter((item) => item.isActive === "전시 중");
-  });
-</script>
+    <script>
+      const { createApp, ref, reactive } = Vue;
+      createApp({
+        setup() {
+          const isActive = ref(false);
 
-<style></style>
+          const info = {
+            "무라카미 다카시 : 무라카시좀비": {
+              location: "부산 시립 미술관",
+              price: 1000,
+              isActive: true,
+            },
+            "마우라치오 카텔란 개인전": {
+              location: "리움 미술관",
+              price: 30000,
+              isActive: true,
+            },
+            조선백자전: {
+              location: "리움 미술관",
+              price: 30000,
+              isActive: true,
+            },
+            "한국 실험미술 1960 - 1970": {
+              location: "국립현대미술관",
+              price: 0,
+              isActive: true,
+            },
+            "에드워드 호퍼 : 길 위에서": {
+              location: "서울 시립 미술관",
+              price: 1000,
+              isActive: false,
+            },
+            "알렉산더 칼더 x 이우환": {
+              location: "국제갤러리 서울집",
+              price: 15000,
+              isActive: false,
+            },
+          };
+
+          return { info, isActive };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
