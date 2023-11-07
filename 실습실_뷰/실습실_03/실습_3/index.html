@@ -6,7 +6,7 @@
     <input type="checkbox" id="isActive" v-model="isActive" />
     <hr />
     <ul>
-      <li v-for="item in (isActive? isActiveFilter:jeonsi)" :key="item.title">
+      <li v-for="item in (isActive? isActiveFilter : jeonsi)" :key="item.title">
         <h3>{{item.title}}</h3>
         <p>{{item.museum}}</p>
         <p>가격 :{{item.price}}</p>
@@ -48,7 +48,7 @@
       title: "에드워드 호퍼 : 길 위에서",
       museum: "서울 시립 미술관",
       price: 1000,
-      isActive: "전시 종",
+      isActive: "전시 종료",
     },
     {
       title: "알렉산더 칼더 x 이우환",
@@ -63,4 +63,4 @@
   });
 </script>
 
-<style></style>
+<style scoped></style>
