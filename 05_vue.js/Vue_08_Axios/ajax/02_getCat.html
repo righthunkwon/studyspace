@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cat API</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>Cat API</h1>
+      <button @click="getCat1">가져오기(fetch)</button>
+      <button @click="getCat2">가져오기(Axios)</button>
+      <hr />
+      <img :src="imgSrc" />
+    </div>
+
+    <script>
+      const { createApp, ref, onMounted } = Vue;
+      const URL = "https://api.thecatapi.com/v1/images/search";
+
+      const app = createApp({
+        setup() {
+          const imgSrc = ref("");
+
+          // (1) getCat1
+          // fetch
+          const getCat1 = function () {
+            fetch(URL)
+              .then((response) => response.json())
+              .then((response) => {
+                imgSrc.value = response[0].url;
+              })
+              .catch((error) => {
+                console.log("실패");
+              });
+          };
+
+          // (2) getCat2
+          // axios
+          const getCat2 = function () {
+            axios({
+              url: URL,
+              method: "GET",
+            })
+              .then((response) => {
+                imgSrc.value = response.data[0].url;
+              })
+              .catch((error) => {
+                console.log("실패");
+              });
+          };
+
+          // Vue3 LifeCycle
+          // onMounted() : 컴포넌트가 마운트된 후 호출될 콜백을 등록
+          onMounted(() => {
+            getCat2(); // 연결된 후 호출
+          });
+
+          return { imgSrc, getCat1, getCat2 };
+        },
+      });
+
+      app.mount("#app");
+    </script>
+  </body>
+</html>

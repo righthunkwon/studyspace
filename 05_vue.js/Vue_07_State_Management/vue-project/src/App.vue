@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Todo PJT</h2>
-    <p>완료 Todo : {{ store.doneTodoCount }}</p>
+    <p>Fin Todo : {{ store.doneTodoCount }}</p>
     <TodoForm />
     <TodoList />
   </div>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dog API</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <h1>Dog API</h1>
+    <button id="btn1">가져오기(XMLHttpRequest)</button>
+    <button id="btn2">가져오기(Fetch)</button>
+    <button id="btn3">가져오기(Axios)</button>
+    <img src="" alt="" id="dog-img" />
+    <script>
+      const URL = "https://dog.ceo/api/breeds/image/random";
+
+      // (1) getDog1()
+      // XMLHttpRequest
+      function getDog1() {
+        const xhr = new XMLHttpRequest();
+
+        xhr.onreadystatechange = function () {
+          // 통신준비가 되었는데
+          if (xhr.readyState == xhr.DONE) {
+            // 정상적으로 통신이 완료되었다면
+            if (xhr.status == 200) {
+              // 특수문자도 인식하기 위해 bracket notation을 사용하는 게 좋다.
+              // const imgSrc = JSON.parse(xhr.response).message;
+              const imgSrc = JSON.parse(xhr.response)["message"];
+              const imgTag = document.querySelector("#dog-img");
+              imgTag.src = imgSrc;
+
+              // 명시하지 않았던 속성을 새로 부여하고 싶을 때는 해당 방식 사용
+              // imgTag.setAttribute("src", imgSrc)
+            }
+          }
+        };
+        xhr.open("GET", URL);
+        xhr.send();
+      }
+      const btn1 = document.querySelector("#btn1");
+      btn1.addEventListener("click", getDog1);
+
+      // (2) getDog2()
+      // fetch & Promise
+      function getDog2() {
+        fetch(URL)
+          .then((response) => {
+            return response.json();
+          })
+          .then((response) => {
+            const imgSrc = response.message;
+            document.querySelector("#dog-img").setAttribute("src", imgSrc);
+          });
+      }
+      const btn2 = document.querySelector("#btn2");
+      btn2.addEventListener("click", getDog2);
+
+      // (3) getDog3()
+      // Axios
+      function getDog3() {
+        axios.get(URL).then((response) => {
+          const imgSrc = response.data.message;
+          document.querySelector("#dog-img").setAttribute("src", imgSrc);
+        });
+      }
+      const btn3 = document.querySelector("#btn3");
+      btn3.addEventListener("click", getDog3);
+    </script>
+  </body>
+</html>
