@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper.xml은 Dao의 구현제(implement)이므로 -->
+<!-- mapper의 namespace에는 반드시 dao의 경로를 명시해야 한다. -->
+<mapper namespace="com.ssafit.board.model.dao.WishlistDao">
+
+	<select id="selectAll" resultType="Wishlist">
+		SELECT  * FROM wishlist		
+	</select>
+
+	<insert id="insert" parameterType="map">
+		INSERT INTO Wishlist
+		VALUES (#{userId}, #{movieId})
+	</insert>
+	
+	<delete id="delete" parameterType="map">
+		Delete FROM Wishlist
+		WHERE user_id = ${userId} and movie_id = {movieId}
+	</delete>
+	
+	<select id="selectOne" parameterType="map" resultType="Wishlist">
+		SELECT *
+		FROM Wishlist
+		WHERE user_id = ${userId} and movie_id = {movieId}
+	</select>
+	
+	
+	
+	
+</mapper>

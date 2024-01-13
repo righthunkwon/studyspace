@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+	
+	<!-- (1) web.xml -->
+	<!-- 설정을 위한 설정 파일, WAS가 최초로 구동될 때 각종 설정을 정의 -->
+	
+	<!-- (2) servlet-context.xml -->
+	<!-- 요청과 관련된 객체 정의, Controller, Annotation, ViewResolver, -->
+	<!-- Intereptor, MultipartResolver, HandlerMapping 등 Front-end(view)와 관련-->
+	
+	<!-- (3) root-context.xml -->
+	<!-- 비즈니스 로직과 관련된 설정, Service, Repository(DAO), DB 등 Back-end와 관련 -->
+	
+	
+	<!-- dataSource를  Bean으로 등록 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+		<property name="url" value="jdbc:mysql://localhost:3306/ssafy_board?serverTimezone=UTC"/>
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+		<property name="username" value="ssafy"/>
+		<property name="password" value="ssafy"/>
+	</bean>
+	
+	<!-- Mybatis를 사용하기 위한 sqlSessionFactory를 Bean으로 등록 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="mapperLocations" value="classpath*:mappers/*.xml"/>
+		<property name="typeAliasesPackage" value="com.ssafy.board.model.dto"/>
+	</bean>
+	
+	<!-- Mybatis-spring 에서 제공하는 scan을 통해 dao 인터페이스 위치를 지정 -->
+	<mybatis-spring:scan base-package="com.ssafy.board.model.dao"/>
+	
+	<!-- package에 해당하는 component를 bean으로 등록 -->
+	<context:component-scan base-package="com.ssafy.board.model"/>
+	
+	<!-- 트랜잭션 매니저 등록 -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<!-- 생성자(constructor) 주입 -->
+		<!-- 설정자(setter) 주입은 property로 한다 -->
+		<constructor-arg ref="dataSource"/>
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+</beans>

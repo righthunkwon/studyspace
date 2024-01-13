@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- name space는 MovieDao의 fully qualified name으로 설정한다. -->
+<mapper namespace="com.ssafy.ws.model.dao.MovieDao">
+
+	<!-- Movie 정보를 저장 -->
+	<insert id="insert" parameterType="Movie">
+		INSERT INTO movies (Id, Title, Director, Genre, RunningTime)
+		VALUES(#{id}, #{title}, #{director}, #{genre}, #{runningTime})
+	</insert>
+	
+	<!-- Movie를 ID로 검색하여 조회 -->
+	<select id="searchById" resultType="Movie" parameterType="int">
+		SELECT *
+		FROM movies WHERE Id = #{Id}
+	</select>
+	
+	<!-- Movie를 제목으로 검색하여 조회 -->
+	<select id="searchByTitle" resultType="Movie" parameterType="String">
+		SELECT *
+		FROM movies WHERE title LIKE
+		CONCAT('%',#{title},'%')
+	</select>
+	
+	<!-- Movie에서 모든 정보를 검색 -->
+	<select id="selectAll" resultType="Movie">
+		SELECT * 
+		FROM movies
+	</select>
+
+</mapper>

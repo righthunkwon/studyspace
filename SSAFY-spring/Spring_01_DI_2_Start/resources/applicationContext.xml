@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <bean></bean> -->
+	<!-- Spring의 bean을 통해 자바의 Class를 관리할 수 있다. -->
+	<!-- bean의 id에는 맨 앞글자를 소문자로 한 클래스명을, class에는 패키지를 포함한 클래스 이름(경로)을 적는다. -->
+	<!-- bean은 클래스의 기본 생성자를 통해 생성되므로 클래스에 기본 생성자가 정의되어 있지 않으면 오류가 발생할 수 있다. -->
+	<!-- 
+		bean의 scope
+		
+		singleton	: 기본값, Spring IoC 컨테이너에 대한 단일 객체 인스턴스, 한 번만 생성
+		prototype	: 빈을 요청할 때마다 새로운 인스턴스 생성
+		request		: HTTP Request 주기로 bean 인스턴스 생성
+		session		: HTTP Session 주기로 bean 인스턴스 생성
+	 -->
+	<bean class="com.ssafy.di.Desktop" id="desktop" scope="singleton"></bean>
+	<bean class="com.ssafy.di.Laptop" id="laptop" scope="singleton"></bean>
+	<bean class="com.ssafy.di.Programmer" id="programmer" scope="singleton"></bean>
+</beans>

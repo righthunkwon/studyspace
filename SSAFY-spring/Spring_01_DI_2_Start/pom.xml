@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>Spring_01_DI_2_Start</groupId>
+	<artifactId>Spring_01_DI_2_Start</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	
+	<!-- pom.xml은 메이븐 프로젝트의 설정을 담당한다. -->
+	<!-- 메이븐 프로젝트를 위한 pom.xml의 설정으로는 빌드와 스프링 컨텍스트의 의존성 추가를 한다. -->
+	
+	<!-- (1) 빌드 -->
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<!-- (2) 스프링 컨텍스트 의존성 추가 -->	
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>5.3.18</version>
+		</dependency>
+	</dependencies>
+</project>

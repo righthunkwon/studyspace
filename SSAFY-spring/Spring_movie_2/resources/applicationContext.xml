@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	<!-- AOP 초기설정 -->
+	<aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
+	
+	<!-- 빈 객체 생성 -->
+	<bean class="com.ssafy.ws.MovieAspect" id="movieAspect"></bean>
+	<bean class="com.ssafy.ws.Audience" id="audience"></bean>
+
+	<!-- Aop 코드작성 -->
+	<aop:config>
+		<!-- pointcut: 핵심관심사항(메소드) -->
+		<aop:pointcut expression="execution(public * com.ssafy.ws.*.doSomething())" id="mypt"/>
+		<!-- aspect: 공통관심사항 -->
+		<aop:aspect ref="movieAspect">
+			<aop:before method="before" pointcut-ref="mypt" />
+			<aop:after-returning method="afterReturning" pointcut-ref="mypt" />
+			<aop:after-throwing method="afterThrowing" pointcut-ref="mypt" throwing="th" />
+			<aop:after method="after" pointcut-ref="mypt" />
+		</aop:aspect>
+	</aop:config>
+</beans>

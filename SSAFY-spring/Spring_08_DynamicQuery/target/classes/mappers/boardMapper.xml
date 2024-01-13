@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.board.model.dao.BoardDao">
+	<resultMap type="Board" id="boardMap">
+		<result column="id" property="id"/>
+		<result column="writer" property="writer"/>
+		<result column="title" property="title"/>
+		<result column="content" property="content"/>
+		<result column="view_cnt" property="viewCnt"/>
+		<result column="reg_date" property="regDate"/>
+	</resultMap>
+
+	<!-- 전체글 조회 -->
+	<select id="selectAll" resultType="Board">
+		SELECT id, content, writer, title, view_cnt as viewCnt, date_format(reg_date, '%Y-%M-%d') as regDate 
+		FROM board;
+	</select>
+
+	<!-- 상세글 조회 -->
+	<select id="selectOne" resultMap="boardMap" parameterType="int">
+		SELECT *
+		FROM board
+		WHERE id = #{id};
+	</select>
+
+	<!-- 게시글 등록 -->
+	<!-- 등록한 게시글의 id는 SQL문이 실행된 시점에서 결정되므로, -->
+	<!-- 만약 게시글 등록 처리가 완료된 후에 글 전체 목록이 아니라 등록한 게시글이 보이게 하고 싶다면 -->
+	<!-- 등록하는 시점에서의 id를 가져와야 한다. 이를 위해서는 keyProperty와 useGeneratedKeys 속성을 사용하면 된다. -->
+	<insert id="insertBoard" parameterType="Board" keyProperty="id" useGeneratedKeys="true">
+		INSERT INTO board (id, title, writer, content)
+		VALUES (#{id}, #{title}, #{writer}, #{content})
+	</insert>
+	
+	<!-- 게시글 삭제 -->
+	<delete id="deleteBoard" parameterType="int">
+		DELETE FROM board
+		WHERE id = #{id}
+	</delete>
+	
+	<!-- 조회수 증가 -->
+	<update id="updateViewCnt" parameterType="int">
+		UPDATE board
+		SET view_cnt = view_cnt+1
+		WHERE id = #{id}
+	</update>
+	
+	<!-- 게시글 수정 -->
+	<update id="updateBoard" parameterType="board">
+		UPDATE board
+		SET title = #{title}, content = #{content}, reg_date = now()
+		WHERE id = #{id}
+	</update> 
+	
+	<!-- 검색기능  -->
+	<!-- parameterType을 전체 경로가 아니라 DTO 클래스 이름만으로 가져올 수 있는 건  -->
+	<!-- 이전에 이미 root-context.xml에서 sqlSessionFactory의 프로퍼티로 typeAliasesPackage를 -->
+	<!-- value="com.ssafy.board.model.dto"로 등록해놓았기에 해당 패키지에 있는 클래스를 그냥 가져올 수 있다.-->
+	<select id="search" resultType="Board" parameterType="SearchCondition">
+		SELECT id, content, writer, title, view_cnt as viewCnt, date_format(reg_date, '%Y-%M-%d') as regDate
+		FROM board
+		
+		<!-- 동적 쿼리 -->
+		<!-- #{}은 ''붙어서 나옴, ${}는 ''안 붙어서 나옴 -->
+		<!-- 검색 기준 -->
+		<if test="key != 'none'">
+			WHERE ${key} LIKE concat('%', #{word}, '%')
+		</if>
+		<!-- 정렬기준, 정렬 방향 -->
+		<if test="orderBy != 'none'">
+			ORDER BY ${orderBy} ${orderByDir}
+		</if>
+	</select>
+</mapper>

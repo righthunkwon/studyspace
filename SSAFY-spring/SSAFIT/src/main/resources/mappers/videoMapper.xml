@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper.xml은 Dao의 구현제(implement)이므로 -->
+<!-- mapper의 namespace에는 반드시 dao의 경로를 명시해야 한다. -->
+<mapper namespace="com.ssafit.board.model.dao.VideoDao">
+
+	<!-- 전체 비디오 목록 조회 -->
+	<select id="selectAll" resultType="video">
+		SELECT *
+		FROM video
+	</select>
+	
+	<!-- ID에 일치하는 비디오 조회 -->
+	<select id="selectOne" resultType="video">
+		SELECT *
+		FROM video
+		WHERE video_id = #{videoId}
+	</select>
+
+	<!-- 비디오 삽입 -->
+	<insert id="insert" parameterType="Video">
+		INSERT INTO video (title, content, part, creator, link)
+		VALUES (#{title}, #{content}, #{part}, #{creator}, #{link})
+	</insert>
+
+	<!-- 비디오 삭제 -->
+	<delete id="deleteVideo" parameterType="int">
+		DELETE FROM video
+		WHERE video_id = #{videoId}
+	</delete>
+	
+	<!-- 조회수 증가 -->
+	<update id="updateViewCnt" parameterType="int">
+		UPDATE video
+		SET viewcnt = viewcnt+1
+		WHERE video_id = #{videoId}
+	</update>
+	
+	<!-- 조회수 순 조회 -->
+	<select id="selectByHits" resultType="video">
+		SELECT *
+		FROM video
+		ORDER BY viewcnt desc
+	</select>
+	
+	<!-- 운동 부위 별 검색  -->
+	<select id="selectByPart" resultType="Video" parameterType="SearchCondition">
+		SELECT title, content, part, creator, viewcnt, date_format(regdate, '%Y-%M-%d') as regdate
+		FROM video
+		<!-- 검색 조건 (동적쿼리)-->
+		<if test="key != 'none'">
+			WHERE ${key} LIKE concat('%', #{word}, '%')
+		</if>
+	</select>
+</mapper>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- 주석1) xml 문서 초기 설정(xml 문서임을 인식하게 함) -->
+<!-- 주석2) mybatis 초기 설정(mybatis 파일임을 인식하게 함)-->
+
+<configuration>
+	<!-- mybatis-config.xml -->
+	<!-- properties, typeAliases, environments, mappers 등을 설정, 각 설정은 순서대로 작성 -->
+
+	<!-- (1) properties -->
+	<!-- driver, url, username, password 등을 정의 -->
+	<properties resource="config/db.properties" />
+	
+	<!-- (2) typeAliases -->
+	<!-- type에 해당하는 별칭을 저장하여 XML 설정에서의 코드 작성을 편리하게 한다. -->
+	<typeAliases>
+		<typeAlias type="com.ssafy.board.model.dto.Board" alias="Board"/>
+	</typeAliases>
+
+	<!-- (3) environments -->
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<!-- db.properties에서 정의한 속성들을 value에 사용 -->
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${password}" />
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<!-- MyBatis에서 #{}와 ${}의 차이 -->
+	<!--  
+			웬만하면 ${}보다 #{}를 사용하는 것이 낫다.
+			
+			#{}
+			파라미터가 String 형태로 들어와 ''가 자동으로 붙는다(add Single Quotation automatically).
+			SQL Injection을 예방할 수 있어 보안 측면에서 유리하다.
+			
+			${}
+			파라미터가 바로 출력된다.
+			해당 컬럼의 자료형에 맞춰 파라미터의 자료형이 변경된다.
+			SQL Injection을 예방할 수 없어 보안 측면에서 불리하다.
+	 -->
+	
+	<!-- (4) mappers -->
+	<!-- 다양한 mapper들을 정의하는 공간, 각 mapper들은 각각의 xml 파일에 정의 -->
+	<mappers>
+		<mapper resource="mappers/boardMapper.xml" />
+	</mappers>
+	
+</configuration>

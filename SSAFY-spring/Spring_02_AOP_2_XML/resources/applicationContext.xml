@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 하단 Namespaces에서 aop 추가 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+		
+	<!-- aop 초기 세팅 -->
+	<aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
+	
+	<!-- bean 생성 -->
+	<bean class="com.ssafy.aop.Programmer" id="programmer" />
+	<bean class="com.ssafy.aop.Ssafy" id="ssafy" />
+	<bean class="com.ssafy.aop.MyAspect" id="myAspect" />
+
+	<!-- AOP -->
+	<aop:config>
+		<!-- pointcut: 어떤 조인포인트를 사용할지 결정, 스프링의 AOP는 메소드 실행만 지원 -->
+		<aop:pointcut expression="execution(public * com.ssafy.aop.*.coding())" id="mypt" />
+		<!-- aspect: 공통 관심 사항들을 작성할 클래스 -->
+		<aop:aspect ref="myAspect">
+			<!-- 1번 방법(before, after-returning / after-throwing, after -->
+			<aop:before method="before" pointcut-ref="mypt" />
+			<aop:after-returning method="afterReturning" pointcut-ref="mypt" />
+			<aop:after-throwing method="afterThrowing" pointcut-ref="mypt" throwing="th" />
+			<aop:after method="after" pointcut-ref="mypt" />
+			<!-- 2번 방법(around) -->
+			<!--  <aop:around method="around" pointcut-ref="mypt" /> -->
+		</aop:aspect>
+	</aop:config>
+</beans>

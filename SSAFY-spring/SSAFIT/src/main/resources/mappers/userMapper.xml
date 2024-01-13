@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper.xml은 Dao의 구현제(implement)이므로 -->
+<!-- mapper의 namespace에는 반드시 dao의 경로를 명시해야 한다. -->
+<mapper namespace="com.ssafit.board.model.dao.UserDao">
+
+	<!-- id와 일치하는 유저 조회 -->
+	<!-- select Query에는 resultType을 명시한다. -->
+	<select id="selectOne" parameterType="String" resultType="User">
+		SELECT *
+		FROM user
+		WHERE user_id = #{id}
+	</select>
+
+	<!-- 회원가입 -->
+	<insert id="insertUser" parameterType="User">
+		INSERT INTO user
+		VALUES (#{userId}, #{password}, #{name}, #{nickname}, #{birthdate})
+	</insert>
+	
+	<!-- 회원탈퇴 -->
+	<delete id="deleteUser" parameterType="map">
+		DELETE FROM user
+		WHERE user_id = ${id}
+	</delete>
+	
+	<!-- 회원정보수정(닉네임) -->
+	<update id="updateUser" parameterType="map">
+		UPDATE user 
+		SET nickname = ${nickname}
+		WHERE user_id = ${id}
+	</update>
+	
+</mapper>

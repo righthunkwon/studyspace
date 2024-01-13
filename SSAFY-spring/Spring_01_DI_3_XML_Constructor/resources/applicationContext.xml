@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Spring을 통해 Class 관리 -->
+	<!-- bean은 DTO 혹은 VO를 나타내는 클래스이다. -->
+	<bean class="com.ssafy.di.Laptop" id="laptop"></bean>
+	<bean class="com.ssafy.di.Desktop" id="desktop"></bean>
+	<bean class="com.ssafy.di.Programmer" id="programmer">
+		<!-- 의존성주입 (1) 생성자 주입 -->
+		<!-- Desktop Class 미리 조립 -->
+		<!-- 하나의 Constructor만 조립 가능 -->
+		<constructor-arg ref="desktop"></constructor-arg>
+	</bean>
+</beans>

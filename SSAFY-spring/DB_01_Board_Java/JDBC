@@ -1,0 +1,27 @@
+
+JDBC
+	Java는 JDBC를 이용하여 DBMS와 SQL을 주고받는다.
+	
+	다양한 DBMS가 있는 상황에서 JDBC는 클래스의 집합으로서
+	JAVA 프로그램에서 DB에 일관된 방식으로 접근할 수 있도록 API를 제공한다. 
+	
+
+
+JDBC 연동 과정
+
+	세팅
+		1. jar 파일  추가(lib 폴더)
+			1-1 직접 추가
+			1-2 메이븐 저장소 활용
+		
+		2. jar 파일 등록
+			- build path - configure build path - libraries - add external jars
+			
+	연동
+		1. JDBC 드라이버 로드
+		
+		2. 데이터베이스 연결
+		
+		3. SQL 준비 및 실행
+		
+		4. 데이터베이스 연결 해제
