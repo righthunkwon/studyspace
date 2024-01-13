@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Vue</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+  <!-- v-bind (:) -->
+  <!-- 1. 속성 바인딩 -->
+  <!-- 2. 클래스와 스타일 바인딩 -->
+
+  <div id="app">
+    <img v-bind:src="imageSrc" />
+    <div><a :href="google">구글로 이동</a></div> <!-- v-bind 생략 가능 (:만 사용 가능) -->
+    <p :[dynamicattr]="dynamicValue">title이 Hello Vue.js인 p 태그</p> <!-- v-bind 생략 가능 (:만 사용 가능) -->
+  </div>
+  <script>
+    const { createApp, ref } = Vue;
+    const app = createApp({
+      setup() {
+        const imageSrc = ref("https://picsum.photos/200");
+        const google = ref("https://www.google.com");
+        const dynamicattr = ref("title");
+        const dynamicValue = ref("Hello Vue.js");
+        return { imageSrc, google, dynamicattr, dynamicValue };
+      },
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

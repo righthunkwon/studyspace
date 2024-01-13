@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-container {
+        width: 400px;
+        height: 300px;
+        border: 1px solid blue;
+        display: flex;
+
+        flex-direction: row;
+      }
+
+      .flex-container > * {
+        width: 200px;
+        flex-shrink: 2;
+      }
+
+      .flex-container > div:nth-child(2) {
+        flex-shrink: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>flex-shrink: 기본(1)</h2>
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+  </body>
+</html>

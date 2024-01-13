@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Vue</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+
+  <!-- v-for -->
+  <!-- 소스 데이터를 기반으로 요소 또는 템플릿 블록을 여러 번 렌더링(배열, 객체, 숫자,문자열, iterable 등) -->
+
+  <div id="app">
+    <!-- v-for의 구조(1) - 배열 -->
+    <!-- v-for="item in items" -->
+    <div v-for="p in myArr">{{p.name}} / {{p.age}}</div>
+    <hr />
+
+    <!-- v-for의 구조(2) - 배열 -->
+    <!-- v-for="(item, index) in items" -->
+    <div v-for="(p, idx) in myArr">{{idx}} : {{p.name}} / {{p.age}}</div>
+    <hr />
+
+    <!-- v-for의 구조(3) - 객체  -->
+    <!-- 인자가 늘어남에 따라 value, key, index를 받아온다. -->
+    <div v-for="value in myObj">{{value}}</div>
+    <hr />
+    <div v-for="(value, key) in myObj">{{key}} : {{value}}</div>
+    <hr />
+    <div v-for="(value, key, index) in myObj">{{index}} - {{key}} : {{value}}</div>
+    <hr />
+
+    <!-- v-for의 구조(4) - template: 여러 요소에 대한 적용 -->
+    <ul>
+      <template v-for="item in myArr">
+        <li>{{item.name}}</li>
+        <li>{{item.age}}</li>
+      </template>
+    </ul>
+    <hr />
+
+    <!-- v-for의 구조(5) - 중첩반복문 -->
+    <ul v-for="item in myInfo">
+      <li v-for="friend in item.friends">{{item.name}}는 {{friend}}와 친구입니다.</li>
+    </ul>
+  </div>
+  <script>
+    const { createApp, ref } = Vue;
+
+    const app = createApp({
+      setup() {
+        const myArr = ref([
+          { name: "Alice", age: 20 },
+          { name: "Bella", age: 21 },
+        ]);
+        const myObj = ref({
+          name: "Cathy",
+          age: 30,
+        });
+
+        // nested v-for
+        const myInfo = ref([
+          { name: "Alice", age: 20, friends: ["Bella", "Cathy", "Dan"] },
+          { name: "Bella", age: 21, friends: ["Alice", "Cathy"] },
+        ]);
+
+        return {
+          myArr,
+          myObj,
+          myInfo,
+        };
+      },
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

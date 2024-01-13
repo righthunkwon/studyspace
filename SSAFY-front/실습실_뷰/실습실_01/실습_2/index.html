@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+    <div id="firstApp">
+        <h1>{{title}}</h1>
+    </div>
+    <div id="secondApp">
+        <h1>{{title}}</h1>
+    </div>
+    <div id="thirdApp">
+        <h1>{{title}}</h1>
+    </div>
+
+    <script>
+        const { createApp, ref } = Vue;
+
+        const firstApp = createApp({
+            setup() {
+                const title = ref("첫번째 앱");
+                return {
+                    title,
+                };
+            },
+        });
+        firstApp.mount("#firstApp");
+
+        const secondApp = createApp({
+            setup() {
+                const title = ref("두번째 앱");
+                return {
+                    title,
+                };
+            },
+        });
+        secondApp.mount("#secondApp");
+
+        const thirdApp = createApp({
+            setup() {
+                const title = ref("세번째 앱");
+                return {
+                    title,
+                };
+            },
+        });
+        thirdApp.mount("#thirdApp");
+    </script>
+</body>
+
+</html>

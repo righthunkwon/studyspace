@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Vue</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <button @click="count++">증가</button>
+    <p>{{count}}</p>
+    <p>{{message}}</p>
+  </div>
+  <script>
+    const { createApp, ref, onMounted, onUpdated } = Vue;
+
+    const app = createApp({
+      setup() {
+        const count = ref(0);
+        const message = ref(null);
+        // 이미지 API 요청 메서드가 있다고 가정
+
+        onMounted(() => {
+          // 이미지 API 요청 메서드 기술 -> 호출된 걸 확인 가능
+          console.log("연결이 완료되었습니다.");
+        });
+
+        onUpdated(() => {
+          message.value = "update";
+          console.log("업데이트 되었습니다.");
+        });
+
+        return {
+          count,
+          message,
+        };
+      },
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

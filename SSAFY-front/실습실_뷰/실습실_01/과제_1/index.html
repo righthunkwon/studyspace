@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1 id="name">제 이름은 {{name}} 입니다.</h1>
+        <p>저는 {{age}} 살 입니다.</p>
+        <p>연락처 : {{phone}} </p>
+    </div>
+    <script>
+        const { createApp, ref } = Vue;
+        const app = createApp({
+            setup() {
+                const name = ref("권정훈");
+                const age = ref(28);
+                const phone = ref("010-1234-5678");
+
+                return {
+                    name,
+                    age,
+                    phone,
+                }
+            }
+        });
+        app.mount("#app")
+    </script>
+</body>
+
+</html>

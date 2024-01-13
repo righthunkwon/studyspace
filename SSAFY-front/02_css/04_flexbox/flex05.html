@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        border: 1px solid blue;
+        align-items: stretch;
+      }
+
+      .box1 {
+        width: 150px;
+        height: 100px;
+        background-color: aqua;
+        border: 1px solid black;
+      }
+      .box2 {
+        width: 150px;
+        font-size:40px;
+        background-color: aqua;
+        border: 1px solid black;
+      }
+      .box3 {
+        width: 150px;
+        background-color: aqua;
+        border: 1px solid black;
+      }
+      .box4 {
+        width: 150px;
+        height: 100px;
+        background-color: aqua;
+        border: 1px solid black;
+      }
+      .box5 {
+        width: 150px;
+        height: 200px;
+        background-color: aqua;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>flex-direction : row | column | row-reverse | column-reverse</h2>
+    <h2>flex-wrap : nowrap | wrap | wrap-reverse</h2>
+    <h2>flex-flow : flex-direction flex-wrap</h2>
+    <h2>
+      justify-content : flex-start | flex-end | center | space-around |
+      space-evenly | space-between
+    </h2>
+    <h2>align-items : stretch | flex-start | flex-end | center | baseline</h2>
+    <div class="flex-container">
+      <div class="box1">1</div>
+      <div class="box2">2</div>
+      <div class="box3">3</div>
+      <div class="box4">4</div>
+      <div class="box5">5</div>
+    </div>
+  </body>
+</html>

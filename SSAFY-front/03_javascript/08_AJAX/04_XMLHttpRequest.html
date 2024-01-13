@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>XMLHttpRequest실습</title>
+  </head>
+  <body>
+    <h2>서버에 요청을 보내고 이를 받아서 화면에 출력</h2>
+    <div id="view"></div>
+    <button id="submit">요청</button>
+
+    <script>
+      let xhr;
+      // 1. 클라이언트에서 요청이 발생
+      document.querySelector("#submit").addEventListener("click", function () {
+        // 2. xhr 객체를 생성
+        xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = responseMsg;
+
+        // 3. xhr 객체 초기화 (메소드 방식, URL 경로, 비동기방식 설정(기본값 true))
+        xhr.open("GET", "./data/hello.txt", true); // txt data
+
+        // 4. 요청 전송
+        xhr.send();
+      });
+
+      // AJAX 요청에 대한 응답이 왔을 때 사용할 콜백함수
+      function responseMsg() {
+
+        // 서버와 통신이 잘 끝났고,
+        if (xhr.readyState == 4) {
+
+          // 상태도 정상적일 때(200)
+          if (xhr.status == 200) {
+            document.querySelector("#view").innerHTML = xhr.responseText;
+          } else {
+            console.log("정상적으로 데이터를 받지 못했습니다.");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

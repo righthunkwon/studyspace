@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <section>
+    <h2>테스트</h2>
+    <div id="region">지역</div>
+    <p class="select">서울</p>
+    <p class="select">대전</p>
+    <p class="non-select">광주</p>
+    <p class="non-select security">구미</p>
+    <p class="select security">부울경</p>
+    <p name="select">테스트</p>
+  </section>
+
+  <script>
+    // getElementById(string)
+    let region = document.getElementById("region");
+    console.log(region); // <div id="a" class="a b" style="color: green;">지역</div>
+    region.style.color = "tomato";
+
+    // getElementsByClassName(string) : list로 반환되므로 순회 필요
+    let select = document.getElementsByClassName("select");
+    console.log(select);
+    for (let i = 0; i < select.length; i++) {
+      select[i].style.color = "blue";
+    }
+
+    // querySelector는 클래스면 .을 붙이고 id면 #을 붙이는 방식(CSS와 동일)
+    // querySelector(css selector)
+    // querySelectorAll(css selector) : list로 반환되므로 순회 필요
+  </script>
+</body>
+
+</html>

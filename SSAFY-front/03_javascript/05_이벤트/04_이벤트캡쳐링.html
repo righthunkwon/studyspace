@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    button {
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <button><span>Click me!</span></button>
+  </div>
+  <pre id="output"></pre>
+</body>
+
+<script>
+  // Event propagation(이벤트 전파)
+  /*
+    가령, button에 click 이벤트가 발생했다면 
+    [1. 캡쳐링 단계]
+    이는 html, body, div, button 순으로 캡처링되어 
+    이벤트가 상위 요소에서 하위 요소 방향으로 전파되고,
+    [2. 타깃 단계]
+    이후 이벤트가 타깃에 도달하면,
+    [3. 버블링 단계]
+    이벤트가 다시 하위 요소에서 상위 요소 방향으로 전파된다.
+
+    고전 이벤트 처리 방식은 타깃 단계와 버블링 단계의 이벤트만 캐치할 수 있지만,
+    표준 이벤트 처리 방식은 타깃과 버블링 단계 뿐 아니라 캡쳐링 단계의 이벤트도 캐치할 수 있다.
+    캡쳐링 단계의 이벤트를 캐치하려면 addEventListener의 세 번째 인수로 true를 전달하면 된다.
+  */
+  const output = document.querySelector("#output");
+  function handleClick(e) {
+    output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
+  }
+
+  const container = document.querySelector("#container");
+  const button = document.querySelector("button");
+  const span = document.querySelector("span");
+
+  document.body.addEventListener("click", handleClick, { capture: true });
+  container.addEventListener("click", handleClick, { capture: true });
+  button.addEventListener("click", handleClick, { capture: true });
+  span.addEventListener("click", handleClick, { capture: true });
+</script>
+
+</html>

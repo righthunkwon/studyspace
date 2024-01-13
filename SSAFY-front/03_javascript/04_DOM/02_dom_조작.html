@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document 객체</title>
+</head>
+
+<body>
+  <script>
+    // document Object
+    // 전역객체 window에 포함된 객체
+    // window.document로 쓸 수도 있지만 window는 생략 가능하므로 보통 document로 사용
+
+    document.title = "document 객체로 수정한 title";
+    document.body.style.background = "tomato";
+    setTimeout(function () {
+      document.body.style.background = "";
+    }, 3000);
+  </script>
+</body>
+
+</html>

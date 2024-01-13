@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    div {
+      border: 1px solid blue;
+      padding: 0px;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      border: 1px solid black;
+      background-color: crimson;
+    }
+
+    .left {
+      float: left;
+    }
+
+    .right {
+      float: right;
+    }
+
+    /* .clear{
+        clear: both;
+      } */
+
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="clearfix">
+    <div class="box right"></div>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+    <!-- <div class="clear"></div> -->
+  </div>
+
+
+</body>
+
+</html>

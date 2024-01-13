@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Vue</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div>{{object.id +1}}</div> <!-- [object Object]1 -->
+    <div>{{object["id"]+1}}</div> <!-- [object Object]1 -->
+    <div>{{object.id}}</div> <!-- 0 -->
+    <div>{{object["id"]}}</div> <!-- 0 -->
+    <div>{{object.id.value}}</div> <!-- 0 -->
+    <div>{{object.id.value + 1}}</div> <!-- 1 -->
+    <div>{{id}}</div> <!-- 0 -->
+    <div>{{id + 1}}</div> <!-- 1 -->
+  </div>
+
+  <script>
+    const { createApp, ref } = Vue;
+    const app = createApp({
+
+      setup() {
+        // 객체 선언
+        const object = {
+          id: ref(0),
+        };
+
+        // 구조 분해 할당
+        const { id } = object;
+
+        return {
+          object,
+          id,
+        };
+      },
+
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

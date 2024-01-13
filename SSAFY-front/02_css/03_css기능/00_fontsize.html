@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .parent {
+      font-size: 2rem;
+      /* root */
+    }
+
+    .em {
+      /*부모엘리먼트의 font-size의 배수*/
+      font-size: 2em;
+    }
+
+    .rem {
+      /* html의 font-size에 다가 배수
+        html의 기본적인 font-size는 16px;
+
+        px, in, cm, mm => 고정적인 크기
+
+        rem, em => 반응형 디자인을 위해
+        언제 rem? 언제 em?
+        rem
+        - 유지보수하기가 편하다.
+        - 예측이 쉽다.
+        - 전체적인 틀을 잡을 때
+
+        em
+        - 세부적으로 조정할 때..
+
+        */
+      font-size: 1.5rem;
+    }
+
+    html {
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="parent">
+    <li class="em">1.5em</li>
+    <li class="rem">1.5rem</li>
+    <li>no class</li>
+  </ul>
+  <ul>
+    <li>other list no class</li>
+  </ul>
+</body>
+
+</html>

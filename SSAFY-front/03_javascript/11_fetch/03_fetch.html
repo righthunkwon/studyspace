@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>XMLHttpRequest실습</title>
+  </head>
+  <body>
+    <h2>서버에 요청을 보내고 받아서 화면에 출력하자</h2>
+    <div id="view"></div>
+    <button id="submit">요청</button>
+
+    <script>
+      // 클라이언트에서 요청이 발생한다.
+      document.querySelector("#submit").addEventListener("click", function () {
+        fetch("./data/hello.txt")
+        .then((response)=>{
+          return response.text()
+        })
+        .then((body)=>{
+          document.querySelector("#view").innerHTML = body;
+        })
+      });
+    </script>
+  </body>
+</html>

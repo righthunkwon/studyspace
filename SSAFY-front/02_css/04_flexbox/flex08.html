@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-container {
+        width: 800px;
+        height: 300px;
+        display: inline-flex;
+        flex-direction: row;
+        border: 1px solid red;
+      }
+
+      .flex-container > div {
+        border: 1px solid green;
+        flex-basis: 80px;
+      }
+
+      .flex-container > div:nth-child(2) {
+        flex-basis: 50px;
+      }
+
+      .flex-container > div:nth-child(3) {
+        flex-basis: 150px;
+      }
+
+      .flex-container > div:nth-child(4) {
+        flex-basis: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>flex-basis: 크기지정</h2>
+    <div class="flex-container">
+      <div>1<br />(80)</div>
+      <div>2<br />(50)</div>
+      <div>3<br />(150)</div>
+      <div>4<br />(250)</div>
+      <div>5<br />(80)</div>
+    </div>
+  </body>
+</html>

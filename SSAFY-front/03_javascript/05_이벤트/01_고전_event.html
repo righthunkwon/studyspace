@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- attribute : 태그의 속성 -->
+  <button onclick="alert('Hello')">Hello</button>
+  <button id="actionBtn">zero to nine</button>
+</body>
+<script>
+  // Event
+  // 웹 페이지에서의 상호작용
+  // 마우스 클릭, 키보드 타이핑 등
+  // JavaScript로 DOM에서 발생하는 이벤트를 감지하고 대응하는 작업 수행 가능
+
+  // Event type
+  // Keyboard : keyup, keydown, keypress
+  // mouse : click, mousemove, mouseup, mousedown, mouseenter, mouseleave
+  // loading : load, unload
+  // form : input, change, blur, focus, submit
+
+  function writeNum() {
+    for (let i = 0; i < 10; i++) {
+      console.log(i);
+    }
+  }
+
+  // property : 객체의 속성
+  let actionBtn = document.getElementById("actionBtn");
+  actionBtn.onclick = writeNum;
+
+</script>
+
+</html>

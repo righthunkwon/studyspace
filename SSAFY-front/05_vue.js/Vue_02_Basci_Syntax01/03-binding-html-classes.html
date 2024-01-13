@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Vue</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <style>
+    .active {
+      color: crimson;
+    }
+
+    .text-primary {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div :class="{active: isActive}">글자색</div>
+    <div :class="{active: isActive, 'text-primary':hasInfo}">글자색</div> <!-- 여러 클래스 사용 가능-->
+    <div class="static" :class="{active: isActive, 'text-primary':hasInfo}">글자색</div> <!-- 클래스 속성과도 함께 동적 바인딩 가능 -->
+    <div class="static" :class="classObj">글자색</div> <!-- 객체로서도 클래스 부여 가능 -->
+    <div :class="[activeClass, infoClass]">글자색</div> <!-- 배열로서도 클래스 부여 가능 -->
+    <div :class="[{active: isActive}, infoClass]">글자색</div> <!-- 객체와 배열 모두를 사용하여 클래스 부여 가능 -->
+  </div>
+  <script>
+    const { createApp, ref } = Vue;
+
+    const app = createApp({
+      setup() {
+        const isActive = ref(true);
+        const hasInfo = ref(true);
+
+        // ref 는 반응 객체의 속성으로
+        // 액세스되거나 변경될 때 자동으로 unwrap된다.
+        const classObj = ref({
+          active: isActive,
+          "text-primary": hasInfo, // -가 있을 경우 따옴표로 감싸야 한다.
+        });
+
+        const activeClass = ref("active");
+        const infoClass = ref("text-primary");
+
+        return {
+          isActive,
+          hasInfo,
+          classObj,
+          activeClass,
+          infoClass,
+        };
+      },
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>
