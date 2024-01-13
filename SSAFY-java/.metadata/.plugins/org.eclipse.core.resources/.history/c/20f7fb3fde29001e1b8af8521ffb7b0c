@@ -1,0 +1,10 @@
+package polymorphism01;
+
+public class Test {
+	public static void main(String[] args) {
+		Object obj = new Student();
+		Person p = new Student();
+		Student st = new Student();
+
+	}
+}

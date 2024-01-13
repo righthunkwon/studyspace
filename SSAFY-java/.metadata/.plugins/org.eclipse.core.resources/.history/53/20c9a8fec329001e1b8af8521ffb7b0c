@@ -1,0 +1,26 @@
+package ploymorphism01;
+
+public class TypeCastingTest {
+	public static void main(String[] args) {
+		Person p = new Person();
+		Object obj = p; // 자동형변환
+		// 자손타입 객체를 조상타입으로 형변환 할 수 있고 이때 생략 가능
+		// 지손 -> 조상은 타입 생략 가능
+
+//		Person p2 = new Person(); // 메모리상에는 Object와 Person만 만들어짐
+		Person p2 = new Student(); // 메모리상에 Object, Person, Student 모두 만들어짐
+		Student st = (Student) p;
+		// Student st = p2;는 컴파일 에러 발생
+		// 조상타입으로 자손을 참조할 수 없음. 단, 명시할 경우 가능.
+		// 조상 -> 자손은 생략 불가능
+
+//		st.study(); // 에러 발생
+		if (p2 instanceof Student) {
+			// Person p2 = new Person();일 경우 실행되지 않는다.
+			// Person p2 = new Student();일 경우 실행된다.
+			Student student = (Student) p2;
+			student.study();
+		}
+
+	}
+}

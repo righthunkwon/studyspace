@@ -1,0 +1,12 @@
+package polymorphism01;
+
+public class Test {
+	public static void main(String[] args) {
+		// 상속 관계: Object -> Person -> Student
+		// 조상클래스로부터는 자식 클래스의 객체를 선언할 수 있다.
+		Object obj = new Student();
+		Person p = new Student();
+		Student st = new Student();
+
+	}
+}

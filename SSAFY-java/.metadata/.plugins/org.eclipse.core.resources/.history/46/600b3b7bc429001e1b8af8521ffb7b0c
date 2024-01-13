@@ -1,0 +1,31 @@
+package ploymorphism01;
+
+class Parent {
+	String x = "parent";
+
+	public String method() {
+		return "parent method!!!!";
+	}
+}
+
+class Child extends Parent {
+	String x = "child";
+
+	@Override
+	public String method() {
+		return "child method!!!!";
+	}
+}
+
+public class BindingTest {
+	public static void main(String[] args) {
+		Parent p = new Parent();
+		Child c = new Child();
+		
+		System.out.println(p.x);
+		System.out.println(p.method());
+		
+		System.out.println(c.x);
+		System.out.println(c.method());
+	}
+}

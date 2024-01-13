@@ -1,0 +1,14 @@
+package ploymorphism01;
+
+public class TypeCastingTest {
+	public static void main(String[] args) {
+		Person p = new Person();
+		Object obj = p; // 자동형변환
+		// 자손타입 객체를 조상타입으로 형변환 할 수 있고 이때 생략 가능
+		
+		Person p2 = new Student();
+		// Student st = p2; // 컴파일 에러
+		// 조상타입으로 자손을 참조할 수 없음.
+		
+	}
+}
