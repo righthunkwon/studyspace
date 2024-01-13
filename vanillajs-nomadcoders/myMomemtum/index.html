@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Momentum App</title>
+</head>
+
+<body>
+    <!--background -->
+    <div id="backGround"></div>
+
+    <!-- logIn-->
+    <form id="login-form" class="hidden">
+        <input required maxlength="15" type="text" placeholder="What is your name?" />
+        <button>Log in</button>
+    </form>
+
+    <!-- greeting & logOut-->
+    <div id="greeting-logout" class="hidden">
+        <h1 id="greeting" class="hidden"></h1>
+        <form id="logout-form" class="hidden">
+            <button>Log out</button>
+        </form>
+        <br />
+    </div>
+
+    <!-- clock -->
+    <div>
+        <h2 id="clock">00:00:00</h2>
+    </div>
+
+
+    <!-- quote -->
+    <div id="quote">
+        <div id="quote-string"></div>
+        <br />
+        <div id="quote-person"></div>
+    </div>
+    <br />
+
+    <!-- link -->
+    <div id="linkNomad">
+        <a href="https://nomadcoders.co/challenges" target="_blank">Link to Nomad Coders</a>
+    </div>
+
+    <form id="todo-form">
+        <input type="text" placeholder="Write a To-do and Press Enter." />
+    </form>
+
+    <div id="todo-list-div">
+        <ul id="todo-list"></ul>
+    </div>
+    <span class="js-weather"></span>
+
+
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+</body>
+
+</html>

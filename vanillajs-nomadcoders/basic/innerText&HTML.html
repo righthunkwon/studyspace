@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test2</title>
+</head>
+<body>
+    <div id="myDiv">
+        <h1>Hello World</h1>
+        <p>This is some text.</p>
+    </div>
+
+    <script>
+        // innerHTML
+        console.log("innerHTML");
+        var myDiv1 = document.getElementById("myDiv");
+        var html = myDiv1.innerHTML;
+        console.log(html);
+
+        console.log("-------------------------------");
+
+        // innerText
+        console.log("innerText");
+        var myDiv2 = document.getElementById("myDiv");
+        var text = myDiv2.innerText;
+        console.log(text);
+    </script>
+</body>
+</html>
